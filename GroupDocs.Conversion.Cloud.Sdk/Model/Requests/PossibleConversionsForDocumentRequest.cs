@@ -32,5 +32,25 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
   /// </summary>  
   public class PossibleConversionsForDocumentRequest  
   {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PossibleConversionsForDocumentRequest"/> class.
+        /// </summary>        
+        public PossibleConversionsForDocumentRequest()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PossibleConversionsForDocumentRequest"/> class.
+        /// </summary>
+        /// <param name="file">File contents.</param>
+        public PossibleConversionsForDocumentRequest(System.IO.Stream file)             
+        {
+            this.File = file;
+        }
+
+        /// <summary>
+        /// File contents.
+        /// </summary>  
+        public System.IO.Stream File { get; set; }
   }
 }

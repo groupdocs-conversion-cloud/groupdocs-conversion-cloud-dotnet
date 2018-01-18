@@ -474,7 +474,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace(resourcePath, "\\*", string.Empty)
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "extension", request.Extension);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "extension", request.Extension);
             
             var response = this.apiInvoker.InvokeApi(
                 resourcePath, 
@@ -498,19 +498,31 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         /// <returns><see cref="PossibleConversionResponse"/></returns>
         public PossibleConversionResponse PossibleConversionsForDocument(PossibleConversionsForDocumentRequest request)
         {
+            // verify the required parameter 'file' is set
+            if (request.File == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'file' when calling PossibleConversionsForDocument");
+            }
+
             // create path and map variables
             var resourcePath = this.configuration.GetApiRootUrl() + "/conversion/formats";
             resourcePath = Regex
                         .Replace(resourcePath, "\\*", string.Empty)
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
+            var formParams = new Dictionary<string, object>();
+            
+            if (request.File != null) 
+            {
+                formParams.Add("file", this.apiInvoker.ToFileInfo(request.File, "File"));
+            }
             
             var response = this.apiInvoker.InvokeApi(
                 resourcePath, 
                 "POST", 
                 null, 
                 null, 
-                null);
+                formParams);
 
             if (response != null)
             {
