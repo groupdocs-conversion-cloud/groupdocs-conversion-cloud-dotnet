@@ -109,3 +109,7 @@ hs_err_pid*
 *StyleCop.Cache
 SDKs/NET/.vs/*
 .vs/
+.sign-keys
+*.nuspec
+*.Nuget.csproj
+*.nupkg
