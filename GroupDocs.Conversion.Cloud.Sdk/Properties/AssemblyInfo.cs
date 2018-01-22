@@ -35,7 +35,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("GroupDocs.Conversion.Cloud.Sdk.Properties")]
-[assembly: AssemblyCopyright("Copyright © 2017")]
+[assembly: AssemblyCopyright("Copyright © 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -53,7 +53,7 @@ using System.Runtime.InteropServices;
 //      Minor Version 
 //      Build Number
 //      Revision
-[assembly: AssemblyVersion("17.11.0.0")]
-[assembly: AssemblyFileVersion("17.11.0.0")]
+[assembly: AssemblyVersion("17.12.0.0")]
+[assembly: AssemblyFileVersion("17.12.0.0")]
 
 [assembly: InternalsVisibleTo("GroupDocs.Conversion.Cloud.Sdk.Test")]
