@@ -6,8 +6,8 @@
     <title>GroupDocs.Conversion Cloud SDK for .NET</title>
     <authors>GroupDocs</authors>
     <owners>GroupDocs</owners>
-    <licenseUrl>https://github.com/groupdocscloud/GroupDocs.Conversion-Cloud/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/groupdocscloud/GroupDocs.Conversion-Cloud</projectUrl>
+    <licenseUrl>https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet</projectUrl>
     <iconUrl>https://www.groupdocs.cloud/templates/groupdocs/images/product-logos/groupdocs-conversion-cloud.png</iconUrl>    
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -16,7 +16,7 @@ Develop efficient apps with the ability to transform documents to new format, us
     </description>
     <releaseNotes>
     GroupDocs.Conversion for Cloud is a REST API for converting over 50 documents and image formats to Words, Cells, Html, PDF, Slides and Image formats for the whole document, page by page or custom range of pages.
-The main features are:
+The main features are:    
     * Converting from:
         * Portable Document Format: PDF
         * Microsoft Word: DOC, DOCX, DOCM, DOT, DOTX, DOTM
@@ -60,7 +60,7 @@ The main features are:
     * Password protect output document when output format support it    
     </releaseNotes>    
     <copyright>Aspose 2001-2018. All Rights Reserved.</copyright>
-    <tags>Convert Conversion Documents PDF Word Excel PowerPoint Visio AutoCad DOC DOCX XLS XLSX PPT PPTX VSD DXF TIFF</tags>    
+    <tags>Convert Conversion Documents PDF Word Excel PowerPoint Visio AutoCad DOC DOCX XLS XLSX PPT PPTX VSD DXF TIFF</tags>
     <dependencies>
       <dependency id="Newtonsoft.Json" version="10.0.3" />
     </dependencies>
