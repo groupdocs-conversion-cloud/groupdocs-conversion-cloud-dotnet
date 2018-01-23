@@ -53,8 +53,8 @@ using System.Runtime.InteropServices;
 //      Minor Version 
 //      Build Number
 //      Revision
-[assembly: AssemblyVersion("17.12.0.0")]
-[assembly: AssemblyFileVersion("17.12.0.0")]
+[assembly: AssemblyVersion("17.12.1.0")]
+[assembly: AssemblyFileVersion("17.12.1.0")]
 
 #if DEBUG
 [assembly: InternalsVisibleTo("GroupDocs.Conversion.Cloud.Sdk.Test")]
