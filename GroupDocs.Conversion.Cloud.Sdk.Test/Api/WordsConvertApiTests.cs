@@ -30,7 +30,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
             var response = ConversionApi.ConvertToWords(request);
 
             Assert.IsNotNull(response);
-            Assert.That(() => response.Href.EndsWith(".doc"));
+            Assert.IsTrue(response.Href.EndsWith(".doc"));
         }
 
         /// <summary>

@@ -27,7 +27,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
             var response = ConversionApi.ConvertToSlides(request);
 
             Assert.IsNotNull(response);
-            Assert.That(() => response.Href.EndsWith(".pptx"));
+            Assert.IsTrue(response.Href.EndsWith(".pptx"));
         }
 
         /// <summary>

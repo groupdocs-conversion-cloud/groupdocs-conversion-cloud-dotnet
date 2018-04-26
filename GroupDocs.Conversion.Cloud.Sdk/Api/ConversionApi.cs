@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="ConversionApi.cs">
-//  Copyright (c) 2003-2017 Aspose Pty Ltd
+//  Copyright (c) 2003-2018 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -430,8 +430,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         /// Retrieves all possible conversions 
         /// </summary>
         /// <param name="request">Request. <see cref="GetAllPossibleConversionsRequest" /></param>
-        /// <returns><see cref="List&lt;PossibleConversionResponse&gt;"/></returns>
-        public List<PossibleConversionResponse> GetAllPossibleConversions(GetAllPossibleConversionsRequest request)
+        /// <returns><see cref="AllPossibleConversionsResponse"/></returns>
+        public AllPossibleConversionsResponse GetAllPossibleConversions(GetAllPossibleConversionsRequest request)
         {
             // create path and map variables
             var resourcePath = this.configuration.GetApiRootUrl() + "/conversion/formats";
@@ -449,7 +449,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
 
             if (response != null)
             {
-                return (List<PossibleConversionResponse>)SerializationHelper.Deserialize(response, typeof(List<PossibleConversionResponse>));
+                return (AllPossibleConversionsResponse)SerializationHelper.Deserialize(response, typeof(AllPossibleConversionsResponse));
             }
 
             return null;

@@ -1,16 +1,15 @@
-﻿using System;
+﻿using GroupDocs.Conversion.Cloud.Sdk.Model;
+using System;
 using System.Configuration;
 using System.IO;
 using System.Reflection;
 using System.Text;
-using GroupDocs.Conversion.Cloud.Sdk.Model;
 
 namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 {
-    using NUnit.Framework;
     using GroupDocs.Conversion.Cloud.Sdk.Api;
-    using GroupDocs.Conversion.Cloud.Sdk.Internal;
     using GroupDocs.Conversion.Cloud.Sdk.Test.Internal;
+    using NUnit.Framework;
 
     public class BaseApiTest
     {
@@ -78,7 +77,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
         private byte[] GetTestFileBytes(TestFile file)
         {
-            var filePath = Path.Combine(GetTestDataPath(), file.Folder, file.FileName);
+            var filePath = Path.Combine(Path.Combine(GetTestDataPath(), file.Folder), file.FileName);
+
             if (!File.Exists(filePath))
             {
                 throw new FileNotFoundException("File not found: " + filePath);
@@ -96,7 +96,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
         protected Stream SerializeObject(object obj)
         {
-            var json = SerializationHelper.Serialize(obj);
+            var json = Internal.SerializationHelper.Serialize(obj);
             var bytes = Encoding.UTF8.GetBytes(json);
 
             return new MemoryStream(bytes);
@@ -109,8 +109,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
             if (workingDir == null)
                 workingDir = Directory.GetCurrentDirectory();
 
-            var baseDir = Path.Combine(workingDir, "Resources", "TestData");
-
+            var baseDir = Path.Combine(Path.Combine(workingDir, "Resources"), "TestData");
             return Path.GetFullPath(baseDir);
         }
     }

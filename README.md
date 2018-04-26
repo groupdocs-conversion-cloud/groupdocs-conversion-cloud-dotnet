@@ -46,7 +46,7 @@ namespace Example
                 // Get supported file formats
                 var response = ConversionApi.GetAllPossibleConversions(request);
 
-                foreach (var entry in response)
+                foreach (var entry in response.Conversions)
                 {
                    Debug.Print(string.Format("{0}: {1}", entry.SourceFileType,
                         string.Join(",", entry.PossibleConversions));

@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="GetPossibleConversionsForFileTypeRequest.cs">
+// <copyright company="Aspose Pty Ltd" file="AllPossibleConversionsResponse.cs">
 //  Copyright (c) 2003-2018 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -23,34 +23,37 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests 
+namespace GroupDocs.Conversion.Cloud.Sdk.Model 
 {
-  using GroupDocs.Conversion.Cloud.Sdk.Model; 
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Request model for <see cref="GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.GetPossibleConversionsForFileType" /> operation.
+  /// All Possible conversions response class
   /// </summary>  
-  public class GetPossibleConversionsForFileTypeRequest  
-  {
+  public class AllPossibleConversionsResponse 
+  {                       
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetPossibleConversionsForFileTypeRequest"/> class.
-        /// </summary>        
-        public GetPossibleConversionsForFileTypeRequest()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GetPossibleConversionsForFileTypeRequest"/> class.
-        /// </summary>
-        /// <param name="extension">File extension</param>
-        public GetPossibleConversionsForFileTypeRequest(string extension)             
-        {
-            this.Extension = extension;
-        }
-
-        /// <summary>
-        /// File extension
+        /// All possible conversions. List of PossibleConversionResponse
         /// </summary>  
-        public string Extension { get; set; }
-  }
+        public List<PossibleConversionResponse> Conversions { get; set; }
+
+        /// <summary>
+        /// Get the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()  
+        {
+          var sb = new StringBuilder();
+          sb.Append("class AllPossibleConversionsResponse {\n");
+          sb.Append("  Conversions: ").Append(this.Conversions).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
+        }
+    }
 }

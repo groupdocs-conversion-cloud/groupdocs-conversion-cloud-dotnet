@@ -1,9 +1,9 @@
-﻿using System;
+﻿using GroupDocs.Conversion.Cloud.Sdk.Api;
+using NUnit.Framework;
+using System;
 using System.Configuration;
 using System.IO;
 using System.Reflection;
-using GroupDocs.Conversion.Cloud.Sdk.Api;
-using NUnit.Framework;
 using Configuration = GroupDocs.Conversion.Cloud.Sdk.Api.Configuration;
 
 namespace GroupDocs.Conversion.Cloud.Sdk.Test
@@ -74,7 +74,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test
             if (workingDir == null)
                 workingDir = Directory.GetCurrentDirectory();
 
-            var baseDir = Path.Combine(workingDir, "Resources", "TestData");
+            // var baseDir = Path.Combine(workingDir, "Resources", "TestData");
+            var baseDir = Path.Combine(Path.Combine(workingDir, "Resources"), "TestData");
 
             return Path.GetFullPath(baseDir);
         }

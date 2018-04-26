@@ -1,9 +1,9 @@
 ﻿namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 {
-    using NUnit.Framework;
     using GroupDocs.Conversion.Cloud.Sdk.Model;
     using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
     using GroupDocs.Conversion.Cloud.Sdk.Test.Internal;
+    using NUnit.Framework;
 
     public class CellsConvertApiTests : BaseApiTest
     {
@@ -27,7 +27,7 @@
             var response = ConversionApi.ConvertToCells(request);
 
             Assert.IsNotNull(response);
-            Assert.That(() => response.Href.EndsWith(".xlsx"));
+            Assert.IsTrue(response.Href.EndsWith(".xlsx"));
         }
 
         /// <summary>

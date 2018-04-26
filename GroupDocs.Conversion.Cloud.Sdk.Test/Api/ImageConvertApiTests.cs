@@ -27,7 +27,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
             var response = ConversionApi.ConvertToImage(request);
 
             Assert.IsNotNull(response);
-            Assert.That(() => response.Href.EndsWith(".jpg"));
+            Assert.IsTrue(response.Href.EndsWith(".jpg"));
         }
 
         /// <summary>

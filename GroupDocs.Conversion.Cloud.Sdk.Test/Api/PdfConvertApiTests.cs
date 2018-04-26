@@ -27,7 +27,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
             var response = ConversionApi.ConvertToPdf(request);
 
             Assert.IsNotNull(response);
-            Assert.That(() => response.Href.EndsWith(".pdf"));
+            Assert.IsTrue(response.Href.EndsWith(".pdf"));
         }
 
         /// <summary>

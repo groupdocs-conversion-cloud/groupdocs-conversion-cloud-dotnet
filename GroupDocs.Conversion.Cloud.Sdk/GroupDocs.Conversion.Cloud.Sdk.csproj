@@ -65,8 +65,9 @@
     <DocumentationFile>bin\Release\GroupDocs.Conversion.Cloud.Sdk.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net20\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net20\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Web" />
@@ -100,6 +101,7 @@
     <Compile Include="Internal\SerializationHelper.cs" />
     <Compile Include="Internal\StreamHelper.cs" />
     <Compile Include="Internal\UrlHelper.cs" />
+    <Compile Include="Model\AllPossibleConversionsResponse.cs" />
     <Compile Include="Model\BaseConversionRequest.cs" />
     <Compile Include="Model\CadOptionsDto.cs" />
     <Compile Include="Model\CellsConversionSettings.cs" />

@@ -27,7 +27,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
             var response = ConversionApi.ConvertToHtml(request);
 
             Assert.IsNotNull(response);
-            Assert.That(() => response.Href.EndsWith(".html"));
+            Assert.IsTrue(response.Href.EndsWith(".html"));
         }
 
         /// <summary>

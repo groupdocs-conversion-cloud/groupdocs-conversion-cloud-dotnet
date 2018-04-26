@@ -2,8 +2,8 @@
 
 namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 {
-    using NUnit.Framework;
     using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+    using NUnit.Framework;
 
     public class FormatsApiTests : BaseApiTest
     {
@@ -17,8 +17,10 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var response = ConversionApi.GetAllPossibleConversions(request);
 
-            Assert.IsTrue(response.Count > 0);
-            foreach (var entry in response)
+            Assert.IsNotNull(response.Conversions);
+            Assert.IsTrue(response.Conversions.Count > 0);
+
+            foreach (var entry in response.Conversions)
             {
                 Assert.IsNotEmpty(entry.SourceFileType);
                 Assert.IsNotEmpty(entry.PossibleConversions);
