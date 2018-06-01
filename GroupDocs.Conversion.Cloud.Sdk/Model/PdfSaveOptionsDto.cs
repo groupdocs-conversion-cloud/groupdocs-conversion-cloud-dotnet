@@ -69,7 +69,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         /// <summary>
         /// If the input document is Word the conversion will handle the word bookmarks regarding this option.
         /// </summary>  
-        public string WordBookmarks { get; set; }
+        public WordBookmarksOptionsDto WordBookmarksOptions { get; set; }
 
         /// <summary>
         /// Desired page width in pixels after conversion
@@ -125,7 +125,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           var sb = new StringBuilder();
           sb.Append("class PdfSaveOptionsDto {\n");
           sb.Append("  ConvertFileType: ").Append(this.ConvertFileType).Append("\n");
-          sb.Append("  WordBookmarks: ").Append(this.WordBookmarks).Append("\n");
+          sb.Append("  WordBookmarksOptions: ").Append(this.WordBookmarksOptions).Append("\n");
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  Dpi: ").Append(this.Dpi).Append("\n");

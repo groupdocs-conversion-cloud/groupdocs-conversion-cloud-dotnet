@@ -42,8 +42,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="QuickConvertRequest"/> class.
         /// </summary>
-        /// <param name="settings">The settings.</param>
-        /// <param name="outPath">outPath: path to output document on file storage</param>
+        /// <param name="settings">The settings</param>
+        /// <param name="outPath">path to output document on file storage</param>
         public QuickConvertRequest(QuickConversionSettings settings = null, string outPath = null)             
         {
             this.Settings = settings;
@@ -51,12 +51,12 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// The settings.
+        /// The settings
         /// </summary>  
         public QuickConversionSettings Settings { get; set; }
 
         /// <summary>
-        /// outPath: path to output document on file storage
+        /// path to output document on file storage
         /// </summary>  
         public string OutPath { get; set; }
   }

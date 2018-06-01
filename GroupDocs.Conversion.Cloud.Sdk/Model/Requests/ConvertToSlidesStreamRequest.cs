@@ -42,14 +42,14 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="ConvertToSlidesStreamRequest"/> class.
         /// </summary>
-        /// <param name="settings">The settings.</param>
+        /// <param name="settings">The settings</param>
         public ConvertToSlidesStreamRequest(SlidesConversionSettings settings = null)             
         {
             this.Settings = settings;
         }
 
         /// <summary>
-        /// The settings.
+        /// The settings
         /// </summary>  
         public SlidesConversionSettings Settings { get; set; }
   }

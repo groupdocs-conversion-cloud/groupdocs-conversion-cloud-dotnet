@@ -144,6 +144,7 @@
     <Compile Include="Model\TiffOptionsDto.cs" />
     <Compile Include="Model\WatermarkOptionsDto.cs" />
     <Compile Include="Model\WebpOptionsDto.cs" />
+    <Compile Include="Model\WordBookmarksOptionsDto.cs" />
     <Compile Include="Model\WordsConversionSettings.cs" />
     <Compile Include="Model\WordsSaveOptionsDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

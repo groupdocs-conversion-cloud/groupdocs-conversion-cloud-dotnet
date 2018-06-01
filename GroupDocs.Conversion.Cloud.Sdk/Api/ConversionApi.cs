@@ -73,7 +73,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }                            
 
         /// <summary>
-        /// Returns document with the result of conversion 
+        /// Returns CELLS document, result of conversion of the source file, specified by the provided CellsConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToCellsRequest" /></param>
         /// <returns><see cref="Link"/></returns>
@@ -103,7 +103,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns stream of document with the result of conversion 
+        /// Returns CELLS stream, result of conversion of the source file, specified by the provided CellsConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToCellsStreamRequest" /></param>
         /// <returns><see cref="System.IO.Stream"/></returns>
@@ -132,7 +132,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns document with the result of conversion 
+        /// Returns HTML document, result of conversion of the source file, specified by the provided HtmlConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToHtmlRequest" /></param>
         /// <returns><see cref="Link"/></returns>
@@ -162,7 +162,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns stream of document with the result of conversion 
+        /// Returns HTML stream, result of conversion of the source file, specified by the provided HtmlConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToHtmlStreamRequest" /></param>
         /// <returns><see cref="System.IO.Stream"/></returns>
@@ -191,7 +191,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns document with the result of conversion 
+        /// Returns IMAGE document, result of conversion of the source file, specified by the provided ImageConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToImageRequest" /></param>
         /// <returns><see cref="Link"/></returns>
@@ -221,7 +221,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns stream of document with the result of conversion 
+        /// Returns IMAGE stream, result of conversion of the source file, specified by the provided ImageConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToImageStreamRequest" /></param>
         /// <returns><see cref="System.IO.Stream"/></returns>
@@ -250,7 +250,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns document with the result of conversion 
+        /// Returns PDF document, result of conversion of the source file, specified by the provided PdfConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToPdfRequest" /></param>
         /// <returns><see cref="Link"/></returns>
@@ -280,7 +280,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns stream of document with the result of conversion 
+        /// Returns PDF stream, result of conversion of the source file, specified by the provided PdfConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToPdfStreamRequest" /></param>
         /// <returns><see cref="System.IO.Stream"/></returns>
@@ -309,7 +309,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns document with the result of conversion 
+        /// Returns SLIDES document, result of conversion of the source file, specified by the provided SlidesConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToSlidesRequest" /></param>
         /// <returns><see cref="Link"/></returns>
@@ -339,7 +339,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns stream of document with the result of conversion 
+        /// Returns SLIDES stream, result of conversion of the source file, specified by the provided SlidesConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToSlidesStreamRequest" /></param>
         /// <returns><see cref="System.IO.Stream"/></returns>
@@ -368,7 +368,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns document with the result of conversion 
+        /// Returns WORDS document, result of conversion of the source file, specified by the provided WordsConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToWordsRequest" /></param>
         /// <returns><see cref="Link"/></returns>
@@ -398,7 +398,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns stream of document with the result of conversion 
+        /// Returns WORDS stream, result of conversion of the source file, specified by the provided WordsConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertToWordsStreamRequest" /></param>
         /// <returns><see cref="System.IO.Stream"/></returns>
@@ -533,7 +533,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns document with the result of conversion 
+        /// Returns document, result of conversion of the source file, specified by the provided QuickConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="QuickConvertRequest" /></param>
         /// <returns><see cref="Link"/></returns>
@@ -563,7 +563,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
         }
 
         /// <summary>
-        /// Returns stream of document with the result of conversion 
+        /// Returns stream, result of conversion of the source file, specified by the provided QuickConversionSettings 
         /// </summary>
         /// <param name="request">Request. <see cref="QuickConvertToStreamRequest" /></param>
         /// <returns><see cref="System.IO.Stream"/></returns>
