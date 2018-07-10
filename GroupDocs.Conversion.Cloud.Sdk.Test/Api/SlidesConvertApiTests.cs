@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new ConvertToSlidesRequest
             {
-                Settings = new SlidesConversionSettings
+                Request = new SlidesConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new SlidesSaveOptionsDto()
@@ -40,7 +40,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new ConvertToSlidesStreamRequest
             {
-                Settings = new SlidesConversionSettings
+                Request = new SlidesConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new SlidesSaveOptionsDto()

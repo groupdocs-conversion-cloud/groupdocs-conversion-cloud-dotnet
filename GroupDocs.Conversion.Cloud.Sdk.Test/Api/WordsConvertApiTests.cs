@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new ConvertToWordsRequest
             {
-                Settings = new WordsConversionSettings
+                Request = new WordsConversionRequest()
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new WordsSaveOptionsDto
@@ -43,7 +43,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new ConvertToWordsStreamRequest
             {
-                Settings = new WordsConversionSettings
+                Request = new WordsConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new WordsSaveOptionsDto()

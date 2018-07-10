@@ -42,15 +42,15 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="ConvertToCellsStreamRequest"/> class.
         /// </summary>
-        /// <param name="settings">The settings</param>
-        public ConvertToCellsStreamRequest(CellsConversionSettings settings = null)             
+        /// <param name="request">The settings</param>
+        public ConvertToCellsStreamRequest(CellsConversionRequest request = null)             
         {
-            this.Settings = settings;
+            this.Request = request;
         }
 
         /// <summary>
         /// The settings
         /// </summary>  
-        public CellsConversionSettings Settings { get; set; }
+        public CellsConversionRequest Request { get; set; }
   }
 }

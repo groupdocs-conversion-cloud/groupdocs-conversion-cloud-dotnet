@@ -122,6 +122,16 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public string Password { get; set; }
 
         /// <summary>
+        /// RTF specific convert options
+        /// </summary>  
+        public RtfOptionsDto RtfOptions { get; set; }
+
+        /// <summary>
+        /// Specifies the zoom level in percentage. Default is 100. Default zoom is supported till Microsoft Word 2010. Starting from Microsoft Word 2013 default zoom is no longer set to document, instead it appears to use the zoom factor of the last document that was opened.
+        /// </summary>  
+        public int? Zoom { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -134,6 +144,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  Dpi: ").Append(this.Dpi).Append("\n");
           sb.Append("  Password: ").Append(this.Password).Append("\n");
+          sb.Append("  RtfOptions: ").Append(this.RtfOptions).Append("\n");
+          sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

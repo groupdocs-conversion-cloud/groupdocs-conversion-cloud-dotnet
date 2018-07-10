@@ -73,7 +73,27 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
             /// <summary>
             /// Enum Otp for "Otp"
             /// </summary>            
-            Otp            
+            Otp,
+            
+            /// <summary>
+            /// Enum Potx for "Potx"
+            /// </summary>            
+            Potx,
+            
+            /// <summary>
+            /// Enum Potm for "Potm"
+            /// </summary>            
+            Potm,
+            
+            /// <summary>
+            /// Enum Pptm for "Pptm"
+            /// </summary>            
+            Pptm,
+            
+            /// <summary>
+            /// Enum Ppsm for "Ppsm"
+            /// </summary>            
+            Ppsm            
         }
 
         /// <summary>
@@ -87,6 +107,11 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public string Password { get; set; }
 
         /// <summary>
+        /// Specifies the zoom level in percentage. Default is 100. Default zoom is supported till Microsoft Powerpoint 2010. Starting from Microsoft Powerpoint 2013 default zoom is no longer set to document, instead it appears to use the zoom factor of the last document that was opened.
+        /// </summary>  
+        public int? Zoom { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -96,6 +121,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("class SlidesSaveOptionsDto {\n");
           sb.Append("  ConvertFileType: ").Append(this.ConvertFileType).Append("\n");
           sb.Append("  Password: ").Append(this.Password).Append("\n");
+          sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

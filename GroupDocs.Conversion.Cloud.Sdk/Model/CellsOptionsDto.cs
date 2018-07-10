@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="SaveOptionsBaseDto.cs">
+// <copyright company="Aspose Pty Ltd" file="CellsOptionsDto.cs">
 //  Copyright (c) 2003-2018 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,54 +34,39 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Base options class
+  /// Options for converting Cells documents
   /// </summary>  
-  public class SaveOptionsBaseDto 
+  public class CellsOptionsDto 
   {                       
         /// <summary>
-        /// Start conversion from PageNumber page
+        /// Show grid lines when converting Excel files
         /// </summary>  
-        public int? PageNumber { get; set; }
+        public bool? ShowGridLines { get; set; }
 
         /// <summary>
-        /// Number of pages to convert
+        /// Show hidden sheets when converting Excel files
         /// </summary>  
-        public int? NumPagesToConvert { get; set; }
+        public bool? ShowHiddenSheets { get; set; }
 
         /// <summary>
-        /// Convert specific pages. The list contains the page indexes of the pages to be converted
+        /// If OnePagePerSheet is true the content of the sheet will be converted to one page in the PDF document. Default value is true.
         /// </summary>  
-        public List<int?> ConvertPages { get; set; }
+        public bool? OnePagePerSheet { get; set; }
 
         /// <summary>
-        /// Watermark specific options
+        /// If True and converting to Pdf the conversion is optimized for better file size than print quality
         /// </summary>  
-        public WatermarkOptionsDto WatermarkOptions { get; set; }
+        public bool? OptimizePdfSize { get; set; }
 
         /// <summary>
-        /// Hide markup and track changes for Word documents
+        /// Convert specific range when converting to other than cells format. Example: \"D1:F8\"
         /// </summary>  
-        public bool? HideWordTrackedChanges { get; set; }
+        public string ConvertRange { get; set; }
 
         /// <summary>
-        /// CAD specific convert options
+        /// Skips empty rows and columns when converting. Default is True.
         /// </summary>  
-        public CadOptionsDto CadOptions { get; set; }
-
-        /// <summary>
-        /// Hide annotations in Pdf documents
-        /// </summary>  
-        public bool? HidePdfAnnotations { get; set; }
-
-        /// <summary>
-        /// Hide comments during conversion if the source format support comments
-        /// </summary>  
-        public bool? HideComments { get; set; }
-
-        /// <summary>
-        /// Cells specific convert options
-        /// </summary>  
-        public CellsOptionsDto CellsOptions { get; set; }
+        public bool? SkipEmptyRowsAndColumns { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -90,16 +75,13 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class SaveOptionsBaseDto {\n");
-          sb.Append("  PageNumber: ").Append(this.PageNumber).Append("\n");
-          sb.Append("  NumPagesToConvert: ").Append(this.NumPagesToConvert).Append("\n");
-          sb.Append("  ConvertPages: ").Append(this.ConvertPages).Append("\n");
-          sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
-          sb.Append("  HideWordTrackedChanges: ").Append(this.HideWordTrackedChanges).Append("\n");
-          sb.Append("  CadOptions: ").Append(this.CadOptions).Append("\n");
-          sb.Append("  HidePdfAnnotations: ").Append(this.HidePdfAnnotations).Append("\n");
-          sb.Append("  HideComments: ").Append(this.HideComments).Append("\n");
-          sb.Append("  CellsOptions: ").Append(this.CellsOptions).Append("\n");
+          sb.Append("class CellsOptionsDto {\n");
+          sb.Append("  ShowGridLines: ").Append(this.ShowGridLines).Append("\n");
+          sb.Append("  ShowHiddenSheets: ").Append(this.ShowHiddenSheets).Append("\n");
+          sb.Append("  OnePagePerSheet: ").Append(this.OnePagePerSheet).Append("\n");
+          sb.Append("  OptimizePdfSize: ").Append(this.OptimizePdfSize).Append("\n");
+          sb.Append("  ConvertRange: ").Append(this.ConvertRange).Append("\n");
+          sb.Append("  SkipEmptyRowsAndColumns: ").Append(this.SkipEmptyRowsAndColumns).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

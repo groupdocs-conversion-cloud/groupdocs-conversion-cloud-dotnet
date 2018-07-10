@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new ConvertToHtmlRequest
             {
-                Settings = new HtmlConversionSettings
+                Request = new HtmlConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new HtmlSaveOptionsDto()
@@ -40,7 +40,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new ConvertToHtmlStreamRequest
             {
-                Settings = new HtmlConversionSettings
+                Request = new HtmlConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new HtmlSaveOptionsDto()

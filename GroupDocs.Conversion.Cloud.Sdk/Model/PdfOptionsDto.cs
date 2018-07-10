@@ -137,6 +137,26 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public bool? RemovePdfaCompliance { get; set; }
 
         /// <summary>
+        /// Specifies the zoom level in percentage. Default is 100.
+        /// </summary>  
+        public int? Zoom { get; set; }
+
+        /// <summary>
+        /// Linearize PDF Document for the Web
+        /// </summary>  
+        public bool? Linearize { get; set; }
+
+        /// <summary>
+        /// Pdf optimization options
+        /// </summary>  
+        public PdfOptimizationOptionsDto OptimizationOptions { get; set; }
+
+        /// <summary>
+        /// Convert a PDF from RGB colorspace to Grayscale
+        /// </summary>  
+        public bool? Grayscale { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -146,6 +166,10 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("class PdfOptionsDto {\n");
           sb.Append("  PdfFormat: ").Append(this.PdfFormat).Append("\n");
           sb.Append("  RemovePdfaCompliance: ").Append(this.RemovePdfaCompliance).Append("\n");
+          sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
+          sb.Append("  Linearize: ").Append(this.Linearize).Append("\n");
+          sb.Append("  OptimizationOptions: ").Append(this.OptimizationOptions).Append("\n");
+          sb.Append("  Grayscale: ").Append(this.Grayscale).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

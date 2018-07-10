@@ -1,5 +1,5 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="NeedRepeatRequestException.cs">
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright company="Aspose Pty Ltd" file="QuickConversionRequest.cs">
 //  Copyright (c) 2003-2018 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -23,11 +23,37 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace GroupDocs.Conversion.Cloud.Sdk.Internal
+namespace GroupDocs.Conversion.Cloud.Sdk.Model 
 {
-    using System;
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
 
-    internal class NeedRepeatRequestException : Exception
-    {
+  /// <summary>
+  /// QuickConversionSettings
+  /// </summary>  
+  public class QuickConversionRequest : BaseConversionRequest 
+  {                       
+        /// <summary>
+        /// required target format
+        /// </summary>  
+        public string Format { get; set; }
+
+        /// <summary>
+        /// Get the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()  
+        {
+          var sb = new StringBuilder();
+          sb.Append("class QuickConversionRequest {\n");
+          sb.Append("  Format: ").Append(this.Format).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
+        }
     }
 }

@@ -42,15 +42,15 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="ConvertToImageStreamRequest"/> class.
         /// </summary>
-        /// <param name="settings">The settings</param>
-        public ConvertToImageStreamRequest(ImageConversionSettings settings = null)             
+        /// <param name="request">The settings</param>
+        public ConvertToImageStreamRequest(ImageConversionRequest request = null)             
         {
-            this.Settings = settings;
+            this.Request = request;
         }
 
         /// <summary>
         /// The settings
         /// </summary>  
-        public ImageConversionSettings Settings { get; set; }
+        public ImageConversionRequest Request { get; set; }
   }
 }

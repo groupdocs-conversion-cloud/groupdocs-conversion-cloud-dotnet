@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="SaveOptionsBaseDto.cs">
+// <copyright company="Aspose Pty Ltd" file="PdfOptimizationOptionsDto.cs">
 //  Copyright (c) 2003-2018 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,54 +34,39 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Base options class
+  /// Define Pdf optimization options
   /// </summary>  
-  public class SaveOptionsBaseDto 
+  public class PdfOptimizationOptionsDto 
   {                       
         /// <summary>
-        /// Start conversion from PageNumber page
+        /// Link duplcate streams
         /// </summary>  
-        public int? PageNumber { get; set; }
+        public bool? LinkDuplicateStreams { get; set; }
 
         /// <summary>
-        /// Number of pages to convert
+        /// Remove unused objects
         /// </summary>  
-        public int? NumPagesToConvert { get; set; }
+        public bool? RemoveUnusedObjects { get; set; }
 
         /// <summary>
-        /// Convert specific pages. The list contains the page indexes of the pages to be converted
+        /// Remove unused streams
         /// </summary>  
-        public List<int?> ConvertPages { get; set; }
+        public bool? RemoveUnusedStreams { get; set; }
 
         /// <summary>
-        /// Watermark specific options
+        /// If CompressImages set to true, all images in the document are recompressed. The compression is defined by the ImageQuality property.
         /// </summary>  
-        public WatermarkOptionsDto WatermarkOptions { get; set; }
+        public bool? CompressImages { get; set; }
 
         /// <summary>
-        /// Hide markup and track changes for Word documents
+        /// Value in percent where 100% is unchanged quality and image size. To decrease the image size, use ImageQuality less than 100             
         /// </summary>  
-        public bool? HideWordTrackedChanges { get; set; }
+        public int? ImageQuality { get; set; }
 
         /// <summary>
-        /// CAD specific convert options
+        /// Make fonts not embedded if set to true
         /// </summary>  
-        public CadOptionsDto CadOptions { get; set; }
-
-        /// <summary>
-        /// Hide annotations in Pdf documents
-        /// </summary>  
-        public bool? HidePdfAnnotations { get; set; }
-
-        /// <summary>
-        /// Hide comments during conversion if the source format support comments
-        /// </summary>  
-        public bool? HideComments { get; set; }
-
-        /// <summary>
-        /// Cells specific convert options
-        /// </summary>  
-        public CellsOptionsDto CellsOptions { get; set; }
+        public bool? UnembedFonts { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -90,16 +75,13 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class SaveOptionsBaseDto {\n");
-          sb.Append("  PageNumber: ").Append(this.PageNumber).Append("\n");
-          sb.Append("  NumPagesToConvert: ").Append(this.NumPagesToConvert).Append("\n");
-          sb.Append("  ConvertPages: ").Append(this.ConvertPages).Append("\n");
-          sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
-          sb.Append("  HideWordTrackedChanges: ").Append(this.HideWordTrackedChanges).Append("\n");
-          sb.Append("  CadOptions: ").Append(this.CadOptions).Append("\n");
-          sb.Append("  HidePdfAnnotations: ").Append(this.HidePdfAnnotations).Append("\n");
-          sb.Append("  HideComments: ").Append(this.HideComments).Append("\n");
-          sb.Append("  CellsOptions: ").Append(this.CellsOptions).Append("\n");
+          sb.Append("class PdfOptimizationOptionsDto {\n");
+          sb.Append("  LinkDuplicateStreams: ").Append(this.LinkDuplicateStreams).Append("\n");
+          sb.Append("  RemoveUnusedObjects: ").Append(this.RemoveUnusedObjects).Append("\n");
+          sb.Append("  RemoveUnusedStreams: ").Append(this.RemoveUnusedStreams).Append("\n");
+          sb.Append("  CompressImages: ").Append(this.CompressImages).Append("\n");
+          sb.Append("  ImageQuality: ").Append(this.ImageQuality).Append("\n");
+          sb.Append("  UnembedFonts: ").Append(this.UnembedFonts).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

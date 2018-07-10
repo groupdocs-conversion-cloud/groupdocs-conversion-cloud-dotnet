@@ -67,11 +67,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public ConvertFileTypeEnum? ConvertFileType { get; set; }
 
         /// <summary>
-        /// If the input document is Word the conversion will handle the word bookmarks regarding this option.
-        /// </summary>  
-        public WordBookmarksOptionsDto WordBookmarksOptions { get; set; }
-
-        /// <summary>
         /// Desired page width in pixels after conversion
         /// </summary>  
         public int? Width { get; set; }
@@ -117,6 +112,11 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public PdfOptionsDto PdfOptions { get; set; }
 
         /// <summary>
+        /// If the input document is Word the conversion will handle the word bookmarks regarding this option.
+        /// </summary>  
+        public WordBookmarksOptionsDto WordBookmarksOptions { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -125,7 +125,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           var sb = new StringBuilder();
           sb.Append("class PdfSaveOptionsDto {\n");
           sb.Append("  ConvertFileType: ").Append(this.ConvertFileType).Append("\n");
-          sb.Append("  WordBookmarksOptions: ").Append(this.WordBookmarksOptions).Append("\n");
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  Dpi: ").Append(this.Dpi).Append("\n");
@@ -135,6 +134,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  MarginLeft: ").Append(this.MarginLeft).Append("\n");
           sb.Append("  MarginRight: ").Append(this.MarginRight).Append("\n");
           sb.Append("  PdfOptions: ").Append(this.PdfOptions).Append("\n");
+          sb.Append("  WordBookmarksOptions: ").Append(this.WordBookmarksOptions).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

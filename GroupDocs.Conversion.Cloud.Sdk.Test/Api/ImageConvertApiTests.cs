@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new ConvertToImageRequest
             {
-                Settings = new ImageConversionSettings
+                Request = new ImageConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new ImageSaveOptionsDto()
@@ -40,7 +40,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new ConvertToImageStreamRequest
             {
-                Settings = new ImageConversionSettings
+                Request = new ImageConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new ImageSaveOptionsDto()

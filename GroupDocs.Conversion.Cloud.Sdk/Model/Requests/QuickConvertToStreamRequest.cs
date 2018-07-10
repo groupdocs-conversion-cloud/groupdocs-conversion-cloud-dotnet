@@ -42,15 +42,15 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="QuickConvertToStreamRequest"/> class.
         /// </summary>
-        /// <param name="settings">The settings.</param>
-        public QuickConvertToStreamRequest(QuickConversionSettings settings = null)             
+        /// <param name="request">The settings.</param>
+        public QuickConvertToStreamRequest(QuickConversionRequest request = null)             
         {
-            this.Settings = settings;
+            this.Request = request;
         }
 
         /// <summary>
         /// The settings.
         /// </summary>  
-        public QuickConversionSettings Settings { get; set; }
+        public QuickConversionRequest Request { get; set; }
   }
 }

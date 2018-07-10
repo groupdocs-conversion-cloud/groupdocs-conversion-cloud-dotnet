@@ -42,18 +42,18 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="ConvertToPdfRequest"/> class.
         /// </summary>
-        /// <param name="settings">The settings.</param>
+        /// <param name="request">The settings.</param>
         /// <param name="outPath">outPath: path to output document on file storage</param>
-        public ConvertToPdfRequest(PdfConversionSettings settings = null, string outPath = null)             
+        public ConvertToPdfRequest(PdfConversionRequest request = null, string outPath = null)             
         {
-            this.Settings = settings;
+            this.Request = request;
             this.OutPath = outPath;
         }
 
         /// <summary>
         /// The settings.
         /// </summary>  
-        public PdfConversionSettings Settings { get; set; }
+        public PdfConversionRequest Request { get; set; }
 
         /// <summary>
         /// outPath: path to output document on file storage

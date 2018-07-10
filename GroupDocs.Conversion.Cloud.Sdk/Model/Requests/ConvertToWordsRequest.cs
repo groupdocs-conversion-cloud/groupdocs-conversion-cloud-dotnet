@@ -42,18 +42,18 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="ConvertToWordsRequest"/> class.
         /// </summary>
-        /// <param name="settings">The settings</param>
+        /// <param name="request">The settings</param>
         /// <param name="outPath">path to output document on file storage</param>
-        public ConvertToWordsRequest(WordsConversionSettings settings = null, string outPath = null)             
+        public ConvertToWordsRequest(WordsConversionRequest request = null, string outPath = null)             
         {
-            this.Settings = settings;
+            this.Request = request;
             this.OutPath = outPath;
         }
 
         /// <summary>
         /// The settings
         /// </summary>  
-        public WordsConversionSettings Settings { get; set; }
+        public WordsConversionRequest Request { get; set; }
 
         /// <summary>
         /// path to output document on file storage

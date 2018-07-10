@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new ConvertToPdfRequest
             {
-                Settings = new PdfConversionSettings
+                Request = new PdfConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new PdfSaveOptionsDto()
@@ -40,7 +40,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new ConvertToPdfStreamRequest
             {
-                Settings = new PdfConversionSettings
+                Request = new PdfConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new PdfSaveOptionsDto()

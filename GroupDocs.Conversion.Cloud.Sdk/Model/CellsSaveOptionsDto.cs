@@ -78,7 +78,17 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
             /// <summary>
             /// Enum Csv for "Csv"
             /// </summary>            
-            Csv            
+            Csv,
+            
+            /// <summary>
+            /// Enum Xltx for "Xltx"
+            /// </summary>            
+            Xltx,
+            
+            /// <summary>
+            /// Enum Xltm for "Xltm"
+            /// </summary>            
+            Xltm            
         }
 
         /// <summary>
@@ -92,6 +102,11 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public string Password { get; set; }
 
         /// <summary>
+        /// Specifies the zoom level in percentage. Default is 100.
+        /// </summary>  
+        public int? Zoom { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -101,6 +116,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("class CellsSaveOptionsDto {\n");
           sb.Append("  ConvertFileType: ").Append(this.ConvertFileType).Append("\n");
           sb.Append("  Password: ").Append(this.Password).Append("\n");
+          sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

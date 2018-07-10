@@ -84,6 +84,16 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public double? Transparency { get; set; }
 
         /// <summary>
+        /// Indicates that the watermark is stamped as background. If the value is true, the watermark is layed at the bottom. By default is false and the watermark is layed on top.
+        /// </summary>  
+        public bool? Background { get; set; }
+
+        /// <summary>
+        /// Image watermark
+        /// </summary>  
+        public byte[] Image { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -100,6 +110,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  Left: ").Append(this.Left).Append("\n");
           sb.Append("  RotationAngle: ").Append(this.RotationAngle).Append("\n");
           sb.Append("  Transparency: ").Append(this.Transparency).Append("\n");
+          sb.Append("  Background: ").Append(this.Background).Append("\n");
+          sb.Append("  Image: ").Append(this.Image).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

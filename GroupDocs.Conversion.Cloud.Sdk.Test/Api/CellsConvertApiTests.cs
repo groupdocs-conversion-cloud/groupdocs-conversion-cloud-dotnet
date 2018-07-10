@@ -17,7 +17,7 @@
 
             var request = new ConvertToCellsRequest
             {
-                Settings = new CellsConversionSettings
+                Request = new CellsConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new CellsSaveOptionsDto()
@@ -40,7 +40,7 @@
 
             var request = new ConvertToCellsStreamRequest
             {
-                Settings = new CellsConversionSettings
+                Request = new CellsConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Options = new CellsSaveOptionsDto()

@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="AssemblyInfo.cs">
-//  Copyright (c) 2017 GroupDocs for Cloud
+//  Copyright (c) 2018 GroupDocs for Cloud
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GroupDocs.Conversion.Cloud.Sdk.Properties")]
+[assembly: AssemblyProduct("GroupDocs.Conversion.Cloud.Sdk")]
 [assembly: AssemblyCopyright("Copyright © 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -53,5 +53,5 @@ using System.Runtime.InteropServices;
 //      Minor Version 
 //      Build Number
 //      Revision
-[assembly: AssemblyVersion("18.4")]
-[assembly: AssemblyFileVersion("18.4")]
+[assembly: AssemblyVersion("18.6")]
+[assembly: AssemblyFileVersion("18.6")]

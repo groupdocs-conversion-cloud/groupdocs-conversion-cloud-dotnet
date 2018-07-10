@@ -98,7 +98,12 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
             /// <summary>
             /// Enum Svg for "Svg"
             /// </summary>            
-            Svg            
+            Svg,
+            
+            /// <summary>
+            /// Enum Jp2 for "Jp2"
+            /// </summary>            
+            Jp2            
         }
 
         /// <summary>

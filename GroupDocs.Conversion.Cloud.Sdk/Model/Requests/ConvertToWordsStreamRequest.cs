@@ -42,15 +42,15 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="ConvertToWordsStreamRequest"/> class.
         /// </summary>
-        /// <param name="settings">The settings</param>
-        public ConvertToWordsStreamRequest(WordsConversionSettings settings = null)             
+        /// <param name="request">The settings</param>
+        public ConvertToWordsStreamRequest(WordsConversionRequest request = null)             
         {
-            this.Settings = settings;
+            this.Request = request;
         }
 
         /// <summary>
         /// The settings
         /// </summary>  
-        public WordsConversionSettings Settings { get; set; }
+        public WordsConversionRequest Request { get; set; }
   }
 }

@@ -42,15 +42,15 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="ConvertToPdfStreamRequest"/> class.
         /// </summary>
-        /// <param name="settings">The settings.</param>
-        public ConvertToPdfStreamRequest(PdfConversionSettings settings = null)             
+        /// <param name="request">The settings.</param>
+        public ConvertToPdfStreamRequest(PdfConversionRequest request = null)             
         {
-            this.Settings = settings;
+            this.Request = request;
         }
 
         /// <summary>
         /// The settings.
         /// </summary>  
-        public PdfConversionSettings Settings { get; set; }
+        public PdfConversionRequest Request { get; set; }
   }
 }

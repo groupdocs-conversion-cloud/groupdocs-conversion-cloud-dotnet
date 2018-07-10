@@ -1,5 +1,5 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="FileExistResponse.cs">
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright company="Aspose Pty Ltd" file="RtfOptionsDto.cs">
 //  Copyright (c) 2003-2018 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -23,43 +23,37 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace GroupDocs.Conversion.Cloud.Sdk.Model.Responses
+namespace GroupDocs.Conversion.Cloud.Sdk.Model 
 {
-    using System.Text;
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
 
-    /// <summary>
-    /// File exist response.
-    /// </summary>
-    public class FileExistResponse
-    {
+  /// <summary>
+  /// Options for converting to RTF
+  /// </summary>  
+  public class RtfOptionsDto 
+  {                       
         /// <summary>
-        /// File exists.
-        /// </summary>
-        public FileExist FileExist { get; set; }
-
-        /// <summary>
-        /// The code.
-        /// </summary>
-        public string Code { get; set; }
-
-        /// <summary>
-        /// The status.
-        /// </summary>
-        public string Status { get; set; }
+        /// Specifies whether the keywords for \"old readers\" are written to RTF or not. This can significantly affect the size of the RTF document. Default is False.
+        /// </summary>  
+        public bool? ExportImagesForOldReaders { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append("class FileExistResponse {\n");
-            stringBuilder.Append("  FileExist: ").Append((object)this.FileExist).Append("\n");
-            stringBuilder.Append("  Code: ").Append(this.Code).Append("\n");
-            stringBuilder.Append("  Status: ").Append(this.Status).Append("\n");
-            stringBuilder.Append("}\n");
-            return stringBuilder.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class RtfOptionsDto {\n");
+          sb.Append("  ExportImagesForOldReaders: ").Append(this.ExportImagesForOldReaders).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

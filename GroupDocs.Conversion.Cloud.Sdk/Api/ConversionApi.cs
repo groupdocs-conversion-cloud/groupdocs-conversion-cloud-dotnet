@@ -86,7 +86,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var response = this.apiInvoker.InvokeApi(
                 resourcePath, 
                 "POST", 
@@ -115,20 +115,13 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace(resourcePath, "\\*", string.Empty)
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
-            var response = this.apiInvoker.InvokeApi(
-                resourcePath, 
-                "POST", 
-                postBody, 
-                null, 
-                null);
-
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-
-            return null;
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
+            return this.apiInvoker.InvokeBinaryApi(
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
         }
 
         /// <summary>
@@ -145,7 +138,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var response = this.apiInvoker.InvokeApi(
                 resourcePath, 
                 "POST", 
@@ -174,20 +167,13 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace(resourcePath, "\\*", string.Empty)
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
-            var response = this.apiInvoker.InvokeApi(
-                resourcePath, 
-                "POST", 
-                postBody, 
-                null, 
-                null);
-
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-
-            return null;
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
+            return this.apiInvoker.InvokeBinaryApi(
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
         }
 
         /// <summary>
@@ -204,7 +190,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var response = this.apiInvoker.InvokeApi(
                 resourcePath, 
                 "POST", 
@@ -233,20 +219,13 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace(resourcePath, "\\*", string.Empty)
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
-            var response = this.apiInvoker.InvokeApi(
-                resourcePath, 
-                "POST", 
-                postBody, 
-                null, 
-                null);
-
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-
-            return null;
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
+            return this.apiInvoker.InvokeBinaryApi(
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
         }
 
         /// <summary>
@@ -263,7 +242,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var response = this.apiInvoker.InvokeApi(
                 resourcePath, 
                 "POST", 
@@ -292,20 +271,13 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace(resourcePath, "\\*", string.Empty)
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
-            var response = this.apiInvoker.InvokeApi(
-                resourcePath, 
-                "POST", 
-                postBody, 
-                null, 
-                null);
-
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-
-            return null;
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
+            return this.apiInvoker.InvokeBinaryApi(
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
         }
 
         /// <summary>
@@ -322,7 +294,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var response = this.apiInvoker.InvokeApi(
                 resourcePath, 
                 "POST", 
@@ -351,20 +323,13 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace(resourcePath, "\\*", string.Empty)
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
-            var response = this.apiInvoker.InvokeApi(
-                resourcePath, 
-                "POST", 
-                postBody, 
-                null, 
-                null);
-
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-
-            return null;
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
+            return this.apiInvoker.InvokeBinaryApi(
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
         }
 
         /// <summary>
@@ -381,7 +346,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var response = this.apiInvoker.InvokeApi(
                 resourcePath, 
                 "POST", 
@@ -410,20 +375,13 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace(resourcePath, "\\*", string.Empty)
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
-            var response = this.apiInvoker.InvokeApi(
-                resourcePath, 
-                "POST", 
-                postBody, 
-                null, 
-                null);
-
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-
-            return null;
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
+            return this.apiInvoker.InvokeBinaryApi(
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
         }
 
         /// <summary>
@@ -546,7 +504,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var response = this.apiInvoker.InvokeApi(
                 resourcePath, 
                 "POST", 
@@ -575,20 +533,13 @@ namespace GroupDocs.Conversion.Cloud.Sdk
                         .Replace(resourcePath, "\\*", string.Empty)
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
-            var postBody = SerializationHelper.Serialize(request.Settings); // http body (model) parameter
-            var response = this.apiInvoker.InvokeApi(
-                resourcePath, 
-                "POST", 
-                postBody, 
-                null, 
-                null);
-
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-
-            return null;
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
+            return this.apiInvoker.InvokeBinaryApi(
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new QuickConvertRequest
             {
-                Settings = new QuickConversionSettings
+                Request = new QuickConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Format = "jpg"
@@ -40,7 +40,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var request = new QuickConvertToStreamRequest
             {
-                Settings = new QuickConversionSettings
+                Request = new QuickConversionRequest
                 {
                     SourceFile = ToConversionFileInfo(file),
                     Format = "jpg"

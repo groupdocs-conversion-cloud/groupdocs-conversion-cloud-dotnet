@@ -42,18 +42,18 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="ConvertToSlidesRequest"/> class.
         /// </summary>
-        /// <param name="settings">The settings</param>
+        /// <param name="request">The settings</param>
         /// <param name="outPath">path to output document on file storage</param>
-        public ConvertToSlidesRequest(SlidesConversionSettings settings = null, string outPath = null)             
+        public ConvertToSlidesRequest(SlidesConversionRequest request = null, string outPath = null)             
         {
-            this.Settings = settings;
+            this.Request = request;
             this.OutPath = outPath;
         }
 
         /// <summary>
         /// The settings
         /// </summary>  
-        public SlidesConversionSettings Settings { get; set; }
+        public SlidesConversionRequest Request { get; set; }
 
         /// <summary>
         /// path to output document on file storage
