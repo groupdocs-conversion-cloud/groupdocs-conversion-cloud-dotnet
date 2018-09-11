@@ -41,11 +41,11 @@ namespace GroupDocs.Conversion.Cloud.Examples.Conversions
 
                 // convert to Slides
                 var response = apiInstance.ConvertToSlides(request);
-                Console.Write(response.Href.ToString());
+                Console.WriteLine(response.Href.ToString());
             }
             catch (Exception e)
             {
-                Console.Write("Exception when calling ConversionApi.ConvertToSlides: " + e.Message);
+                Console.WriteLine("Exception when calling ConversionApi.ConvertToSlides: " + e.Message);
             }
         }
     }

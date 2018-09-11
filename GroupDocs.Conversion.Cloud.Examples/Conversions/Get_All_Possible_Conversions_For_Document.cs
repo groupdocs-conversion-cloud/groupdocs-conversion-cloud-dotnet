@@ -33,11 +33,11 @@ namespace GroupDocs.Conversion.Cloud.Examples.Conversions
                 // Get supported file formats for specified document type
                 var response = apiInstance.PossibleConversionsForDocument(request);
 
-                Console.Write(string.Format("{0}: {1}", response.SourceFileType, string.Join(",", response.PossibleConversions)));
+                Console.WriteLine(string.Format("{0}: {1}", response.SourceFileType, string.Join(",", response.PossibleConversions)));
             }
             catch (Exception e)
             {
-                Console.Write("Exception when calling ConversionApi.PossibleConversionsForDocument: " + e.Message);
+                Console.WriteLine("Exception when calling ConversionApi.PossibleConversionsForDocument: " + e.Message);
             }
         }
     }

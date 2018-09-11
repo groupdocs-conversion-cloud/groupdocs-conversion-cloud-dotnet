@@ -42,12 +42,12 @@ namespace GroupDocs.Conversion.Cloud.Examples.Conversions
 
                 // convert to cells
                 var response = apiInstance.ConvertToCellsStream(request);
-                Console.Write(response.Length.ToString());
+                Console.WriteLine(response.Length.ToString());
                 return response;
             }
             catch (Exception e)
             {
-                Console.Write("Exception when calling ConversionApi.ConvertToCellsStream: " + e.Message);
+                Console.WriteLine("Exception when calling ConversionApi.ConvertToCellsStream: " + e.Message);
             }
             return null;
         }

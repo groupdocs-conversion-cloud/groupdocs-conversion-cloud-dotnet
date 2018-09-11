@@ -41,11 +41,11 @@ namespace GroupDocs.Conversion.Cloud.Examples.Conversions
 
                 // convert to Pdf
                 var response = apiInstance.ConvertToPdfStream(request);
-                Console.Write(response.Length.ToString());
+                Console.WriteLine(response.Length.ToString());
             }
             catch (Exception e)
             {
-                Console.Write("Exception when calling ConversionApi.ConvertToPdfStream: " + e.Message);
+                Console.WriteLine("Exception when calling ConversionApi.ConvertToPdfStream: " + e.Message);
             }
         }
     }

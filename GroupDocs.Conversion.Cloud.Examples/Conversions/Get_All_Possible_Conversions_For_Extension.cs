@@ -35,11 +35,11 @@ namespace GroupDocs.Conversion.Cloud.Examples.Conversions
                 var response = apiInstance.GetPossibleConversionsForFileType(request);
 
 
-                Console.Write(string.Format("{0}: {1}", response.SourceFileType, string.Join(",", response.PossibleConversions)));
+                Console.WriteLine(string.Format("{0}: {1}", response.SourceFileType, string.Join(",", response.PossibleConversions)));
             }
             catch (Exception e)
             {
-                Console.Write("Exception when calling ConversionApi.GetPossibleConversionsForFileType: " + e.Message);
+                Console.WriteLine("Exception when calling ConversionApi.GetPossibleConversionsForFileType: " + e.Message);
             }
         }
     }

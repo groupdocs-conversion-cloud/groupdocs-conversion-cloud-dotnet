@@ -70,12 +70,22 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="README.md" />
+    <None Include="Resources\conversions\sample-one-page.docx" />
+    <None Include="Resources\conversions\sample-one-page.pdf" />
+    <None Include="Resources\conversions\sample.docx" />
+    <None Include="Resources\conversions\sample.pdf" />
+    <None Include="Resources\conversions\sample.xlsx" />
+    <None Include="Resources\conversions\three-sheets.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GroupDocs.Conversion.Cloud.Sdk\GroupDocs.Conversion.Cloud.Sdk.csproj">
       <Project>{13284d1a-8b08-469a-a58b-5c94b92c68e7}</Project>
       <Name>GroupDocs.Conversion.Cloud.Sdk</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\conversions\one-page.jpg" />
+    <Content Include="Resources\conversions\sample.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
