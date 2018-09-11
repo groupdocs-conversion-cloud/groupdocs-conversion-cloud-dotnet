@@ -19,7 +19,7 @@ namespace GroupDocs.Conversion.Cloud.Examples
             Common.MyAppSid = "XXXX-XXXX-XXXX";
             Common.MyAppKey = "XXXXXXXXXX";
 
-            // Uploading sample test files from local to defult storage under folder 'conversions'
+            // Uploading sample test files from local to default storage under folder 'conversions'
             Common.UploadSampleTestFiles();
 
             // Get All Possible Conversions Formats
@@ -27,7 +27,7 @@ namespace GroupDocs.Conversion.Cloud.Examples
             // Get All Possible Conversions Formats For Provided Document
             Get_All_Possible_Conversions_For_Document.Run();
             // Get All Possible Conversions Formats For Provided Extension
-            Get_All_Possible_Conversions_For_Extension.Run();
+            // Get_All_Possible_Conversions_For_Extension.Run();
 
             // Quick Convert to Any Desired Output Format and Get Output File Url
             Convert_To_Any_Format.Run();
