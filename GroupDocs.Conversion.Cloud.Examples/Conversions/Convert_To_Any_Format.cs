@@ -41,11 +41,11 @@ namespace GroupDocs.Conversion.Cloud.Examples.Conversions
 
                 // convert to specified format
                 var response = apiInstance.QuickConvert(request);
-                Console.Write(response.Href.ToString());
+                Console.WriteLine(response.Href.ToString());
             }
             catch (Exception e)
             {
-                Console.Write("Exception when calling ConversionApi.QuickConvert: " + e.Message);
+                Console.WriteLine("Exception when calling ConversionApi.QuickConvert: " + e.Message);
             }
         }
     }

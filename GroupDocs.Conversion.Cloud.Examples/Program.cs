@@ -17,7 +17,10 @@ namespace GroupDocs.Conversion.Cloud.Examples
 
             //TODO: Get your AppSID and AppKey at https://dashboard.groupdocs.cloud (free registration is required).
             Common.MyAppSid = "XXXX-XXXX-XXXX";
-            Common.MyAppKey = "XXXXXXXXXXXX";
+            Common.MyAppKey = "XXXXXXXXXX";
+
+            // Uploading sample test files from local to defult storage under folder 'conversions'
+            Common.UploadSampleTestFiles();
 
             // Get All Possible Conversions Formats
             Get_All_Possible_Conversions.Run();

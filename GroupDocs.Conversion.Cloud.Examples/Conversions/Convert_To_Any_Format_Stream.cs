@@ -41,11 +41,11 @@ namespace GroupDocs.Conversion.Cloud.Examples.Conversions
 
                 // convert to specified format
                 var response = apiInstance.QuickConvertToStream(request);
-                Console.Write(response.Length.ToString());
+                Console.WriteLine(response.Length.ToString());
             }
             catch (Exception e)
             {
-                Console.Write("Exception when calling ConversionApi.QuickConvertToStream: " + e.Message);
+                Console.WriteLine("Exception when calling ConversionApi.QuickConvertToStream: " + e.Message);
             }
         }
     }

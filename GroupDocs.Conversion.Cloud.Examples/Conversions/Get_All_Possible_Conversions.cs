@@ -32,12 +32,12 @@ namespace GroupDocs.Conversion.Cloud.Examples.Conversions
 
                 foreach (var entry in response.Conversions)
                 {
-                    Console.Write(string.Format("{0}: {1}", entry.SourceFileType, string.Join(",", entry.PossibleConversions)));
+                    Console.WriteLine(string.Format("{0}: {1}", entry.SourceFileType, string.Join(",", entry.PossibleConversions)));
                 }
             }
             catch (Exception e)
             {
-                Console.Write("Exception when calling ConversionApi.GetAllPossibleConversions: " + e.Message);
+                Console.WriteLine("Exception when calling ConversionApi.GetAllPossibleConversions: " + e.Message);
             }
         }
     }

@@ -41,11 +41,11 @@ namespace GroupDocs.Conversion.Cloud.Examples.Conversions
 
                 // convert to HTML
                 var response = apiInstance.ConvertToHtml(request);
-                Console.Write(response.Href.ToString());
+                Console.WriteLine(response.Href.ToString());
             }
             catch (Exception e)
             {
-                Console.Write("Exception when calling ConversionApi.ConvertToHtml: " + e.Message);
+                Console.WriteLine("Exception when calling ConversionApi.ConvertToHtml: " + e.Message);
             }
         }
     }
