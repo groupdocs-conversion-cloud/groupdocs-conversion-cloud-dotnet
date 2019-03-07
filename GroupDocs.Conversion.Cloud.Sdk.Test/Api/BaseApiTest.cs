@@ -1,84 +1,101 @@
-﻿using GroupDocs.Conversion.Cloud.Sdk.Model;
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright company="Aspose Pty Ltd">
+//  Copyright (c) 2003-2019 Aspose Pty Ltd
+// </copyright>
+// <summary>
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+// 
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+// 
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
 using System;
-using System.Configuration;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+using Configuration = GroupDocs.Conversion.Cloud.Sdk.Client.Configuration;
 
 namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 {
-    using GroupDocs.Conversion.Cloud.Sdk.Api;
-    using GroupDocs.Conversion.Cloud.Sdk.Test.Internal;
+    using Newtonsoft.Json;
     using NUnit.Framework;
+    using Internal;
 
     public class BaseApiTest
     {
-        protected const string FromUrlFolder = "tests\\from_url";
-        protected const string FromContentFolder = "tests\\from_content";
-
-        private readonly string _appSid = ConfigurationManager.AppSettings["AppSID"];
-        private readonly string _appKey = ConfigurationManager.AppSettings["AppKey"];
-        private readonly string _apiBaseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+        private readonly string _appSid = Config.AppSid;
+        private readonly string _appKey = Config.AppKey;
+        private readonly string _apiBaseUrl = Config.ApiBaseUrl;
 
         protected ConversionApi ConversionApi;
+        protected FileApi FileApi;
+        protected FolderApi FolderApi;
         protected StorageApi StorageApi;
 
-        [SetUp]
-        public void BeforeEachTest()
+        [OneTimeSetUp]
+        public void BeforeAllTests()
         {
-            var conversionConfig = new Configuration
+            var config = new Configuration(_appSid, _appKey)
             {
-                AuthType = AuthType.OAuth2,
-                AppSid = _appSid,
-                AppKey = _appKey,
                 ApiBaseUrl = _apiBaseUrl
             };
 
-            ConversionApi = new ConversionApi(conversionConfig);
+            ConversionApi = new ConversionApi(config);
+            FileApi = new FileApi(config);
+            FolderApi = new FolderApi(config);
+            StorageApi = new StorageApi(config);
 
-            var storageConfig = new Configuration
-            {
-                AuthType = AuthType.OAuth2,
-                AppSid = _appSid,
-                AppKey = _appKey,
-                ApiBaseUrl = _apiBaseUrl
-            };
-
-            StorageApi = new StorageApi(storageConfig);
+            UploadTestFiles();
         }
 
         [TearDown]
         public void AfterEachTest()
         {
-            RemoveTempFiles();
+            Cleanup();
         }
 
-        protected ConversionFileInfo ToConversionFileInfo(TestFile file)
+        private void UploadTestFiles()
         {
-            return new ConversionFileInfo
+            foreach (var testFile in TestFiles.TestFilesList)
             {
-                Folder = file.Folder,
-                Name = file.FileName,
-                Password = file.Password
-            };
+                var existRequest = new ObjectExistsRequest(testFile.FullName);
+                var existResponse = StorageApi.ObjectExists(existRequest);
+                if(existResponse.Exists == true) continue;
+                var request = new UploadFileRequest(testFile.FullName, GetTestFileStream(testFile));
+                FileApi.UploadFile(request);
+            }
         }
 
-        private void RemoveTempFiles()
+        private void Cleanup()
         {
-            //if (Directory.Exists(Path.Combine(GetTestDataPath(), "cache")))
-            //    Directory.Delete(Path.Combine(GetTestDataPath(), "cache"), true);
+            DeleteFolderFromStorage("conversion");
+        }
 
-            //if (Directory.Exists(Path.Combine(GetTestDataPath(), "tests")))
-            //    Directory.Delete(Path.Combine(GetTestDataPath(), "tests"), true);
-
-            StorageApi.DeleteFolder("cache");
-            StorageApi.DeleteFolder("tests");
+        private void DeleteFolderFromStorage(string folderName)
+        {
+            var request = new DeleteFolderRequest(folderName, null, true);
+            FolderApi.DeleteFolder(request);                        
         }
 
         private byte[] GetTestFileBytes(TestFile file)
         {
-            var filePath = Path.Combine(Path.Combine(GetTestDataPath(), file.Folder), file.FileName);
-
+            var filePath = Path.Combine(GetTestDataPath(), file.Folder, file.FileName);
             if (!File.Exists(filePath))
             {
                 throw new FileNotFoundException("File not found: " + filePath);
@@ -94,22 +111,27 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
             return new MemoryStream(bytes);
         }
 
+        // ReSharper disable once UnusedMember.Global
         protected Stream SerializeObject(object obj)
         {
-            var json = Internal.SerializationHelper.Serialize(obj);
+            var options = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore
+            };
+            var json = JsonConvert.SerializeObject(obj, options);
+
             var bytes = Encoding.UTF8.GetBytes(json);
 
             return new MemoryStream(bytes);
         }
 
-        private string GetTestDataPath()
+        private static string GetTestDataPath()
         {
             var uri = new Uri(Assembly.GetExecutingAssembly().CodeBase);
-            var workingDir = Path.GetDirectoryName(uri.LocalPath);
-            if (workingDir == null)
-                workingDir = Directory.GetCurrentDirectory();
+            var workingDir = Path.GetDirectoryName(uri.LocalPath) ?? Directory.GetCurrentDirectory();
 
-            var baseDir = Path.Combine(Path.Combine(workingDir, "Resources"), "TestData");
+            var baseDir = Path.Combine(workingDir, "Resources", "TestData");
+
             return Path.GetFullPath(baseDir);
         }
     }

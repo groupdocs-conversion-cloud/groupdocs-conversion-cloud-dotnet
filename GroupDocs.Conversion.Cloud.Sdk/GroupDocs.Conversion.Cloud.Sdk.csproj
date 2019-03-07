@@ -13,7 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <NuGetPackageImportStamp>9e52cd64</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -52,7 +53,6 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Debug\GroupDocs.Conversion.Cloud.Sdk.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\Release\</OutputPath>
@@ -64,13 +64,15 @@
     <Prefer32Bit>false</Prefer32Bit>
     <DocumentationFile>bin\Release\GroupDocs.Conversion.Cloud.Sdk.xml</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net20\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net20\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -82,75 +84,202 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\ApiException.cs" />
-    <Compile Include="Api\AuthType.cs" />
-    <Compile Include="Api\Configuration.cs" />
-    <Compile Include="Api\ConversionApi.cs" />
+    <Compile Include="Api\FileApi.cs" />
+    <Compile Include="Api\FolderApi.cs" />
     <Compile Include="Api\StorageApi.cs" />
-    <Compile Include="Internal\ApiInvoker.cs" />
-    <Compile Include="Internal\NeedRepeatRequestException.cs" />
-    <Compile Include="Internal\FileInfo.cs" />
-    <Compile Include="Internal\IRequestHandler.cs" />
-    <Compile Include="Internal\RequestHandlers\LegacyApiErrorResponse.cs" />
-    <Compile Include="Internal\RequestHandlers\ApiErrorResponse.cs" />
-    <Compile Include="Internal\RequestHandlers\ApiExceptionRequestHandler.cs" />
-    <Compile Include="Internal\RequestHandlers\AuthWithSignatureRequestHandler.cs" />
-    <Compile Include="Internal\RequestHandlers\DebugLogRequestHandler.cs" />
-    <Compile Include="Internal\RequestHandlers\Error.cs" />
-    <Compile Include="Internal\RequestHandlers\OAuthRequestHandler.cs" />
-    <Compile Include="Internal\SerializationHelper.cs" />
-    <Compile Include="Internal\StreamHelper.cs" />
-    <Compile Include="Internal\UrlHelper.cs" />
-    <Compile Include="Model\AllPossibleConversionsResponse.cs" />
-    <Compile Include="Model\BaseConversionRequest.cs" />
-    <Compile Include="Model\CadOptionsDto.cs" />
-    <Compile Include="Model\CellsConversionRequest.cs" />
-    <Compile Include="Model\CellsOptionsDto.cs" />
-    <Compile Include="Model\CellsSaveOptionsDto.cs" />
-    <Compile Include="Model\ConversionFileInfo.cs" />
-    <Compile Include="Model\FileResponse.cs" />
-    <Compile Include="Model\HtmlConversionRequest.cs" />
-    <Compile Include="Model\HtmlSaveOptionsDto.cs" />
-    <Compile Include="Model\ImageConversionRequest.cs" />
-    <Compile Include="Model\ImageSaveOptionsDto.cs" />
-    <Compile Include="Model\Link.cs" />
-    <Compile Include="Model\PdfConversionRequest.cs" />
-    <Compile Include="Model\PdfOptimizationOptionsDto.cs" />
-    <Compile Include="Model\PdfOptionsDto.cs" />
-    <Compile Include="Model\PdfSaveOptionsDto.cs" />
-    <Compile Include="Model\PossibleConversionResponse.cs" />
-    <Compile Include="Model\PsdOptionsDto.cs" />
-    <Compile Include="Model\QuickConversionRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToCellsRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToCellsStreamRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToHtmlRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToHtmlStreamRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToImageRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToImageStreamRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToPdfRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToPdfStreamRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToSlidesRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToSlidesStreamRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToWordsRequest.cs" />
-    <Compile Include="Model\Requests\ConvertToWordsStreamRequest.cs" />
-    <Compile Include="Model\Requests\GetAllPossibleConversionsRequest.cs" />
-    <Compile Include="Model\Requests\GetPossibleConversionsForFileTypeRequest.cs" />
-    <Compile Include="Model\Requests\PossibleConversionsForDocumentRequest.cs" />
-    <Compile Include="Model\Requests\QuickConvertRequest.cs" />
-    <Compile Include="Model\Requests\QuickConvertToStreamRequest.cs" />
-    <Compile Include="Model\Responses\FileExist.cs" />
-    <Compile Include="Model\Responses\FileExistResponse.cs" />
-    <Compile Include="Model\Responses\ResponseMessage.cs" />
-    <Compile Include="Model\RtfOptionsDto.cs" />
-    <Compile Include="Model\SaveOptionsBaseDto.cs" />
-    <Compile Include="Model\SlidesConversionRequest.cs" />
-    <Compile Include="Model\SlidesSaveOptionsDto.cs" />
-    <Compile Include="Model\TiffOptionsDto.cs" />
-    <Compile Include="Model\WatermarkOptionsDto.cs" />
-    <Compile Include="Model\WebpOptionsDto.cs" />
-    <Compile Include="Model\WordBookmarksOptionsDto.cs" />
-    <Compile Include="Model\WordsConversionRequest.cs" />
-    <Compile Include="Model\WordsSaveOptionsDto.cs" />
+    <Compile Include="Api\ConversionApi.cs" />
+    <Compile Include="Client\ApiException.cs" />
+    <Compile Include="Client\ApiInvoker.cs" />
+    <Compile Include="Client\Configuration.cs" />
+    <Compile Include="Client\FileInfo.cs" />
+    <Compile Include="Client\IRequestHandler.cs" />
+    <Compile Include="Client\NeedRepeatRequestException.cs" />
+    <Compile Include="Client\RequestHandlers\AuthErrorResponse.cs" />
+    <Compile Include="Client\RequestHandlers\ApiErrorResponse.cs" />
+    <Compile Include="Client\RequestHandlers\ApiExceptionRequestHandler.cs" />
+    <Compile Include="Client\RequestHandlers\DebugLogRequestHandler.cs" />
+    <Compile Include="Client\RequestHandlers\Error.cs" />
+    <Compile Include="Client\RequestHandlers\AuthRequestHandler.cs" />
+    <Compile Include="Client\SerializationHelper.cs" />
+    <Compile Include="Client\StreamHelper.cs" />
+    <Compile Include="Client\UrlHelper.cs" />
+    <Compile Include="Model\BmpConvertOptions.cs" />
+    <Compile Include="Model\BmpLoadOptions.cs" />
+    <Compile Include="Model\CadLoadOptions.cs" />
+    <Compile Include="Model\CgmConvertOptions.cs" />
+    <Compile Include="Model\ColorModes.cs" />
+    <Compile Include="Model\CompressionMethods.cs" />
+    <Compile Include="Model\ConvertOptions.cs" />
+    <Compile Include="Model\ConvertSettings.cs" />
+    <Compile Include="Model\CsvLoadOptions.cs" />
+    <Compile Include="Model\DcmConvertOptions.cs" />
+    <Compile Include="Model\DcmLoadOptions.cs" />
+    <Compile Include="Model\DgnLoadOptions.cs" />
+    <Compile Include="Model\DiagramLoadOptions.cs" />
+    <Compile Include="Model\DiscUsage.cs" />
+    <Compile Include="Model\DjvuConvertOptions.cs" />
+    <Compile Include="Model\DngConvertOptions.cs" />
+    <Compile Include="Model\DngLoadOptions.cs" />
+    <Compile Include="Model\DocConvertOptions.cs" />
+    <Compile Include="Model\DocLoadOptions.cs" />
+    <Compile Include="Model\DocmConvertOptions.cs" />
+    <Compile Include="Model\DocmLoadOptions.cs" />
+    <Compile Include="Model\DocxConvertOptions.cs" />
+    <Compile Include="Model\DocxLoadOptions.cs" />
+    <Compile Include="Model\DotConvertOptions.cs" />
+    <Compile Include="Model\DotLoadOptions.cs" />
+    <Compile Include="Model\DotmConvertOptions.cs" />
+    <Compile Include="Model\DotmLoadOptions.cs" />
+    <Compile Include="Model\DotxConvertOptions.cs" />
+    <Compile Include="Model\DotxLoadOptions.cs" />
+    <Compile Include="Model\DwfLoadOptions.cs" />
+    <Compile Include="Model\DwgLoadOptions.cs" />
+    <Compile Include="Model\DxfLoadOptions.cs" />
+    <Compile Include="Model\EmailLoadOptions.cs" />
+    <Compile Include="Model\EmfConvertOptions.cs" />
+    <Compile Include="Model\EmfLoadOptions.cs" />
+    <Compile Include="Model\EmlLoadOptions.cs" />
+    <Compile Include="Model\EmlxLoadOptions.cs" />
+    <Compile Include="Model\EpubConvertOptions.cs" />
+    <Compile Include="Model\Error.cs" />
+    <Compile Include="Model\ErrorDetails.cs" />
+    <Compile Include="Model\FilesList.cs" />
+    <Compile Include="Model\FilesUploadResult.cs" />
+    <Compile Include="Model\FileVersion.cs" />
+    <Compile Include="Model\FileVersions.cs" />
+    <Compile Include="Model\GifConvertOptions.cs" />
+    <Compile Include="Model\GifLoadOptions.cs" />
+    <Compile Include="Model\HtmlConvertOptions.cs" />
+    <Compile Include="Model\IcoConvertOptions.cs" />
+    <Compile Include="Model\IcoLoadOptions.cs" />
+    <Compile Include="Model\IfcLoadOptions.cs" />
+    <Compile Include="Model\IgsLoadOptions.cs" />
+    <Compile Include="Model\ImageConvertOptions.cs" />
+    <Compile Include="Model\ImageLoadOptions.cs" />
+    <Compile Include="Model\J2cConvertOptions.cs" />
+    <Compile Include="Model\J2cLoadOptions.cs" />
+    <Compile Include="Model\J2kConvertOptions.cs" />
+    <Compile Include="Model\J2kLoadOptions.cs" />
+    <Compile Include="Model\Jp2ConvertOptions.cs" />
+    <Compile Include="Model\Jp2LoadOptions.cs" />
+    <Compile Include="Model\JpegConvertOptions.cs" />
+    <Compile Include="Model\JpegLoadOptions.cs" />
+    <Compile Include="Model\JpfConvertOptions.cs" />
+    <Compile Include="Model\JpfLoadOptions.cs" />
+    <Compile Include="Model\JpgConvertOptions.cs" />
+    <Compile Include="Model\JpgLoadOptions.cs" />
+    <Compile Include="Model\JpmConvertOptions.cs" />
+    <Compile Include="Model\JpmLoadOptions.cs" />
+    <Compile Include="Model\JpxConvertOptions.cs" />
+    <Compile Include="Model\JpxLoadOptions.cs" />
+    <Compile Include="Model\LoadOptions.cs" />
+    <Compile Include="Model\MhtLoadOptions.cs" />
+    <Compile Include="Model\MobiLoadOptions.cs" />
+    <Compile Include="Model\MsgLoadOptions.cs" />
+    <Compile Include="Model\ObjectExist.cs" />
+    <Compile Include="Model\OdgConvertOptions.cs" />
+    <Compile Include="Model\OdgLoadOptions.cs" />
+    <Compile Include="Model\OdpConvertOptions.cs" />
+    <Compile Include="Model\OdpLoadOptions.cs" />
+    <Compile Include="Model\OdsConvertOptions.cs" />
+    <Compile Include="Model\OdsLoadOptions.cs" />
+    <Compile Include="Model\OdtConvertOptions.cs" />
+    <Compile Include="Model\OdtLoadOptions.cs" />
+    <Compile Include="Model\OneLoadOptions.cs" />
+    <Compile Include="Model\OstLoadOptions.cs" />
+    <Compile Include="Model\OtpConvertOptions.cs" />
+    <Compile Include="Model\OtpLoadOptions.cs" />
+    <Compile Include="Model\OtsConvertOptions.cs" />
+    <Compile Include="Model\OtsLoadOptions.cs" />
+    <Compile Include="Model\OttConvertOptions.cs" />
+    <Compile Include="Model\OttLoadOptions.cs" />
+    <Compile Include="Model\PdfConvertOptions.cs" />
+    <Compile Include="Model\PdfDirection.cs" />
+    <Compile Include="Model\PdfFormatType.cs" />
+    <Compile Include="Model\PdfLoadOptions.cs" />
+    <Compile Include="Model\PdfPageLayout.cs" />
+    <Compile Include="Model\PdfPageMode.cs" />
+    <Compile Include="Model\PltLoadOptions.cs" />
+    <Compile Include="Model\PngConvertOptions.cs" />
+    <Compile Include="Model\PngLoadOptions.cs" />
+    <Compile Include="Model\PotmConvertOptions.cs" />
+    <Compile Include="Model\PotmLoadOptions.cs" />
+    <Compile Include="Model\PotxConvertOptions.cs" />
+    <Compile Include="Model\PotxLoadOptions.cs" />
+    <Compile Include="Model\PpsConvertOptions.cs" />
+    <Compile Include="Model\PpsLoadOptions.cs" />
+    <Compile Include="Model\PpsmConvertOptions.cs" />
+    <Compile Include="Model\PpsmLoadOptions.cs" />
+    <Compile Include="Model\PpsxConvertOptions.cs" />
+    <Compile Include="Model\PpsxLoadOptions.cs" />
+    <Compile Include="Model\PptConvertOptions.cs" />
+    <Compile Include="Model\PptLoadOptions.cs" />
+    <Compile Include="Model\PptmConvertOptions.cs" />
+    <Compile Include="Model\PptmLoadOptions.cs" />
+    <Compile Include="Model\PptxConvertOptions.cs" />
+    <Compile Include="Model\PptxLoadOptions.cs" />
+    <Compile Include="Model\PresentationConvertOptions.cs" />
+    <Compile Include="Model\PresentationLoadOptions.cs" />
+    <Compile Include="Model\PsdConvertOptions.cs" />
+    <Compile Include="Model\PsdLoadOptions.cs" />
+    <Compile Include="Model\PstLoadOptions.cs" />
+    <Compile Include="Model\Rotation.cs" />
+    <Compile Include="Model\RtfConvertOptions.cs" />
+    <Compile Include="Model\SpreadsheetConvertOptions.cs" />
+    <Compile Include="Model\SpreadsheetLoadOptions.cs" />
+    <Compile Include="Model\StlLoadOptions.cs" />
+    <Compile Include="Model\StorageExist.cs" />
+    <Compile Include="Model\StorageFile.cs" />
+    <Compile Include="Model\StoredConvertedResult.cs" />
+    <Compile Include="Model\SupportedFormat.cs" />
+    <Compile Include="Model\SvgConvertOptions.cs" />
+    <Compile Include="Model\TifConvertOptions.cs" />
+    <Compile Include="Model\TiffCompression.cs" />
+    <Compile Include="Model\TiffConvertOptions.cs" />
+    <Compile Include="Model\TiffLoadOptions.cs" />
+    <Compile Include="Model\TifLoadOptions.cs" />
+    <Compile Include="Model\TsvConvertOptions.cs" />
+    <Compile Include="Model\TsvLoadOptions.cs" />
+    <Compile Include="Model\TxtConvertOptions.cs" />
+    <Compile Include="Model\TxtLeadingSpacesOptions.cs" />
+    <Compile Include="Model\TxtLoadOptions.cs" />
+    <Compile Include="Model\TxtTrailingSpacesOptions.cs" />
+    <Compile Include="Model\VdwLoadOptions.cs" />
+    <Compile Include="Model\VdxLoadOptions.cs" />
+    <Compile Include="Model\VsdLoadOptions.cs" />
+    <Compile Include="Model\VsdmLoadOptions.cs" />
+    <Compile Include="Model\VsdxLoadOptions.cs" />
+    <Compile Include="Model\VssLoadOptions.cs" />
+    <Compile Include="Model\VssmLoadOptions.cs" />
+    <Compile Include="Model\VssxLoadOptions.cs" />
+    <Compile Include="Model\VstLoadOptions.cs" />
+    <Compile Include="Model\VstmLoadOptions.cs" />
+    <Compile Include="Model\VstxLoadOptions.cs" />
+    <Compile Include="Model\VsxLoadOptions.cs" />
+    <Compile Include="Model\VtxLoadOptions.cs" />
+    <Compile Include="Model\WatermarkOptions.cs" />
+    <Compile Include="Model\WebpConvertOptions.cs" />
+    <Compile Include="Model\WebpLoadOptions.cs" />
+    <Compile Include="Model\WmfConvertOptions.cs" />
+    <Compile Include="Model\WmfLoadOptions.cs" />
+    <Compile Include="Model\WordProcessingConvertOptions.cs" />
+    <Compile Include="Model\WordProcessingLoadOptions.cs" />
+    <Compile Include="Model\Xls2003ConvertOptions.cs" />
+    <Compile Include="Model\Xls2003LoadOptions.cs" />
+    <Compile Include="Model\XlsbConvertOptions.cs" />
+    <Compile Include="Model\XlsbLoadOptions.cs" />
+    <Compile Include="Model\XlsConvertOptions.cs" />
+    <Compile Include="Model\XlsLoadOptions.cs" />
+    <Compile Include="Model\XlsmConvertOptions.cs" />
+    <Compile Include="Model\XlsmLoadOptions.cs" />
+    <Compile Include="Model\XlsxConvertOptions.cs" />
+    <Compile Include="Model\XlsxLoadOptions.cs" />
+    <Compile Include="Model\XltmConvertOptions.cs" />
+    <Compile Include="Model\XltmLoadOptions.cs" />
+    <Compile Include="Model\XltxConvertOptions.cs" />
+    <Compile Include="Model\XltxLoadOptions.cs" />
+    <Compile Include="Model\XmlLoadOptions.cs" />
+    <Compile Include="Model\XpsConvertOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -158,13 +287,4 @@
   <ProjectExtensions>
     <VisualStudio AllowExistingFolder="true" />
   </ProjectExtensions>
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-    <Error Condition="!Exists('..\packages\StyleCop.MSBuild.5.0.0\build\StyleCop.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StyleCop.MSBuild.5.0.0\build\StyleCop.MSBuild.targets'))" />
-  </Target>
-  <Import Project="..\packages\StyleCop.MSBuild.5.0.0\build\StyleCop.MSBuild.targets" Condition="Exists('..\packages\StyleCop.MSBuild.5.0.0\build\StyleCop.MSBuild.targets')" />
 </Project>
