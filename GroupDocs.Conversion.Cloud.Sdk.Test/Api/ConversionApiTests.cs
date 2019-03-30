@@ -23,6 +23,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.IO;
 using GroupDocs.Conversion.Cloud.Sdk.Model;
 using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
 using GroupDocs.Conversion.Cloud.Sdk.Test.Api.Internal;
@@ -45,16 +46,43 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             var settings = new ConvertSettings
             {
-                Storage = string.Empty,
                 FilePath = filePath,
                 Format = format,
                 ConvertOptions = options,
                 OutputPath = "converted"
             };
 
-            ConversionApi.ConvertDocument(new ConvertDocumentRequest(settings));
+            var result = ConversionApi.ConvertDocument(new ConvertDocumentRequest(settings));
 
-            Assert.IsTrue(true);
+            Assert.NotNull(result);
+            Assert.Greater(result.Count, 0);
+            var convertedExtension = Path.GetExtension(result[0].Name);
+            Assert.NotNull(convertedExtension);
+            Assert.AreEqual(targetFormat, convertedExtension.Substring(1));
+        }
+
+
+        /// <summary>
+        /// Test ConvertDocumentTest
+        /// </summary>
+        [TestCaseSource(typeof(ConvertOptionsTestCaseBuilder), "Conversions")]
+        public void ConvertDocumentDownloadTest(TestFile testFile, string targetFormat, ConvertOptions convertOptions)
+        {
+            var format = targetFormat;
+            var options = convertOptions;
+            var filePath = testFile.FullName;
+
+            var settings = new ConvertSettings
+            {
+                FilePath = filePath,
+                Format = format,
+                ConvertOptions = options
+            };
+
+            var result = ConversionApi.ConvertDocumentDownload(new ConvertDocumentRequest(settings));
+
+            Assert.IsNotNull(result);
+            Assert.Greater(result.Length, 0);
         }
 
         /// <summary>

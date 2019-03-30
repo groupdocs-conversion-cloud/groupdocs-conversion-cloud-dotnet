@@ -39,6 +39,289 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class PdfConvertOptions : ConvertOptions 
     {                       
         /// <summary>
+        /// Set the pdf format of the converted document.
+        /// </summary>
+        /// <value>Set the pdf format of the converted document.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PdfFormatEnum
+        { 
+            /// <summary>
+            /// Enum Default for "Default"
+            /// </summary>            
+            Default,
+            
+            /// <summary>
+            /// Enum PdfA1A for "PdfA_1A"
+            /// </summary>            
+            PdfA1A,
+            
+            /// <summary>
+            /// Enum PdfA1B for "PdfA_1B"
+            /// </summary>            
+            PdfA1B,
+            
+            /// <summary>
+            /// Enum PdfA2A for "PdfA_2A"
+            /// </summary>            
+            PdfA2A,
+            
+            /// <summary>
+            /// Enum PdfA3A for "PdfA_3A"
+            /// </summary>            
+            PdfA3A,
+            
+            /// <summary>
+            /// Enum PdfA2B for "PdfA_2B"
+            /// </summary>            
+            PdfA2B,
+            
+            /// <summary>
+            /// Enum PdfA2U for "PdfA_2U"
+            /// </summary>            
+            PdfA2U,
+            
+            /// <summary>
+            /// Enum PdfA3B for "PdfA_3B"
+            /// </summary>            
+            PdfA3B,
+            
+            /// <summary>
+            /// Enum PdfA3U for "PdfA_3U"
+            /// </summary>            
+            PdfA3U,
+            
+            /// <summary>
+            /// Enum V13 for "v1_3"
+            /// </summary>            
+            V13,
+            
+            /// <summary>
+            /// Enum V14 for "v1_4"
+            /// </summary>            
+            V14,
+            
+            /// <summary>
+            /// Enum V15 for "v1_5"
+            /// </summary>            
+            V15,
+            
+            /// <summary>
+            /// Enum V16 for "v1_6"
+            /// </summary>            
+            V16,
+            
+            /// <summary>
+            /// Enum V17 for "v1_7"
+            /// </summary>            
+            V17,
+            
+            /// <summary>
+            /// Enum PdfX1A for "PdfX_1A"
+            /// </summary>            
+            PdfX1A,
+            
+            /// <summary>
+            /// Enum PdfX3 for "PdfX3"
+            /// </summary>            
+            PdfX3            
+        }
+
+        /// <summary>
+        /// Sets reading order of text: L2R (left to right) or R2L (right to left). Default: L2R.
+        /// </summary>
+        /// <value>Sets reading order of text: L2R (left to right) or R2L (right to left). Default: L2R.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DirectionEnum
+        { 
+            /// <summary>
+            /// Enum L2R for "L2R"
+            /// </summary>            
+            L2R,
+            
+            /// <summary>
+            /// Enum R2L for "R2L"
+            /// </summary>            
+            R2L            
+        }
+
+        /// <summary>
+        /// Sets page mode, specifying how to display the document on exiting full-screen mode.
+        /// </summary>
+        /// <value>Sets page mode, specifying how to display the document on exiting full-screen mode.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum NonFullScreenPageModeEnum
+        { 
+            /// <summary>
+            /// Enum UseNone for "UseNone"
+            /// </summary>            
+            UseNone,
+            
+            /// <summary>
+            /// Enum UseOutlines for "UseOutlines"
+            /// </summary>            
+            UseOutlines,
+            
+            /// <summary>
+            /// Enum UseThumbs for "UseThumbs"
+            /// </summary>            
+            UseThumbs,
+            
+            /// <summary>
+            /// Enum FullScreen for "FullScreen"
+            /// </summary>            
+            FullScreen,
+            
+            /// <summary>
+            /// Enum UseOC for "UseOC"
+            /// </summary>            
+            UseOC,
+            
+            /// <summary>
+            /// Enum UseAttachments for "UseAttachments"
+            /// </summary>            
+            UseAttachments            
+        }
+
+        /// <summary>
+        /// Sets page layout which shall be used when the document is opened.
+        /// </summary>
+        /// <value>Sets page layout which shall be used when the document is opened.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PageLayoutEnum
+        { 
+            /// <summary>
+            /// Enum Default for "Default"
+            /// </summary>            
+            Default,
+            
+            /// <summary>
+            /// Enum SinglePage for "SinglePage"
+            /// </summary>            
+            SinglePage,
+            
+            /// <summary>
+            /// Enum OneColumn for "OneColumn"
+            /// </summary>            
+            OneColumn,
+            
+            /// <summary>
+            /// Enum TwoColumnLeft for "TwoColumnLeft"
+            /// </summary>            
+            TwoColumnLeft,
+            
+            /// <summary>
+            /// Enum TwoColumnRight for "TwoColumnRight"
+            /// </summary>            
+            TwoColumnRight,
+            
+            /// <summary>
+            /// Enum TwoPageLeft for "TwoPageLeft"
+            /// </summary>            
+            TwoPageLeft,
+            
+            /// <summary>
+            /// Enum TwoPageRight for "TwoPageRight"
+            /// </summary>            
+            TwoPageRight            
+        }
+
+        /// <summary>
+        /// Sets page mode, specifying how document should be displayed when opened.
+        /// </summary>
+        /// <value>Sets page mode, specifying how document should be displayed when opened.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PageModeEnum
+        { 
+            /// <summary>
+            /// Enum UseNone for "UseNone"
+            /// </summary>            
+            UseNone,
+            
+            /// <summary>
+            /// Enum UseOutlines for "UseOutlines"
+            /// </summary>            
+            UseOutlines,
+            
+            /// <summary>
+            /// Enum UseThumbs for "UseThumbs"
+            /// </summary>            
+            UseThumbs,
+            
+            /// <summary>
+            /// Enum FullScreen for "FullScreen"
+            /// </summary>            
+            FullScreen,
+            
+            /// <summary>
+            /// Enum UseOC for "UseOC"
+            /// </summary>            
+            UseOC,
+            
+            /// <summary>
+            /// Enum UseAttachments for "UseAttachments"
+            /// </summary>            
+            UseAttachments            
+        }
+
+        /// <summary>
+        /// Rotate page
+        /// </summary>
+        /// <value>Rotate page</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum RotateEnum
+        { 
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>            
+            None,
+            
+            /// <summary>
+            /// Enum On90 for "On90"
+            /// </summary>            
+            On90,
+            
+            /// <summary>
+            /// Enum On180 for "On180"
+            /// </summary>            
+            On180,
+            
+            /// <summary>
+            /// Enum On270 for "On270"
+            /// </summary>            
+            On270            
+        }
+
+        /// <summary>
+        /// Set the pdf format of the converted document.
+        /// </summary>
+        public PdfFormatEnum? PdfFormat { get; set; }
+
+        /// <summary>
+        /// Sets reading order of text: L2R (left to right) or R2L (right to left). Default: L2R.
+        /// </summary>
+        public DirectionEnum? Direction { get; set; }
+
+        /// <summary>
+        /// Sets page mode, specifying how to display the document on exiting full-screen mode.
+        /// </summary>
+        public NonFullScreenPageModeEnum? NonFullScreenPageMode { get; set; }
+
+        /// <summary>
+        /// Sets page layout which shall be used when the document is opened.
+        /// </summary>
+        public PageLayoutEnum? PageLayout { get; set; }
+
+        /// <summary>
+        /// Sets page mode, specifying how document should be displayed when opened.
+        /// </summary>
+        public PageModeEnum? PageMode { get; set; }
+
+        /// <summary>
+        /// Rotate page
+        /// </summary>
+        public RotateEnum? Rotate { get; set; }
+
+        /// <summary>
         /// Desired page width in pixels after conversion
         /// </summary>  
         public int? Width { get; set; }
@@ -174,6 +457,11 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public int? ExpandedOutlineLevels { get; set; }
 
         /// <summary>
+        /// Watermark specific options
+        /// </summary>  
+        public WatermarkOptions WatermarkOptions { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -189,6 +477,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  MarginBottom: ").Append(this.MarginBottom).Append("\n");
           sb.Append("  MarginLeft: ").Append(this.MarginLeft).Append("\n");
           sb.Append("  MarginRight: ").Append(this.MarginRight).Append("\n");
+          sb.Append("  PdfFormat: ").Append(this.PdfFormat).Append("\n");
           sb.Append("  RemovePdfaCompliance: ").Append(this.RemovePdfaCompliance).Append("\n");
           sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
           sb.Append("  Linearize: ").Append(this.Linearize).Append("\n");
@@ -200,14 +489,20 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  UnembedFonts: ").Append(this.UnembedFonts).Append("\n");
           sb.Append("  Grayscale: ").Append(this.Grayscale).Append("\n");
           sb.Append("  CenterWindow: ").Append(this.CenterWindow).Append("\n");
+          sb.Append("  Direction: ").Append(this.Direction).Append("\n");
           sb.Append("  DisplayDocTitle: ").Append(this.DisplayDocTitle).Append("\n");
           sb.Append("  FitWindow: ").Append(this.FitWindow).Append("\n");
           sb.Append("  HideMenubar: ").Append(this.HideMenubar).Append("\n");
           sb.Append("  HideToolBar: ").Append(this.HideToolBar).Append("\n");
           sb.Append("  HideWindowUI: ").Append(this.HideWindowUI).Append("\n");
+          sb.Append("  NonFullScreenPageMode: ").Append(this.NonFullScreenPageMode).Append("\n");
+          sb.Append("  PageLayout: ").Append(this.PageLayout).Append("\n");
+          sb.Append("  PageMode: ").Append(this.PageMode).Append("\n");
           sb.Append("  BookmarksOutlineLevel: ").Append(this.BookmarksOutlineLevel).Append("\n");
           sb.Append("  HeadingsOutlineLevels: ").Append(this.HeadingsOutlineLevels).Append("\n");
           sb.Append("  ExpandedOutlineLevels: ").Append(this.ExpandedOutlineLevels).Append("\n");
+          sb.Append("  Rotate: ").Append(this.Rotate).Append("\n");
+          sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

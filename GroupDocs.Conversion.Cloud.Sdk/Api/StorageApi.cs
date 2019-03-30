@@ -25,6 +25,7 @@
 
 namespace GroupDocs.Conversion.Cloud.Sdk.Api
 {
+    using System.IO;
     using System.Collections.Generic;
     using System.Text.RegularExpressions;
     using GroupDocs.Conversion.Cloud.Sdk.Client;
@@ -63,7 +64,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
             requestHandlers.Add(new DebugLogRequestHandler(this.configuration));
             requestHandlers.Add(new ApiExceptionRequestHandler());
             this.apiInvoker = new ApiInvoker(requestHandlers, this.configuration.Timeout);
-        }                            
+        }
 
         /// <summary>
         /// Get disc usage 
@@ -86,7 +87,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                 null, 
                 null, 
                 null);
-
+            
             if (response != null)
             {
                 return (DiscUsage)SerializationHelper.Deserialize(response, typeof(DiscUsage));
@@ -94,7 +95,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
 
             return null;
         }
-
         /// <summary>
         /// Get file versions 
         /// </summary>
@@ -123,7 +123,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                 null, 
                 null, 
                 null);
-
+            
             if (response != null)
             {
                 return (FileVersions)SerializationHelper.Deserialize(response, typeof(FileVersions));
@@ -131,7 +131,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
 
             return null;
         }
-
         /// <summary>
         /// Check if file or folder exists 
         /// </summary>
@@ -161,7 +160,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                 null, 
                 null, 
                 null);
-
+            
             if (response != null)
             {
                 return (ObjectExist)SerializationHelper.Deserialize(response, typeof(ObjectExist));
@@ -169,7 +168,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
 
             return null;
         }
-
         /// <summary>
         /// Check if storage exists 
         /// </summary>
@@ -197,7 +195,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                 null, 
                 null, 
                 null);
-
+            
             if (response != null)
             {
                 return (StorageExist)SerializationHelper.Deserialize(response, typeof(StorageExist));

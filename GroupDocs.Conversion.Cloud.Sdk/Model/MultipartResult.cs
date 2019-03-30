@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="PresentationConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="MultipartResult.cs">
 //  Copyright (c) 2003-2019 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,25 +34,10 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Options for to presentation conversion
+    /// 
     /// </summary>  
-    public class PresentationConvertOptions : ConvertOptions 
+    public class MultipartResult : List<StreamConvertedResult> 
     {                       
-        /// <summary>
-        /// Set this property if you want to protect the converted document with a password
-        /// </summary>  
-        public string Password { get; set; }
-
-        /// <summary>
-        /// Specifies the zoom level in percentage. Default is 100. Default zoom is supported till Microsoft Powerpoint 2010. Starting from Microsoft Powerpoint 2013 default zoom is no longer set to document, instead it appears to use the zoom factor of the last document that was opened.
-        /// </summary>  
-        public int? Zoom { get; set; }
-
-        /// <summary>
-        /// Watermark specific options
-        /// </summary>  
-        public WatermarkOptions WatermarkOptions { get; set; }
-
         /// <summary>
         /// Get the string presentation of the object
         /// </summary>
@@ -60,10 +45,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class PresentationConvertOptions {\n");
-          sb.Append("  Password: ").Append(this.Password).Append("\n");
-          sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
-          sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
+          sb.Append("class MultipartResult {\n");
           sb.Append("}\n");
           return sb.ToString();
         }

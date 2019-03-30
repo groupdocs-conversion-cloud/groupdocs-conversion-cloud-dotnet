@@ -49,7 +49,12 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public long? Size { get; set; }
 
         /// <summary>
-        /// Uri in the storage of the covnerted item
+        /// Path of resource file in storage
+        /// </summary>  
+        public string Path { get; set; }
+
+        /// <summary>
+        /// Uri in the storage of the converted item
         /// </summary>  
         public string Url { get; set; }
 
@@ -63,6 +68,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("class StoredConvertedResult {\n");
           sb.Append("  Name: ").Append(this.Name).Append("\n");
           sb.Append("  Size: ").Append(this.Size).Append("\n");
+          sb.Append("  Path: ").Append(this.Path).Append("\n");
           sb.Append("  Url: ").Append(this.Url).Append("\n");
           sb.Append("}\n");
           return sb.ToString();

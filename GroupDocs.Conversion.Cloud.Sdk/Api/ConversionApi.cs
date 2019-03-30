@@ -25,6 +25,7 @@
 
 namespace GroupDocs.Conversion.Cloud.Sdk.Api
 {
+    using System.IO;
     using System.Collections.Generic;
     using System.Text.RegularExpressions;
     using GroupDocs.Conversion.Cloud.Sdk.Client;
@@ -63,35 +64,70 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
             requestHandlers.Add(new DebugLogRequestHandler(this.configuration));
             requestHandlers.Add(new ApiExceptionRequestHandler());
             this.apiInvoker = new ApiInvoker(requestHandlers, this.configuration.Timeout);
-        }                            
+        }
 
         /// <summary>
         /// Converts specified input document to format specified in the convertSettings with specified options 
         /// </summary>
         /// <param name="request">Request. <see cref="ConvertDocumentRequest" /></param>
-        public void ConvertDocument(ConvertDocumentRequest request)
+        public List<StoredConvertedResult> ConvertDocument(ConvertDocumentRequest request)
         {
             // verify the required parameter 'convertSettings' is set
-            if (request.convertSettings == null) 
+            if (request.convertSettings == null)
             {
-                throw new ApiException(400, "Missing required parameter 'convertSettings' when calling ConvertDocument");
+                throw new ApiException(400,
+                    "Missing required parameter 'convertSettings' when calling ConvertDocument");
+            }
+            
+            // create path and map variables
+            var resourcePath = this.configuration.GetServerUrl() + "/conversion";
+            resourcePath = Regex
+                .Replace(resourcePath, "\\*", string.Empty)
+                .Replace("&amp;", "&")
+                .Replace("/?", "?");
+            var postBody = SerializationHelper.Serialize(request.convertSettings); // http body (model) parameter
+            var response = this.apiInvoker.InvokeApi(
+                resourcePath,
+                "POST",
+                postBody,
+                null,
+                null);
+                
+            if (response != null)
+            {
+                return (List<StoredConvertedResult>) SerializationHelper.Deserialize(response, typeof(List<StoredConvertedResult>));
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Converts specified input document to format specified in the convertSettings with specified options and return result as stream
+        /// </summary>
+        /// <param name="request">Request. <see cref="ConvertDocumentRequest" /></param>
+        public Stream ConvertDocumentDownload(ConvertDocumentRequest request)
+        {
+            // verify the required parameter 'convertSettings' is set
+            if (request.convertSettings == null)
+            {
+                throw new ApiException(400,
+                    "Missing required parameter 'convertSettings' when calling ConvertDocument");
             }
 
             // create path and map variables
             var resourcePath = this.configuration.GetServerUrl() + "/conversion";
             resourcePath = Regex
-                        .Replace(resourcePath, "\\*", string.Empty)
-                        .Replace("&amp;", "&")
-                        .Replace("/?", "?");
+                .Replace(resourcePath, "\\*", string.Empty)
+                .Replace("&amp;", "&")
+                .Replace("/?", "?");
             var postBody = SerializationHelper.Serialize(request.convertSettings); // http body (model) parameter
-            this.apiInvoker.InvokeApi(
-                resourcePath, 
-                "POST", 
-                postBody, 
-                null, 
+            return this.apiInvoker.InvokeBinaryApi(
+                resourcePath,
+                "POST",
+                postBody,
+                null,
                 null);
         }
-
         /// <summary>
         /// Returns all supported conversion types 
         /// </summary>
@@ -106,7 +142,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "filePath", request.FilePath);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "format", request.format);
             
             var response = this.apiInvoker.InvokeApi(
@@ -115,7 +151,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                 null, 
                 null, 
                 null);
-
+            
             if (response != null)
             {
                 return (List<SupportedFormat>)SerializationHelper.Deserialize(response, typeof(List<SupportedFormat>));
@@ -226,12 +262,12 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
           /// Initializes a new instance of the <see cref="GetSupportedConversionTypesRequest"/> class.
           /// </summary>
           /// <param name="filePath">Absolute path to a document in the storage</param>
-          /// <param name="storage">Storage which contains the document</param>
+          /// <param name="storageName">StorageName which contains the document</param>
           /// <param name="format">If provided only supported conversions for specified format will be returned</param>
-          public GetSupportedConversionTypesRequest(string filePath = null, string storage = null, string format = null)             
+          public GetSupportedConversionTypesRequest(string filePath = null, string storageName = null, string format = null)             
           {
               this.FilePath = filePath;
-              this.Storage = storage;
+              this.StorageName = storageName;
               this.format = format;
           }
           
@@ -241,9 +277,9 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
           public string FilePath { get; set; }
           
           /// <summary>
-          /// Storage which contains the document
+          /// StorageName which contains the document
           /// </summary>  
-          public string Storage { get; set; }
+          public string StorageName { get; set; }
           
           /// <summary>
           /// If provided only supported conversions for specified format will be returned

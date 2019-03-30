@@ -39,6 +39,92 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class PsdConvertOptions : ImageConvertOptions 
     {                       
         /// <summary>
+        /// Psd color mode
+        /// </summary>
+        /// <value>Psd color mode</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ColorModeEnum
+        { 
+            /// <summary>
+            /// Enum Bitmap for "Bitmap"
+            /// </summary>            
+            Bitmap,
+            
+            /// <summary>
+            /// Enum Grayscale for "Grayscale"
+            /// </summary>            
+            Grayscale,
+            
+            /// <summary>
+            /// Enum Indexed for "Indexed"
+            /// </summary>            
+            Indexed,
+            
+            /// <summary>
+            /// Enum Rgb for "Rgb"
+            /// </summary>            
+            Rgb,
+            
+            /// <summary>
+            /// Enum Cmyk for "Cmyk"
+            /// </summary>            
+            Cmyk,
+            
+            /// <summary>
+            /// Enum Multichannel for "Multichannel"
+            /// </summary>            
+            Multichannel,
+            
+            /// <summary>
+            /// Enum Duotone for "Duotone"
+            /// </summary>            
+            Duotone,
+            
+            /// <summary>
+            /// Enum Lab for "Lab"
+            /// </summary>            
+            Lab            
+        }
+
+        /// <summary>
+        /// Psd compression method
+        /// </summary>
+        /// <value>Psd compression method</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CompressionMethodEnum
+        { 
+            /// <summary>
+            /// Enum Raw for "Raw"
+            /// </summary>            
+            Raw,
+            
+            /// <summary>
+            /// Enum Rle for "Rle"
+            /// </summary>            
+            Rle,
+            
+            /// <summary>
+            /// Enum ZipWithoutPrediction for "ZipWithoutPrediction"
+            /// </summary>            
+            ZipWithoutPrediction,
+            
+            /// <summary>
+            /// Enum ZipWithPrediction for "ZipWithPrediction"
+            /// </summary>            
+            ZipWithPrediction            
+        }
+
+        /// <summary>
+        /// Psd color mode
+        /// </summary>
+        public ColorModeEnum? ColorMode { get; set; }
+
+        /// <summary>
+        /// Psd compression method
+        /// </summary>
+        public CompressionMethodEnum? CompressionMethod { get; set; }
+
+        /// <summary>
         /// Bits count per color channel
         /// </summary>  
         public int? ChannelBitsCount { get; set; }
@@ -63,6 +149,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("class PsdConvertOptions {\n");
           sb.Append("  ChannelBitsCount: ").Append(this.ChannelBitsCount).Append("\n");
           sb.Append("  ChannelsCount: ").Append(this.ChannelsCount).Append("\n");
+          sb.Append("  ColorMode: ").Append(this.ColorMode).Append("\n");
+          sb.Append("  CompressionMethod: ").Append(this.CompressionMethod).Append("\n");
           sb.Append("  Version: ").Append(this.Version).Append("\n");
           sb.Append("}\n");
           return sb.ToString();

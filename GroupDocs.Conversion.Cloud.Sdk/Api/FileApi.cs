@@ -25,6 +25,7 @@
 
 namespace GroupDocs.Conversion.Cloud.Sdk.Api
 {
+    using System.IO;
     using System.Collections.Generic;
     using System.Text.RegularExpressions;
     using GroupDocs.Conversion.Cloud.Sdk.Client;
@@ -63,7 +64,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
             requestHandlers.Add(new DebugLogRequestHandler(this.configuration));
             requestHandlers.Add(new ApiExceptionRequestHandler());
             this.apiInvoker = new ApiInvoker(requestHandlers, this.configuration.Timeout);
-        }                            
+        }
 
         /// <summary>
         /// Copy file 
@@ -102,7 +103,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                 null, 
                 null);
         }
-
         /// <summary>
         /// Delete file 
         /// </summary>
@@ -132,7 +132,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                 null, 
                 null);
         }
-
         /// <summary>
         /// Download file 
         /// </summary>
@@ -163,7 +162,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                     null, 
                     null);
         }
-
         /// <summary>
         /// Move file 
         /// </summary>
@@ -201,7 +199,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                 null, 
                 null);
         }
-
         /// <summary>
         /// Upload file 
         /// </summary>
@@ -242,7 +239,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                 null, 
                 null, 
                 formParams);
-
+            
             if (response != null)
             {
                 return (FilesUploadResult)SerializationHelper.Deserialize(response, typeof(FilesUploadResult));

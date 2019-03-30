@@ -39,9 +39,9 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class ConvertSettings 
     {                       
         /// <summary>
-        /// Storage which contains the file
+        /// StorageName which contains the file
         /// </summary>  
-        public string Storage { get; set; }
+        public string StorageName { get; set; }
 
         /// <summary>
         /// Gets or sets absolute path to a file in the storage
@@ -76,7 +76,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class ConvertSettings {\n");
-          sb.Append("  Storage: ").Append(this.Storage).Append("\n");
+          sb.Append("  StorageName: ").Append(this.StorageName).Append("\n");
           sb.Append("  FilePath: ").Append(this.FilePath).Append("\n");
           sb.Append("  Format: ").Append(this.Format).Append("\n");
           sb.Append("  LoadOptions: ").Append(this.LoadOptions).Append("\n");

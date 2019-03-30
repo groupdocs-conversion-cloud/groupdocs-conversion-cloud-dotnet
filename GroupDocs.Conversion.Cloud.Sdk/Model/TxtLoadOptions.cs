@@ -39,6 +39,57 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class TxtLoadOptions : LoadOptions 
     {                       
         /// <summary>
+        /// Gets or sets preferred option of a trailing space handling. Default value is Trim.
+        /// </summary>
+        /// <value>Gets or sets preferred option of a trailing space handling. Default value is Trim.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TrailingSpacesOptionsEnum
+        { 
+            /// <summary>
+            /// Enum Preserve for "Preserve"
+            /// </summary>            
+            Preserve,
+            
+            /// <summary>
+            /// Enum Trim for "Trim"
+            /// </summary>            
+            Trim            
+        }
+
+        /// <summary>
+        /// Gets or sets preferred option of a leading space handling. Default value is ConvertToIndent.
+        /// </summary>
+        /// <value>Gets or sets preferred option of a leading space handling. Default value is ConvertToIndent.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum LeadingSpacesOptionsEnum
+        { 
+            /// <summary>
+            /// Enum ConvertToIndent for "ConvertToIndent"
+            /// </summary>            
+            ConvertToIndent,
+            
+            /// <summary>
+            /// Enum Preserve for "Preserve"
+            /// </summary>            
+            Preserve,
+            
+            /// <summary>
+            /// Enum Trim for "Trim"
+            /// </summary>            
+            Trim            
+        }
+
+        /// <summary>
+        /// Gets or sets preferred option of a trailing space handling. Default value is Trim.
+        /// </summary>
+        public TrailingSpacesOptionsEnum? TrailingSpacesOptions { get; set; }
+
+        /// <summary>
+        /// Gets or sets preferred option of a leading space handling. Default value is ConvertToIndent.
+        /// </summary>
+        public LeadingSpacesOptionsEnum? LeadingSpacesOptions { get; set; }
+
+        /// <summary>
         /// Allows to specify how numbered list items are recognized when plain text document is converted. The default value is true.
         /// </summary>  
         public bool? DetectNumberingWithWhitespaces { get; set; }
@@ -52,6 +103,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           var sb = new StringBuilder();
           sb.Append("class TxtLoadOptions {\n");
           sb.Append("  DetectNumberingWithWhitespaces: ").Append(this.DetectNumberingWithWhitespaces).Append("\n");
+          sb.Append("  TrailingSpacesOptions: ").Append(this.TrailingSpacesOptions).Append("\n");
+          sb.Append("  LeadingSpacesOptions: ").Append(this.LeadingSpacesOptions).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

@@ -39,6 +39,44 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class TiffConvertOptions : ImageConvertOptions 
     {                       
         /// <summary>
+        /// Set Tiff compression
+        /// </summary>
+        /// <value>Set Tiff compression</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CompressionEnum
+        { 
+            /// <summary>
+            /// Enum Lzw for "Lzw"
+            /// </summary>            
+            Lzw,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>            
+            None,
+            
+            /// <summary>
+            /// Enum Ccitt3 for "Ccitt3"
+            /// </summary>            
+            Ccitt3,
+            
+            /// <summary>
+            /// Enum Ccitt4 for "Ccitt4"
+            /// </summary>            
+            Ccitt4,
+            
+            /// <summary>
+            /// Enum Rle for "Rle"
+            /// </summary>            
+            Rle            
+        }
+
+        /// <summary>
+        /// Set Tiff compression
+        /// </summary>
+        public CompressionEnum? Compression { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -46,6 +84,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class TiffConvertOptions {\n");
+          sb.Append("  Compression: ").Append(this.Compression).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }
