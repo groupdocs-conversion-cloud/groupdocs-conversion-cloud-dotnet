@@ -47,9 +47,9 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
                 ApiBaseUrl = Config.ApiBaseUrl
             };
 
-            var conversionApi = new ConversionApi(conversionConfig);
+            var infoApi = new InfoApi(conversionConfig);
 
-            var ex = Assert.Throws<ApiException>(() => { conversionApi.GetSupportedConversionTypes(new GetSupportedConversionTypesRequest()); });
+            var ex = Assert.Throws<ApiException>(() => { infoApi.GetSupportedConversionTypes(new GetSupportedConversionTypesRequest()); });
 
             Assert.AreEqual("invalid_client", ex.Message);
         }
@@ -68,11 +68,11 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
                 ApiBaseUrl = Config.ApiBaseUrl
             };
 
-            var conversionApi = new ConversionApi(conversionConfig);
+            var infoApi = new InfoApi(conversionConfig);
 
             var ex = Assert.Throws<ApiException>(() =>
             {
-                conversionApi.GetSupportedConversionTypes(new GetSupportedConversionTypesRequest());
+                infoApi.GetSupportedConversionTypes(new GetSupportedConversionTypesRequest());
             });
 
             Assert.AreEqual("invalid_client", ex.Message);

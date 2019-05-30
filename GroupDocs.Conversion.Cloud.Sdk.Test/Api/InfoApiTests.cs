@@ -23,8 +23,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-using GroupDocs.Conversion.Cloud.Sdk.Model;
 using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
 using GroupDocs.Conversion.Cloud.Sdk.Test.Api.Internal;
 
@@ -32,66 +30,15 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 {
     using NUnit.Framework;
 
-    public class ConversionApiTests : BaseApiTest
+    public class InfoApiTests : BaseApiTest
     {
-        /// <summary>
-        /// Test ConvertDocumentTest
-        /// </summary>
-        [TestCaseSource(typeof(ConvertOptionsTestCaseBuilder), "Conversions")]
-        public void ConvertDocumentTest(TestFile testFile, string targetFormat, ConvertOptions convertOptions)
-        {
-            var format = targetFormat;
-            var options = convertOptions;
-            var filePath = testFile.FullName;
-
-            var settings = new ConvertSettings
-            {
-                FilePath = filePath,
-                Format = format,
-                ConvertOptions = options,
-                OutputPath = "converted"
-            };
-
-            var result = ConversionApi.ConvertDocument(new ConvertDocumentRequest(settings));
-
-            Assert.NotNull(result);
-            Assert.Greater(result.Count, 0);
-            var convertedExtension = Path.GetExtension(result[0].Name);
-            Assert.NotNull(convertedExtension);
-            Assert.AreEqual(targetFormat, convertedExtension.Substring(1));
-        }
-
-
-        /// <summary>
-        /// Test ConvertDocumentTest
-        /// </summary>
-        [TestCaseSource(typeof(ConvertOptionsTestCaseBuilder), "Conversions")]
-        public void ConvertDocumentDownloadTest(TestFile testFile, string targetFormat, ConvertOptions convertOptions)
-        {
-            var format = targetFormat;
-            var options = convertOptions;
-            var filePath = testFile.FullName;
-
-            var settings = new ConvertSettings
-            {
-                FilePath = filePath,
-                Format = format,
-                ConvertOptions = options
-            };
-
-            var result = ConversionApi.ConvertDocumentDownload(new ConvertDocumentRequest(settings));
-
-            Assert.IsNotNull(result);
-            Assert.Greater(result.Length, 0);
-        }
-
         /// <summary>
         /// Test GetSupportedConversionTypes
         /// </summary>
         [Test]
         public void GetSupportedConversionTypesTest()
         {
-            var response = ConversionApi.GetSupportedConversionTypes(new GetSupportedConversionTypesRequest());
+            var response = InfoApi.GetSupportedConversionTypes(new GetSupportedConversionTypesRequest());
 
             Assert.IsTrue(response.Count > 0);
             foreach (var entry in response)
@@ -99,6 +46,17 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
                 Assert.IsNotEmpty(entry.SourceFormat);
                 Assert.IsTrue(entry.TargetFormats.Count > 0);
             }
+        }
+
+        /// <summary>
+        /// Test GetSupportedConversionTypes
+        /// </summary>
+        [Test]
+        public void GetDocumentMetadataTest()
+        {
+            var response = InfoApi.GetDocumentMetadata(new GetDocumentMetadataRequest(TestFiles.FourPagesDocx.FullName));
+
+            Assert.AreEqual(4, response.PageCount);
         }
     }
 }

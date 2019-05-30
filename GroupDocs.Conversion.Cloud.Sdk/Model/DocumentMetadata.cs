@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="ImageConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="DocumentMetadata.cs">
 //  Copyright (c) 2003-2019 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,97 +34,79 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Options for to Image conversion
+    /// Contains a document metadata 
     /// </summary>  
-    public class ImageConvertOptions : ConvertOptions 
+    public class DocumentMetadata 
     {                       
         /// <summary>
-        /// Image flip mode
-        /// </summary>
-        /// <value>Image flip mode</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum FlipModeEnum
-        { 
-            /// <summary>
-            /// Enum None for "None"
-            /// </summary>            
-            None,
-            
-            /// <summary>
-            /// Enum FlipX for "FlipX"
-            /// </summary>            
-            FlipX,
-            
-            /// <summary>
-            /// Enum FlipY for "FlipY"
-            /// </summary>            
-            FlipY,
-            
-            /// <summary>
-            /// Enum FlipXY for "FlipXY"
-            /// </summary>            
-            FlipXY            
-        }
+        /// Document file type
+        /// </summary>  
+        public string FileType { get; set; }
 
         /// <summary>
-        /// Image flip mode
-        /// </summary>
-        public FlipModeEnum? FlipMode { get; set; }
+        /// Gets pages count if applicable to the current document format
+        /// </summary>  
+        public int? PageCount { get; set; }
 
         /// <summary>
-        /// Desired image width after conversion
+        /// Document bytes size
+        /// </summary>  
+        public long? Size { get; set; }
+
+        /// <summary>
+        /// Returns detected width if applicable to the current document format
         /// </summary>  
         public int? Width { get; set; }
 
         /// <summary>
-        /// Desired image height after conversion
+        /// Returns detected height if applicable to the current document format
         /// </summary>  
         public int? Height { get; set; }
 
         /// <summary>
-        /// Desired image horizontal resolution after conversion. The default resolution is the resolution of the input file or 96dpi
+        /// Returns detected horizontal resolution if applicable to the current document format
         /// </summary>  
         public int? HorizontalResolution { get; set; }
 
         /// <summary>
-        /// Desired image vertical resolution after conversion. The default resolution is the resolution of the input file or 96dpi
+        /// Returns detected vertical resolution if applicable to the current document format
         /// </summary>  
         public int? VerticalResolution { get; set; }
 
         /// <summary>
-        /// Convert to grayscale image
+        /// Returns detected bits per pixel if applicable to the current document format
         /// </summary>  
-        public bool? Grayscale { get; set; }
+        public int? BitsPerPixel { get; set; }
 
         /// <summary>
-        /// Image rotation angle 
+        /// Returns document title width if applicable to the current document format
         /// </summary>  
-        public int? RotateAngle { get; set; }
+        public string Title { get; set; }
 
         /// <summary>
-        /// If true, the input firstly is converted to PDF and after that to desired format
+        /// Returns detected document author if applicable to the current document format
         /// </summary>  
-        public bool? UsePdf { get; set; }
+        public string Author { get; set; }
 
         /// <summary>
-        /// Watermark specific options
+        /// Returns detected document creation date if it's applicable to the current document format
         /// </summary>  
-        public WatermarkOptions WatermarkOptions { get; set; }
+        public DateTime? CreatedDate { get; set; }
 
         /// <summary>
-        /// Adjust image brightness
+        /// Returns detected document modification date if applicable to the current document format
         /// </summary>  
-        public int? Brightness { get; set; }
+        public DateTime? ModifiedDate { get; set; }
 
         /// <summary>
-        /// Adjust image contrast
+        /// Returns list of layer names if applicable to the current document format
         /// </summary>  
-        public int? Contrast { get; set; }
+        public List<string> Layers { get; set; }
 
         /// <summary>
-        /// Adjust image gamma
+        /// Is document password protected
         /// </summary>  
-        public double? Gamma { get; set; }
+        public bool? IsPasswordProtected { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -133,19 +115,21 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class ImageConvertOptions {\n");
+          sb.Append("class DocumentMetadata {\n");
+          sb.Append("  FileType: ").Append(this.FileType).Append("\n");
+          sb.Append("  PageCount: ").Append(this.PageCount).Append("\n");
+          sb.Append("  Size: ").Append(this.Size).Append("\n");
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  HorizontalResolution: ").Append(this.HorizontalResolution).Append("\n");
           sb.Append("  VerticalResolution: ").Append(this.VerticalResolution).Append("\n");
-          sb.Append("  Grayscale: ").Append(this.Grayscale).Append("\n");
-          sb.Append("  RotateAngle: ").Append(this.RotateAngle).Append("\n");
-          sb.Append("  UsePdf: ").Append(this.UsePdf).Append("\n");
-          sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
-          sb.Append("  Brightness: ").Append(this.Brightness).Append("\n");
-          sb.Append("  Contrast: ").Append(this.Contrast).Append("\n");
-          sb.Append("  Gamma: ").Append(this.Gamma).Append("\n");
-          sb.Append("  FlipMode: ").Append(this.FlipMode).Append("\n");
+          sb.Append("  BitsPerPixel: ").Append(this.BitsPerPixel).Append("\n");
+          sb.Append("  Title: ").Append(this.Title).Append("\n");
+          sb.Append("  Author: ").Append(this.Author).Append("\n");
+          sb.Append("  CreatedDate: ").Append(this.CreatedDate).Append("\n");
+          sb.Append("  ModifiedDate: ").Append(this.ModifiedDate).Append("\n");
+          sb.Append("  Layers: ").Append(this.Layers).Append("\n");
+          sb.Append("  IsPasswordProtected: ").Append(this.IsPasswordProtected).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

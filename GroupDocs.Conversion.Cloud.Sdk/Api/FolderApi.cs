@@ -125,7 +125,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
             
             this.apiInvoker.InvokeApi(
                 resourcePath, 
-                "POST", 
+                "PUT", 
                 null, 
                 null, 
                 null);
