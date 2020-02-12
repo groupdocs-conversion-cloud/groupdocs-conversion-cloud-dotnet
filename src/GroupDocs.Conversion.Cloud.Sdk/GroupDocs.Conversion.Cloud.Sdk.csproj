@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net20</TargetFrameworks>
+    <AssemblyVersion>20.2.0.0</AssemblyVersion>
+    <FileVersion>20.2.0.0</FileVersion>
+    <Version>20.2</Version>
+    <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
+    <Company>GroupDocs</Company>
+    <Authors>GroupDocs Product Team</Authors>
+    <Copyright>Aspose Pty Ltd.</Copyright>
+    <Description>Convert image and documents using cloud SDKs for .NET, Java, PHP, Python, Ruby, Node.js. Use cURL commands to call document conversion REST APIs.</Description>
+    <PackageLicenseUrl>https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://products.groupdocs.cloud/conversion/family</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net20'">
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+    <PackageReference Include="System.Diagnostics.TraceSource" Version="4.3.0" />
+  </ItemGroup>
+</Project>
