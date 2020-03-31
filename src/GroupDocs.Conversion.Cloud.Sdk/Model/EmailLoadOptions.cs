@@ -79,6 +79,16 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public bool? ConvertAttachments { get; set; }
 
         /// <summary>
+        /// The mapping between email message field and field text representation
+        /// </summary>  
+        public List<FieldLabel> FieldLabels { get; set; }
+
+        /// <summary>
+        /// Defines whether need to keep original date header string in mail message when saving or not (Default value is true)
+        /// </summary>  
+        public bool? PreserveOriginalDate { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -94,6 +104,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  DisplayBccEmailAddress: ").Append(this.DisplayBccEmailAddress).Append("\n");
           sb.Append("  TimeZoneOffset: ").Append(this.TimeZoneOffset).Append("\n");
           sb.Append("  ConvertAttachments: ").Append(this.ConvertAttachments).Append("\n");
+          sb.Append("  FieldLabels: ").Append(this.FieldLabels).Append("\n");
+          sb.Append("  PreserveOriginalDate: ").Append(this.PreserveOriginalDate).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

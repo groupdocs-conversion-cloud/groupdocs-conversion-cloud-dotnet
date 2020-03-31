@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="HtmlConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="HtmlLoadOptions.cs">
 //  Copyright (c) 2003-2020 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,34 +34,14 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Options for to Html conversion
+    /// Html document load options
     /// </summary>  
-    public class HtmlConvertOptions : ConvertOptions 
+    public class HtmlLoadOptions : LoadOptions 
     {                       
         /// <summary>
-        /// If true, the input firstly is converted to PDF and after that to desired format
+        /// Enable or disable generation of page numbering in converted document. Default: false
         /// </summary>  
-        public bool? UsePdf { get; set; }
-
-        /// <summary>
-        /// If true fixed layout will be used e.g. absolutely positioned html elements Default:  true
-        /// </summary>  
-        public bool? FixedLayout { get; set; }
-
-        /// <summary>
-        /// Show page borders when converting to fixed layout. Default is True
-        /// </summary>  
-        public bool? FixedLayoutShowBorders { get; set; }
-
-        /// <summary>
-        /// Specifies the zoom level in percentage. Default is 100.
-        /// </summary>  
-        public int? Zoom { get; set; }
-
-        /// <summary>
-        /// Watermark specific options
-        /// </summary>  
-        public WatermarkOptions WatermarkOptions { get; set; }
+        public bool? PageNumbering { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -70,12 +50,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class HtmlConvertOptions {\n");
-          sb.Append("  UsePdf: ").Append(this.UsePdf).Append("\n");
-          sb.Append("  FixedLayout: ").Append(this.FixedLayout).Append("\n");
-          sb.Append("  FixedLayoutShowBorders: ").Append(this.FixedLayoutShowBorders).Append("\n");
-          sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
-          sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
+          sb.Append("class HtmlLoadOptions {\n");
+          sb.Append("  PageNumbering: ").Append(this.PageNumbering).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }
