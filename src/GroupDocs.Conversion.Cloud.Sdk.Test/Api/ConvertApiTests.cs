@@ -84,5 +84,18 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
             Assert.IsNotNull(result);
             Assert.Greater(result.Length, 0);
         }
+
+        [Test]
+        public void ConvertDocumentDirectTest()
+        {
+            var format = "pdf";
+            var testFile = TestFiles.FourPagesDocx;
+
+            var request = new ConvertDocumentDirectRequest(format, GetTestFileStream(testFile));
+            var result = ConvertApi.ConvertDocumentDirect(request);
+
+            Assert.IsNotNull(result);
+            Assert.Greater(result.Length, 0);
+        }
     }
 }

@@ -46,6 +46,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Client
             this.AddDefaultHeader(GroupDocsClientVersionHeaderName, string.Format("{0}.{1}", sdkVersion.Major, sdkVersion.Minor));
             this.requestHandlers = requestHandlers;
             this._timeout = timeout;
+            ServicePointManager.SecurityProtocol = (SecurityProtocolType) (0xc0 | 0x300 | 0xc00);
         }
 
         public string InvokeApi(

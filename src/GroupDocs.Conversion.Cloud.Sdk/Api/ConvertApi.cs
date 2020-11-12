@@ -128,6 +128,48 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                 null,
                 null);
         }
+        /// <summary>
+        /// Converts input document file to format specified 
+        /// </summary>
+        /// <param name="request">Request. <see cref="ConvertDocumentDirectRequest" /></param>
+        /// <returns><see cref="System.IO.Stream"/></returns>
+        public System.IO.Stream ConvertDocumentDirect(ConvertDocumentDirectRequest request)
+        {
+            // verify the required parameter 'format' is set
+            if (request.format == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling ConvertDocumentDirect");
+            }
+
+            // verify the required parameter 'file' is set
+            if (request.File == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'file' when calling ConvertDocumentDirect");
+            }
+
+            // create path and map variables
+            var resourcePath = this.configuration.GetServerUrl() + "/conversion";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "format", request.format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fromPage", request.fromPage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "pagesCount", request.pagesCount);
+            
+            if (request.File != null) 
+            {
+                formParams.Add("file", this.apiInvoker.ToFileInfo(request.File, "File"));
+            }
+            
+            return this.apiInvoker.InvokeBinaryApi(
+                    resourcePath, 
+                    "PUT", 
+                    null, 
+                    null, 
+                    formParams);
+        }
     }
 }
 // --------------------------------------------------------------------------------------------------------------------
@@ -184,5 +226,82 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
           /// Gets or sets convertSettings
           /// </summary>  
           public ConvertSettings convertSettings { get; set; }
+    }
+}
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright company="Aspose Pty Ltd" file="ConvertDocumentDirectRequest.cs">
+//  Copyright (c) 2003-2020 Aspose Pty Ltd
+// </copyright>
+// <summary>
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+// 
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+// 
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests 
+{
+    using GroupDocs.Conversion.Cloud.Sdk.Model; 
+
+    /// <summary>
+    /// Request model for <see cref="GroupDocs.Conversion.Cloud.Sdk.Api.ConvertApi.ConvertDocumentDirect" /> operation.
+    /// </summary>  
+    public class ConvertDocumentDirectRequest  
+    {
+          /// <summary>
+          /// Initializes a new instance of the <see cref="ConvertDocumentDirectRequest"/> class.
+          /// </summary>        
+          public ConvertDocumentDirectRequest()
+          {
+          }
+
+          /// <summary>
+          /// Initializes a new instance of the <see cref="ConvertDocumentDirectRequest"/> class.
+          /// </summary>
+          /// <param name="format">Requested conversion format</param>
+          /// <param name="file">Input file to convert</param>
+          /// <param name="fromPage">Page start conversion from</param>
+          /// <param name="pagesCount">Number of pages to convert</param>
+          public ConvertDocumentDirectRequest(string format, System.IO.Stream file, int? fromPage = null, int? pagesCount = null)             
+          {
+              this.format = format;
+              this.File = file;
+              this.fromPage = fromPage;
+              this.pagesCount = pagesCount;
+          }
+          
+          /// <summary>
+          /// Requested conversion format
+          /// </summary>  
+          public string format { get; set; }
+          
+          /// <summary>
+          /// Input file to convert
+          /// </summary>  
+          public System.IO.Stream File { get; set; }
+          
+          /// <summary>
+          /// Page start conversion from
+          /// </summary>  
+          public int? fromPage { get; set; }
+          
+          /// <summary>
+          /// Number of pages to convert
+          /// </summary>  
+          public int? pagesCount { get; set; }
     }
 }
