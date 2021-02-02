@@ -57,13 +57,12 @@ First create an account at [GroupDocs for Cloud](https://dashboard.groupdocs.clo
 ## Convert DOCX to PDF in the Cloud
 
 ```csharp
-// Get application information from https://dashboard.groupdocs.cloud
-string MyAppKey = ""; 
-string MyAppSid = "";
+// Get Client Id and Client Secret from https://dashboard.groupdocs.cloud
+string MyClientId = ""; 
+string MyClientSecret = "";
 
-var configuration = new Configuration(MyAppSid, MyAppKey);
-
-// Create necessary API instances
+// Create instance of the API
+var configuration = new Configuration(MyClientId, MyClientSecret);
 var apiInstance = new ConvertApi(configuration);
 
 // Prepare convert settings
