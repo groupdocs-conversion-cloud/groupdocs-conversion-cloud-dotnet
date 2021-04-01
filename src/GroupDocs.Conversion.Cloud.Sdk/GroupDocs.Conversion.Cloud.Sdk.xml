@@ -930,6 +930,11 @@
             Gets or sets converted file save path
             </summary>  
         </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ConvertSettings.FontsPath">
+            <summary>
+            The path to directory containing custom fonts in storage
+            </summary>  
+        </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ConvertSettings.ToString">
             <summary>
             Get the string presentation of the object

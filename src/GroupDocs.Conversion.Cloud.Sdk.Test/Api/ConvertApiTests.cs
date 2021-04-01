@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd">
-//  Copyright (c) 2003-2019 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,6 +24,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.IO;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
 using GroupDocs.Conversion.Cloud.Sdk.Model;
 using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
 using GroupDocs.Conversion.Cloud.Sdk.Test.Api.Internal;
@@ -96,6 +97,40 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             Assert.IsNotNull(result);
             Assert.Greater(result.Length, 0);
+        }
+
+        [Test]
+        public void TestConvertMissingSettings()
+        {
+            // Arrange
+            var request = new ConvertDocumentRequest(null);
+
+            // Act & Assert    
+            var ex = Assert.Throws<ApiException>(() =>
+            {
+                ConvertApi.ConvertDocumentDownload(request);
+            });
+            Assert.True(ex.Message.Contains("Missing required parameter 'convertSettings'"));
+        }
+
+        [Test]
+        public void TestConversionFileNotFound()
+        {
+            var settings = new ConvertSettings
+            {
+                FilePath = TestFiles.NotExist.FullName,
+                Format = "pdf"
+            };
+
+            // Arrange
+            var request = new ConvertDocumentRequest(settings);
+
+            // Act & Assert    
+            var ex = Assert.Throws<ApiException>(() =>
+            {
+                ConvertApi.ConvertDocumentDownload(request);
+            });
+            Assert.True(ex.Message.Contains("The specified key does not exist"));
         }
     }
 }

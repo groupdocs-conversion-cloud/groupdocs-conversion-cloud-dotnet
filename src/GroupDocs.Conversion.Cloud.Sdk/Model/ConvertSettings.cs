@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="ConvertSettings.cs">
-//  Copyright (c) 2003-2020 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -69,6 +69,11 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public string OutputPath { get; set; }
 
         /// <summary>
+        /// The path to directory containing custom fonts in storage
+        /// </summary>  
+        public string FontsPath { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -82,6 +87,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  LoadOptions: ").Append(this.LoadOptions).Append("\n");
           sb.Append("  ConvertOptions: ").Append(this.ConvertOptions).Append("\n");
           sb.Append("  OutputPath: ").Append(this.OutputPath).Append("\n");
+          sb.Append("  FontsPath: ").Append(this.FontsPath).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="WatermarkOptions.cs">
-//  Copyright (c) 2003-2020 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,6 +52,16 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         /// Watermark font name if text watermark is applied
         /// </summary>  
         public int? FontSize { get; set; }
+
+        /// <summary>
+        /// Watermark font bold style if text watermark is applied
+        /// </summary>  
+        public bool? Bold { get; set; }
+
+        /// <summary>
+        /// Watermark font italic style if text watermark is applied
+        /// </summary>  
+        public bool? Italic { get; set; }
 
         /// <summary>
         /// Watermark font color if text watermark is applied
@@ -109,6 +119,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  Text: ").Append(this.Text).Append("\n");
           sb.Append("  FontName: ").Append(this.FontName).Append("\n");
           sb.Append("  FontSize: ").Append(this.FontSize).Append("\n");
+          sb.Append("  Bold: ").Append(this.Bold).Append("\n");
+          sb.Append("  Italic: ").Append(this.Italic).Append("\n");
           sb.Append("  Color: ").Append(this.Color).Append("\n");
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
