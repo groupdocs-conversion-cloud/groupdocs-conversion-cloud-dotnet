@@ -15,6 +15,9 @@
     <ProjectReference Include="..\GroupDocs.Conversion.Cloud.Sdk\GroupDocs.Conversion.Cloud.Sdk.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="Resources\TestData\Note\sample.one">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\TestData\WordProcessing\four-pages.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

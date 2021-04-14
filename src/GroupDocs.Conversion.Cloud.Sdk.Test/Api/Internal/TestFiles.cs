@@ -36,6 +36,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api.Internal
             Password = "password"
         };
         public static readonly TestFile FourPagesDocx = new TestFile("four-pages.docx", "WordProcessing\\");
+        public static readonly TestFile OneNote = new TestFile("sample.one", "Note\\");
 
         public static IEnumerable<TestFile> TestFilesList
         {
@@ -44,6 +45,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api.Internal
                 yield return OnePageDocx;
                 yield return PasswordProtectedDocx;
                 yield return FourPagesDocx;
+                yield return OneNote;
             }
         }
     }

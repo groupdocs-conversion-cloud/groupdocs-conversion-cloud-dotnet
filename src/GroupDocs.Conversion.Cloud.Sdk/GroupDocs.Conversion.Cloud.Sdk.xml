@@ -3920,6 +3920,16 @@
             Watermark font name if text watermark is applied
             </summary>  
         </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptions.Bold">
+            <summary>
+            Watermark font bold style if text watermark is applied
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptions.Italic">
+            <summary>
+            Watermark font italic style if text watermark is applied
+            </summary>  
+        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptions.Color">
             <summary>
             Watermark font color if text watermark is applied

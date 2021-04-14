@@ -23,6 +23,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.IO;
 using GroupDocs.Conversion.Cloud.Sdk.Client;
 using GroupDocs.Conversion.Cloud.Sdk.Model;
@@ -131,6 +132,31 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
                 ConvertApi.ConvertDocumentDownload(request);
             });
             Assert.True(ex.Message.Contains("The specified key does not exist"));
+        }
+
+        [Test]
+        public void TestConversionFontSubs()
+        {
+            // Prepare convert settings
+            var loadOptions = new OneLoadOptions
+            {
+                FontSubstitutes = new Dictionary<string, string>
+                {
+                    {"Tahoma", "Arial"}, {"Times New Roman", "Arial"}
+                }
+            };
+
+            var settings = new ConvertSettings
+            {
+                FilePath = TestFiles.OneNote.FullName,
+                Format = "pdf",
+                LoadOptions = loadOptions,
+                OutputPath = "converted"
+            };
+
+
+            // Convert to specified format
+            var response = ConvertApi.ConvertDocument(new ConvertDocumentRequest(settings));
         }
     }
 }
