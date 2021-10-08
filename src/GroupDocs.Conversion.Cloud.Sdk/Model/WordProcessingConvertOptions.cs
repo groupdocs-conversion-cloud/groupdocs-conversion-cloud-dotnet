@@ -39,6 +39,29 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class WordProcessingConvertOptions : ConvertOptions 
     {                       
         /// <summary>
+        /// Recognition mode when converting from pdf
+        /// </summary>
+        /// <value>Recognition mode when converting from pdf</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PdfRecognitionModeEnum
+        { 
+            /// <summary>
+            /// Enum Textbox for "Textbox"
+            /// </summary>            
+            Textbox,
+            
+            /// <summary>
+            /// Enum Flow for "Flow"
+            /// </summary>            
+            Flow            
+        }
+
+        /// <summary>
+        /// Recognition mode when converting from pdf
+        /// </summary>
+        public PdfRecognitionModeEnum? PdfRecognitionMode { get; set; }
+
+        /// <summary>
         /// Desired page width after conversion
         /// </summary>  
         public int? Width { get; set; }
@@ -82,6 +105,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  Password: ").Append(this.Password).Append("\n");
           sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
           sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
+          sb.Append("  PdfRecognitionMode: ").Append(this.PdfRecognitionMode).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

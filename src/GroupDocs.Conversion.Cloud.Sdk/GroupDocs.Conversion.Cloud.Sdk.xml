@@ -4035,6 +4035,27 @@
             Options for to word processing conversion
             </summary>  
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingConvertOptions.PdfRecognitionModeEnum">
+            <summary>
+            Recognition mode when converting from pdf
+            </summary>
+            <value>Recognition mode when converting from pdf</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingConvertOptions.PdfRecognitionModeEnum.Textbox">
+            <summary>
+            Enum Textbox for "Textbox"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingConvertOptions.PdfRecognitionModeEnum.Flow">
+            <summary>
+            Enum Flow for "Flow"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingConvertOptions.PdfRecognitionMode">
+            <summary>
+            Recognition mode when converting from pdf
+            </summary>
+        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingConvertOptions.Width">
             <summary>
             Desired page width after conversion

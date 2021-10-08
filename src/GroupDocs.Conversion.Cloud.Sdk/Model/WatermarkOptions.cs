@@ -109,6 +109,11 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public string Image { get; set; }
 
         /// <summary>
+        /// Auto scale the watermark. If the value is true the font size and the position is automatically calculated to fit the page size.
+        /// </summary>  
+        public bool? AutoAlign { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -130,6 +135,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  Transparency: ").Append(this.Transparency).Append("\n");
           sb.Append("  Background: ").Append(this.Background).Append("\n");
           sb.Append("  Image: ").Append(this.Image).Append("\n");
+          sb.Append("  AutoAlign: ").Append(this.AutoAlign).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }
