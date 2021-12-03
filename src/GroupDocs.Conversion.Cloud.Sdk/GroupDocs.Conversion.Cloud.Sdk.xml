@@ -166,6 +166,30 @@
             <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.DocumentMetadata"/></returns>
         </member>
         <!-- Badly formed XML comment ignored for member "M:GroupDocs.Conversion.Cloud.Sdk.Api.InfoApi.GetSupportedConversionTypes(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetSupportedConversionTypesRequest)" -->
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Api.LicenseApi">
+            <summary>
+            GroupDocs.Conversion Cloud API.
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.LicenseApi.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Api.LicenseApi"/> class.
+            </summary>
+            <param name="appSid">Application identifier (App SID)</param>
+            <param name="appKey">Application private key (App Key)</param>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.LicenseApi.#ctor(GroupDocs.Conversion.Cloud.Sdk.Client.Configuration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Api.LicenseApi"/> class.
+            </summary>    
+            <param name="configuration">Configuration settings</param>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.LicenseApi.GetConsumptionCredit">
+            <summary>
+            Get license consumption 
+            </summary>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.ConsumptionResult"/></returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Api.StorageApi">
             <summary>
             GroupDocs.Conversion Cloud API.
@@ -864,6 +888,27 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CompressionMethods.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ConsumptionResult">
+            <summary>
+            Metered license consumption information
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ConsumptionResult.Credit">
+            <summary>
+            Amount of used credits
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ConsumptionResult.Quantity">
+            <summary>
+            Amount of MBs processed
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ConsumptionResult.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -3973,6 +4018,11 @@
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptions.Image">
             <summary>
             Image watermark
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptions.AutoAlign">
+            <summary>
+            Auto scale the watermark. If the value is true the font size and the position is automatically calculated to fit the page size.
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptions.ToString">
