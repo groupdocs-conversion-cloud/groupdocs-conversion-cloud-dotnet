@@ -267,7 +267,7 @@
             Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertDocumentDirectRequest"/> class.
             </summary>        
         </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertDocumentDirectRequest.#ctor(System.String,System.IO.Stream,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertDocumentDirectRequest.#ctor(System.String,System.IO.Stream,System.Nullable{System.Int32},System.Nullable{System.Int32},GroupDocs.Conversion.Cloud.Sdk.Model.LoadOptions,GroupDocs.Conversion.Cloud.Sdk.Model.ConvertOptions)">
             <summary>
             Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertDocumentDirectRequest"/> class.
             </summary>
@@ -275,6 +275,8 @@
             <param name="file">Input file to convert</param>
             <param name="fromPage">Page start conversion from</param>
             <param name="pagesCount">Number of pages to convert</param>
+            <param name="loadOptions">Input file load options</param>
+            <param name="convertOptions">Conversion options</param>
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertDocumentDirectRequest.format">
             <summary>
@@ -294,6 +296,16 @@
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertDocumentDirectRequest.pagesCount">
             <summary>
             Number of pages to convert
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertDocumentDirectRequest.loadOptions">
+            <summary>
+            Input file load options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertDocumentDirectRequest.convertOptions">
+            <summary>
+            Conversion options
             </summary>  
         </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.CopyFileRequest">
@@ -2145,6 +2157,11 @@
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.LoadOptions">
             <summary>
             Load document options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.LoadOptions.Format">
+            <summary>
+            The format of input file, (\"docx\", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions. In regular conversion, the input file format taken from the input file name and this field ignored.
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.LoadOptions.ToString">

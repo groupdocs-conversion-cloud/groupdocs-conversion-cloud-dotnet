@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd">
-//  Copyright (c) 2003-2021 Aspose Pty Ltd
+//  Copyright (c) 2003-2022 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -158,6 +158,26 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
 
             // Convert to specified format
             var response = ConvertApi.ConvertDocument(new ConvertDocumentRequest(settings));
+        }
+
+        [Test]
+        public void ConvertDocumentDirectTestWithOptions()
+        {
+            var format = "pdf";
+            var testFile = TestFiles.PasswordProtectedDocx;
+
+            var loadOptions = new DocxLoadOptions
+            {
+                Format = "docx",
+                Password = TestFiles.PasswordProtectedDocx.Password
+            };
+            var convertOptions = new PdfConvertOptions();
+
+            var request = new ConvertDocumentDirectRequest(format, GetTestFileStream(testFile), null, null, loadOptions, convertOptions);
+            var result = ConvertApi.ConvertDocumentDirect(request);
+
+            Assert.IsNotNull(result);
+            Assert.Greater(result.Length, 0);
         }
     }
 }

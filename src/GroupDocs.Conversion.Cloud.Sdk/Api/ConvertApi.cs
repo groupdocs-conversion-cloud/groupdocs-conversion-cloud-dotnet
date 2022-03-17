@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="ConvertApi.cs">
-//  Copyright (c) 2003-2021 Aspose Pty Ltd
+//  Copyright (c) 2003-2022 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -154,6 +154,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
             var formParams = new Dictionary<string, object>();
+            
+            
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "format", request.format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fromPage", request.fromPage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "pagesCount", request.pagesCount);
@@ -161,6 +163,16 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
             if (request.File != null) 
             {
                 formParams.Add("file", this.apiInvoker.ToFileInfo(request.File, "File"));
+            }
+            
+            if (request.loadOptions != null) 
+            {
+                formParams.Add("loadOptions", request.loadOptions); // form parameter
+            }
+            
+            if (request.convertOptions != null) 
+            {
+                formParams.Add("convertOptions", request.convertOptions); // form parameter
             }
             
             return this.apiInvoker.InvokeBinaryApi(
@@ -174,7 +186,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
 }
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="ConvertDocumentRequest.cs">
-//  Copyright (c) 2003-2021 Aspose Pty Ltd
+//  Copyright (c) 2003-2022 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -230,7 +242,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
 }
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="ConvertDocumentDirectRequest.cs">
-//  Copyright (c) 2003-2021 Aspose Pty Ltd
+//  Copyright (c) 2003-2022 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -276,12 +288,16 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
           /// <param name="file">Input file to convert</param>
           /// <param name="fromPage">Page start conversion from</param>
           /// <param name="pagesCount">Number of pages to convert</param>
-          public ConvertDocumentDirectRequest(string format, System.IO.Stream file, int? fromPage = null, int? pagesCount = null)             
+          /// <param name="loadOptions">Input file load options</param>
+          /// <param name="convertOptions">Conversion options</param>
+          public ConvertDocumentDirectRequest(string format, System.IO.Stream file, int? fromPage = null, int? pagesCount = null, LoadOptions loadOptions = null, ConvertOptions convertOptions = null)             
           {
               this.format = format;
               this.File = file;
               this.fromPage = fromPage;
               this.pagesCount = pagesCount;
+              this.loadOptions = loadOptions;
+              this.convertOptions = convertOptions;
           }
           
           /// <summary>
@@ -303,5 +319,15 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model.Requests
           /// Number of pages to convert
           /// </summary>  
           public int? pagesCount { get; set; }
+          
+          /// <summary>
+          /// Input file load options
+          /// </summary>  
+          public LoadOptions loadOptions { get; set; }
+          
+          /// <summary>
+          /// Conversion options
+          /// </summary>  
+          public ConvertOptions convertOptions { get; set; }
     }
 }

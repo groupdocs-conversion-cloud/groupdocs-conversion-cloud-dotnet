@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="LoadOptions.cs">
-//  Copyright (c) 2003-2021 Aspose Pty Ltd
+//  Copyright (c) 2003-2022 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,6 +39,11 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class LoadOptions 
     {                       
         /// <summary>
+        /// The format of input file, (\"docx\", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions. In regular conversion, the input file format taken from the input file name and this field ignored.
+        /// </summary>  
+        public string Format { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -46,6 +51,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class LoadOptions {\n");
+          sb.Append("  Format: ").Append(this.Format).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }
