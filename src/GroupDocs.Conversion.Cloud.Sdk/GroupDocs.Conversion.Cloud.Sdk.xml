@@ -2908,6 +2908,27 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PersonalStorageLoadOptions">
+            <summary>
+            Options for loading personal storage documents.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PersonalStorageLoadOptions.Folder">
+            <summary>
+            Folder which to be processed Default is Inbox
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PersonalStorageLoadOptions.Depth">
+            <summary>
+            Controls how many levels in depth to perform conversion
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PersonalStorageLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PltLoadOptions">
             <summary>
             Plt load options
