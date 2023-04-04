@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="WordProcessingConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="EBookConvertOptions.cs">
 //  Copyright (c) 2003-2023 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,32 +34,14 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Options for to word processing conversion
+    /// Ebook convert options
     /// </summary>  
-    public class WordProcessingConvertOptions : ConvertOptions 
+    public class EBookConvertOptions : ConvertOptions 
     {                       
         /// <summary>
-        /// Recognition mode when converting from pdf
+        /// Specifies page size
         /// </summary>
-        /// <value>Recognition mode when converting from pdf</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum PdfRecognitionModeEnum
-        { 
-            /// <summary>
-            /// Enum Textbox for "Textbox"
-            /// </summary>            
-            Textbox,
-            
-            /// <summary>
-            /// Enum Flow for "Flow"
-            /// </summary>            
-            Flow            
-        }
-
-        /// <summary>
-        /// Page size
-        /// </summary>
-        /// <value>Page size</value>
+        /// <value>Specifies page size</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PageSizeEnum
         { 
@@ -178,12 +160,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Recognition mode when converting from pdf
-        /// </summary>
-        public PdfRecognitionModeEnum? PdfRecognitionMode { get; set; }
-
-        /// <summary>
-        /// Page size
+        /// Specifies page size
         /// </summary>
         public PageSizeEnum? PageSize { get; set; }
 
@@ -193,44 +170,13 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public PageOrientationEnum? PageOrientation { get; set; }
 
         /// <summary>
-        /// Desired page width after conversion
-        /// </summary>  
-        public int? Width { get; set; }
-
-        /// <summary>
-        /// Desired page height after conversion
-        /// </summary>  
-        public int? Height { get; set; }
-
-        /// <summary>
-        /// Desired page DPI after conversion. The default resolution is: 96dpi
-        /// </summary>  
-        public double? Dpi { get; set; }
-
-        /// <summary>
-        /// Set this property if you want to protect the converted document with a password
-        /// </summary>  
-        public string Password { get; set; }
-
-        /// <summary>
-        /// Specifies the zoom level in percentage. Default is 100. Default zoom is supported till Microsoft Word 2010. Starting from Microsoft Word 2013 default zoom is no longer set to document, instead it appears to use the zoom factor of the last document that was opened.
-        /// </summary>  
-        public int? Zoom { get; set; }
-
-        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class WordProcessingConvertOptions {\n");
-          sb.Append("  Width: ").Append(this.Width).Append("\n");
-          sb.Append("  Height: ").Append(this.Height).Append("\n");
-          sb.Append("  Dpi: ").Append(this.Dpi).Append("\n");
-          sb.Append("  Password: ").Append(this.Password).Append("\n");
-          sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
-          sb.Append("  PdfRecognitionMode: ").Append(this.PdfRecognitionMode).Append("\n");
+          sb.Append("class EBookConvertOptions {\n");
           sb.Append("  PageSize: ").Append(this.PageSize).Append("\n");
           sb.Append("  PageOrientation: ").Append(this.PageOrientation).Append("\n");
           sb.Append("}\n");

@@ -54,11 +54,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public bool? UsePdf { get; set; }
 
         /// <summary>
-        /// Watermark specific options
-        /// </summary>  
-        public WatermarkOptions WatermarkOptions { get; set; }
-
-        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -69,7 +64,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  Password: ").Append(this.Password).Append("\n");
           sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
           sb.Append("  UsePdf: ").Append(this.UsePdf).Append("\n");
-          sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

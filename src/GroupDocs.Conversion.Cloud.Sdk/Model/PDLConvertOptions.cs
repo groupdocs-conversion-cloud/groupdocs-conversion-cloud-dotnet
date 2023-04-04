@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="ConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="PDLConvertOptions.cs">
 //  Copyright (c) 2003-2023 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,30 +34,10 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// ConvertOptions base
+    /// Page description langusge convert options
     /// </summary>  
-    public class ConvertOptions 
+    public class PDLConvertOptions : ConvertOptions 
     {                       
-        /// <summary>
-        /// Start conversion from FromPage page
-        /// </summary>  
-        public int? FromPage { get; set; }
-
-        /// <summary>
-        /// Number of pages to convert
-        /// </summary>  
-        public int? PagesCount { get; set; }
-
-        /// <summary>
-        /// Convert specific pages. The list contains the page indexes of the pages to be converted
-        /// </summary>  
-        public List<int?> Pages { get; set; }
-
-        /// <summary>
-        /// Watermark specific options
-        /// </summary>  
-        public WatermarkOptions WatermarkOptions { get; set; }
-
         /// <summary>
         /// Get the string presentation of the object
         /// </summary>
@@ -65,11 +45,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class ConvertOptions {\n");
-          sb.Append("  FromPage: ").Append(this.FromPage).Append("\n");
-          sb.Append("  PagesCount: ").Append(this.PagesCount).Append("\n");
-          sb.Append("  Pages: ").Append(this.Pages).Append("\n");
-          sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
+          sb.Append("class PDLConvertOptions {\n");
           sb.Append("}\n");
           return sb.ToString();
         }

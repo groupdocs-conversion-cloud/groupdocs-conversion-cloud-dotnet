@@ -946,6 +946,11 @@
             Convert specific pages. The list contains the page indexes of the pages to be converted
             </summary>  
         </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ConvertOptions.WatermarkOptions">
+            <summary>
+            Watermark specific options
+            </summary>  
+        </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
@@ -1383,6 +1388,144 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DxfLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions">
+            <summary>
+            Ebook convert options
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum">
+            <summary>
+            Specifies page size
+            </summary>
+            <value>Specifies page size</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Default">
+            <summary>
+            Enum Default for "Default"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.A3">
+            <summary>
+            Enum A3 for "A3"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Statement">
+            <summary>
+            Enum Statement for "Statement"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Quarto">
+            <summary>
+            Enum Quarto for "Quarto"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Paper11x17">
+            <summary>
+            Enum Paper11x17 for "Paper11x17"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Paper10x14">
+            <summary>
+            Enum Paper10x14 for "Paper10x14"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Letter">
+            <summary>
+            Enum Letter for "Letter"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Legal">
+            <summary>
+            Enum Legal for "Legal"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Ledger">
+            <summary>
+            Enum Ledger for "Ledger"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Folio">
+            <summary>
+            Enum Folio for "Folio"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Executive">
+            <summary>
+            Enum Executive for "Executive"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.EnvelopeDL">
+            <summary>
+            Enum EnvelopeDL for "EnvelopeDL"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Custom">
+            <summary>
+            Enum Custom for "Custom"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.B5">
+            <summary>
+            Enum B5 for "B5"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.B4">
+            <summary>
+            Enum B4 for "B4"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.A5">
+            <summary>
+            Enum A5 for "A5"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.A4">
+            <summary>
+            Enum A4 for "A4"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSizeEnum.Tabloid">
+            <summary>
+            Enum Tabloid for "Tabloid"
+            </summary>            
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageOrientationEnum">
+            <summary>
+            Specifies page orientation
+            </summary>
+            <value>Specifies page orientation</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageOrientationEnum.Default">
+            <summary>
+            Enum Default for "Default"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageOrientationEnum.Landscape">
+            <summary>
+            Enum Landscape for "Landscape"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageOrientationEnum.Portrait">
+            <summary>
+            Enum Portrait for "Portrait"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageSize">
+            <summary>
+            Specifies page size
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.PageOrientation">
+            <summary>
+            Specifies page orientation
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.EBookConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1929,11 +2072,6 @@
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConvertOptions.UsePdf">
             <summary>
             If true, the input firstly is converted to PDF and after that to desired format
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConvertOptions.WatermarkOptions">
-            <summary>
-            Watermark specific options
             </summary>  
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConvertOptions.Brightness">
@@ -2822,11 +2960,6 @@
             Specify whether user interface elements should be hidden when document is active. Default: false.
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.WatermarkOptions">
-            <summary>
-            Watermark specific options
-            </summary>  
-        </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
@@ -2903,6 +3036,17 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PdfPageMode.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PDLConvertOptions">
+            <summary>
+            Page description langusge convert options
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PDLConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -3153,11 +3297,6 @@
             Specifies the zoom level in percentage. Default is 100. Default zoom is supported till Microsoft Powerpoint 2010. Starting from Microsoft Powerpoint 2013 default zoom is no longer set to document, instead it appears to use the zoom factor of the last document that was opened.
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationConvertOptions.WatermarkOptions">
-            <summary>
-            Watermark specific options
-            </summary>  
-        </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
@@ -3375,11 +3514,6 @@
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetConvertOptions.UsePdf">
             <summary>
             If true, the input firstly is converted to PDF and after that to desired format
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetConvertOptions.WatermarkOptions">
-            <summary>
-            Watermark specific options
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetConvertOptions.ToString">
@@ -4069,6 +4203,53 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WebConvertOptions">
+            <summary>
+            Options for to Html conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebConvertOptions.UsePdf">
+            <summary>
+            If true, the input firstly is converted to PDF and after that to desired format
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebConvertOptions.FixedLayout">
+            <summary>
+            If true fixed layout will be used e.g. absolutely positioned html elements Default:  true
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebConvertOptions.FixedLayoutShowBorders">
+            <summary>
+            Show page borders when converting to fixed layout. Default is True
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebConvertOptions.Zoom">
+            <summary>
+            Specifies the zoom level in percentage. Default is 100.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WebConvertOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions">
+            <summary>
+            Html document load options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.PageNumbering">
+            <summary>
+            Enable or disable generation of page numbering in converted document. Default: false
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WebpConvertOptions">
             <summary>
             Webp convert options
@@ -4294,11 +4475,6 @@
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingConvertOptions.Zoom">
             <summary>
             Specifies the zoom level in percentage. Default is 100. Default zoom is supported till Microsoft Word 2010. Starting from Microsoft Word 2013 default zoom is no longer set to document, instead it appears to use the zoom factor of the last document that was opened.
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingConvertOptions.WatermarkOptions">
-            <summary>
-            Watermark specific options
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingConvertOptions.ToString">

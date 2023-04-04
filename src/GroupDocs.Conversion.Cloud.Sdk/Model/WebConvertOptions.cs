@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="ConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="WebConvertOptions.cs">
 //  Copyright (c) 2003-2023 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,29 +34,29 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// ConvertOptions base
+    /// Options for to Html conversion
     /// </summary>  
-    public class ConvertOptions 
+    public class WebConvertOptions : ConvertOptions 
     {                       
         /// <summary>
-        /// Start conversion from FromPage page
+        /// If true, the input firstly is converted to PDF and after that to desired format
         /// </summary>  
-        public int? FromPage { get; set; }
+        public bool? UsePdf { get; set; }
 
         /// <summary>
-        /// Number of pages to convert
+        /// If true fixed layout will be used e.g. absolutely positioned html elements Default:  true
         /// </summary>  
-        public int? PagesCount { get; set; }
+        public bool? FixedLayout { get; set; }
 
         /// <summary>
-        /// Convert specific pages. The list contains the page indexes of the pages to be converted
+        /// Show page borders when converting to fixed layout. Default is True
         /// </summary>  
-        public List<int?> Pages { get; set; }
+        public bool? FixedLayoutShowBorders { get; set; }
 
         /// <summary>
-        /// Watermark specific options
+        /// Specifies the zoom level in percentage. Default is 100.
         /// </summary>  
-        public WatermarkOptions WatermarkOptions { get; set; }
+        public int? Zoom { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -65,11 +65,11 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class ConvertOptions {\n");
-          sb.Append("  FromPage: ").Append(this.FromPage).Append("\n");
-          sb.Append("  PagesCount: ").Append(this.PagesCount).Append("\n");
-          sb.Append("  Pages: ").Append(this.Pages).Append("\n");
-          sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
+          sb.Append("class WebConvertOptions {\n");
+          sb.Append("  UsePdf: ").Append(this.UsePdf).Append("\n");
+          sb.Append("  FixedLayout: ").Append(this.FixedLayout).Append("\n");
+          sb.Append("  FixedLayoutShowBorders: ").Append(this.FixedLayoutShowBorders).Append("\n");
+          sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

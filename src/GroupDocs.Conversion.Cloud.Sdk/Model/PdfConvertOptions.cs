@@ -442,11 +442,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public bool? HideWindowUI { get; set; }
 
         /// <summary>
-        /// Watermark specific options
-        /// </summary>  
-        public WatermarkOptions WatermarkOptions { get; set; }
-
-        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -484,7 +479,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  PageLayout: ").Append(this.PageLayout).Append("\n");
           sb.Append("  PageMode: ").Append(this.PageMode).Append("\n");
           sb.Append("  Rotate: ").Append(this.Rotate).Append("\n");
-          sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

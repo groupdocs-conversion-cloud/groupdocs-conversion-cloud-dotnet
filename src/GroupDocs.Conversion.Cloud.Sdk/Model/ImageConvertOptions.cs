@@ -107,11 +107,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public bool? UsePdf { get; set; }
 
         /// <summary>
-        /// Watermark specific options
-        /// </summary>  
-        public WatermarkOptions WatermarkOptions { get; set; }
-
-        /// <summary>
         /// Adjust image brightness
         /// </summary>  
         public int? Brightness { get; set; }
@@ -141,7 +136,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  Grayscale: ").Append(this.Grayscale).Append("\n");
           sb.Append("  RotateAngle: ").Append(this.RotateAngle).Append("\n");
           sb.Append("  UsePdf: ").Append(this.UsePdf).Append("\n");
-          sb.Append("  WatermarkOptions: ").Append(this.WatermarkOptions).Append("\n");
           sb.Append("  Brightness: ").Append(this.Brightness).Append("\n");
           sb.Append("  Contrast: ").Append(this.Contrast).Append("\n");
           sb.Append("  Gamma: ").Append(this.Gamma).Append("\n");
