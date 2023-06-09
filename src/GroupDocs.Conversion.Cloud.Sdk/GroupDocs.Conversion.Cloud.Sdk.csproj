@@ -2,9 +2,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net20</TargetFrameworks>
-    <AssemblyVersion>23.4.0.0</AssemblyVersion>
-    <FileVersion>23.4.0.0</FileVersion>
-    <Version>23.4</Version>
+    <AssemblyVersion>23.6.0.0</AssemblyVersion>
+    <FileVersion>23.6.0.0</FileVersion>
+    <Version>23.6</Version>
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
     <Company>GroupDocs</Company>
     <Authors>GroupDocs Product Team</Authors>
@@ -18,7 +18,7 @@
     <DocumentationFile>GroupDocs.Conversion.Cloud.Sdk.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net20'">
     <Reference Include="System.Web" />

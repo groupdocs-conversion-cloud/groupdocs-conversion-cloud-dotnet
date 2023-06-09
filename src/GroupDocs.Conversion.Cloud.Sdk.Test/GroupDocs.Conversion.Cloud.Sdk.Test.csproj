@@ -8,10 +8,10 @@
     <Copyright>Aspose Pty Ltd.</Copyright>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="NUnit" Version="3.13.2" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.2.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GroupDocs.Conversion.Cloud.Sdk\GroupDocs.Conversion.Cloud.Sdk.csproj" />
