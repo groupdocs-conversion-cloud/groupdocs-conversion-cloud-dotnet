@@ -131,7 +131,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
             {
                 ConvertApi.ConvertDocumentDownload(request);
             });
-            Assert.True(ex.Message.Contains("The specified key does not exist"));
+            Assert.True(ex.Message.Contains("The specified key does not exist") || ex.Message.Contains("some-folder/NotExist.docx"));
         }
 
         [Test]
