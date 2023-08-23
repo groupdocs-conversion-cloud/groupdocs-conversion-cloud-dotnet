@@ -824,6 +824,63 @@
             Storage name
             </summary>  
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ApiError">
+            <summary>
+            
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ApiError.Code">
+            <summary>
+            Gets or sets Code
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ApiError.Message">
+            <summary>
+            Gets or sets Message
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ApiError.Description">
+            <summary>
+            Gets or sets Description
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ApiError.DateTime">
+            <summary>
+            Gets or sets DateTime
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ApiError.InnerError">
+            <summary>
+            Gets or sets InnerError
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ApiError.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ApiErrorResponse">
+            <summary>
+            
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ApiErrorResponse.RequestId">
+            <summary>
+            Gets or sets RequestId
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ApiErrorResponse.Error">
+            <summary>
+            Gets or sets Error
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ApiErrorResponse.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.BmpConvertOptions">
             <summary>
             Bmp convert options
