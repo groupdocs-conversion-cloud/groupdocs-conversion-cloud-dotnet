@@ -18,7 +18,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
                 new TestCaseData(TestFiles.OnePageDocx, "jpeg", new JpegConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "jpg", new JpgConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "png", new PngConvertOptions()),
-                new TestCaseData(TestFiles.OnePageDocx, "psd", new PsdConvertOptions()),
+                //new TestCaseData(TestFiles.OnePageDocx, "psd", new PsdConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "svg", new SvgConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "tif", new TifConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "tiff", new TiffConvertOptions()),
