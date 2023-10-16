@@ -93,5 +93,32 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Api
 
             return null;
         }
+        /// <summary>
+        /// Get license information 
+        /// </summary>
+        /// <returns><see cref="LicenseInfo"/></returns>
+        public LicenseInfo GetLicenseInfo()
+        {
+            // create path and map variables
+            var resourcePath = this.configuration.GetServerUrl() + "/conversion/license";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+            
+            var response = this.apiInvoker.InvokeApi(
+                resourcePath, 
+                "GET", 
+                null, 
+                null, 
+                null);
+            
+            if (response != null)
+            {
+                return (LicenseInfo)SerializationHelper.Deserialize(response, typeof(LicenseInfo));
+            }
+
+            return null;
+        }
     }
 }
