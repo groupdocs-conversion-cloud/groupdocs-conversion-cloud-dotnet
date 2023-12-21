@@ -190,6 +190,12 @@
             </summary>
             <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.ConsumptionResult"/></returns>
         </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.LicenseApi.GetLicenseInfo">
+            <summary>
+            Get license information 
+            </summary>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.LicenseInfo"/></returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Api.StorageApi">
             <summary>
             GroupDocs.Conversion Cloud API.
@@ -2344,6 +2350,22 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.JpxLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.LicenseInfo">
+            <summary>
+            Current license information
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.LicenseInfo.IsLicensed">
+            <summary>
+            True, if license was applied and valid, otherwise False
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.LicenseInfo.ToString">
             <summary>
             Get the string presentation of the object
             </summary>

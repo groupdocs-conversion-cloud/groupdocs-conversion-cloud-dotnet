@@ -36,7 +36,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     /// <summary>
     /// Csv document load options
     /// </summary>  
-    public class CsvLoadOptions : LoadOptions 
+    public class CsvLoadOptions : SpreadsheetLoadOptions 
     {                       
         /// <summary>
         /// Delimiter of a Csv file
