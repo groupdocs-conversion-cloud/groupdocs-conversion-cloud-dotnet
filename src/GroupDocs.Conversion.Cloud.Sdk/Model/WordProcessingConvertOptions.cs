@@ -205,7 +205,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         /// <summary>
         /// Desired page DPI after conversion. The default resolution is: 96dpi
         /// </summary>  
-        public double? Dpi { get; set; }
+        public int? Dpi { get; set; }
 
         /// <summary>
         /// Set this property if you want to protect the converted document with a password
