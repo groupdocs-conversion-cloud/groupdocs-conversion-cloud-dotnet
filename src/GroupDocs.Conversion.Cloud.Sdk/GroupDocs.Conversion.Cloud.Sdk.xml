@@ -2889,6 +2889,123 @@
             Enum On270 for "On270"
             </summary>            
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum">
+            <summary>
+            Specifies page size
+            </summary>
+            <value>Specifies page size</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Default">
+            <summary>
+            Enum Default for "Default"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.A3">
+            <summary>
+            Enum A3 for "A3"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Statement">
+            <summary>
+            Enum Statement for "Statement"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Quarto">
+            <summary>
+            Enum Quarto for "Quarto"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Paper11x17">
+            <summary>
+            Enum Paper11x17 for "Paper11x17"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Paper10x14">
+            <summary>
+            Enum Paper10x14 for "Paper10x14"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Letter">
+            <summary>
+            Enum Letter for "Letter"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Legal">
+            <summary>
+            Enum Legal for "Legal"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Ledger">
+            <summary>
+            Enum Ledger for "Ledger"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Folio">
+            <summary>
+            Enum Folio for "Folio"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Executive">
+            <summary>
+            Enum Executive for "Executive"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.EnvelopeDL">
+            <summary>
+            Enum EnvelopeDL for "EnvelopeDL"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Custom">
+            <summary>
+            Enum Custom for "Custom"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.B5">
+            <summary>
+            Enum B5 for "B5"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.B4">
+            <summary>
+            Enum B4 for "B4"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.A5">
+            <summary>
+            Enum A5 for "A5"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.A4">
+            <summary>
+            Enum A4 for "A4"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSizeEnum.Tabloid">
+            <summary>
+            Enum Tabloid for "Tabloid"
+            </summary>            
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageOrientationEnum">
+            <summary>
+            Specifies page orientation
+            </summary>
+            <value>Specifies page orientation</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageOrientationEnum.Default">
+            <summary>
+            Enum Default for "Default"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageOrientationEnum.Landscape">
+            <summary>
+            Enum Landscape for "Landscape"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageOrientationEnum.Portrait">
+            <summary>
+            Enum Portrait for "Portrait"
+            </summary>            
+        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PdfFormat">
             <summary>
             Set the pdf format of the converted document.
@@ -2917,6 +3034,16 @@
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.Rotate">
             <summary>
             Rotate page
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageSize">
+            <summary>
+            Specifies page size
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.PageOrientation">
+            <summary>
+            Specifies page orientation
             </summary>
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConvertOptions.Width">
