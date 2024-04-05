@@ -914,22 +914,49 @@
             Options for loading CAD documents
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.Width">
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.DrawTypeEnum">
             <summary>
-            Set desired page width for converting CAD document
-            </summary>  
+            Gets or sets type of drawing.
+            </summary>
+            <value>Gets or sets type of drawing.</value>
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.Height">
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.DrawTypeEnum.UseDrawColor">
             <summary>
-            Set desired page height for converting CAD document
-            </summary>  
+            Enum UseDrawColor for "UseDrawColor"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.DrawTypeEnum.UseObjectColor">
+            <summary>
+            Enum UseObjectColor for "UseObjectColor"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.DrawType">
+            <summary>
+            Gets or sets type of drawing.
+            </summary>
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.LayoutNames">
             <summary>
             Render specific CAD layouts
             </summary>  
         </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.BackgroundColor">
+            <summary>
+            Gets or sets a background color.
+            </summary>  
+        </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Cf2LoadOptions">
+            <summary>
+            Cf2 load options
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Cf2LoadOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1434,12 +1461,34 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DwfxLoadOptions">
+            <summary>
+            Dwfx load options
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DwfxLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DwgLoadOptions">
             <summary>
             Dwg load options
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DwgLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DwtLoadOptions">
+            <summary>
+            Dwt load options
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DwtLoadOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>

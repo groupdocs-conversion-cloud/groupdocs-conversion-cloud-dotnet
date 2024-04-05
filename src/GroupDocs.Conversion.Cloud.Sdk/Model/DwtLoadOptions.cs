@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="CadLoadOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="DwtLoadOptions.cs">
 //  Copyright (c) 2003-2024 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,43 +34,10 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Options for loading CAD documents
+    /// Dwt load options
     /// </summary>  
-    public class CadLoadOptions : LoadOptions 
+    public class DwtLoadOptions : CadLoadOptions 
     {                       
-        /// <summary>
-        /// Gets or sets type of drawing.
-        /// </summary>
-        /// <value>Gets or sets type of drawing.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum DrawTypeEnum
-        { 
-            /// <summary>
-            /// Enum UseDrawColor for "UseDrawColor"
-            /// </summary>            
-            UseDrawColor,
-            
-            /// <summary>
-            /// Enum UseObjectColor for "UseObjectColor"
-            /// </summary>            
-            UseObjectColor            
-        }
-
-        /// <summary>
-        /// Gets or sets type of drawing.
-        /// </summary>
-        public DrawTypeEnum? DrawType { get; set; }
-
-        /// <summary>
-        /// Render specific CAD layouts
-        /// </summary>  
-        public List<string> LayoutNames { get; set; }
-
-        /// <summary>
-        /// Gets or sets a background color.
-        /// </summary>  
-        public string BackgroundColor { get; set; }
-
         /// <summary>
         /// Get the string presentation of the object
         /// </summary>
@@ -78,10 +45,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class CadLoadOptions {\n");
-          sb.Append("  LayoutNames: ").Append(this.LayoutNames).Append("\n");
-          sb.Append("  BackgroundColor: ").Append(this.BackgroundColor).Append("\n");
-          sb.Append("  DrawType: ").Append(this.DrawType).Append("\n");
+          sb.Append("class DwtLoadOptions {\n");
           sb.Append("}\n");
           return sb.ToString();
         }
