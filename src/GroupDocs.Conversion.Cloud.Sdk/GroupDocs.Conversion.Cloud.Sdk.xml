@@ -4,6 +4,52 @@
         <name>GroupDocs.Conversion.Cloud.Sdk</name>
     </assembly>
     <members>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi">
+            <summary>
+            GroupDocs.Conversion Cloud API.
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi"/> class.
+            </summary>
+            <param name="appSid">Application identifier (App SID)</param>
+            <param name="appKey">Application private key (App Key)</param>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi.#ctor(GroupDocs.Conversion.Cloud.Sdk.Client.Configuration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi"/> class.
+            </summary>    
+            <param name="configuration">Configuration settings</param>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi.GetOperationResult(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationResultRequest)">
+            <summary>
+            Get async operation result 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationResultRequest" /></param>
+            <returns><see cref="T:System.IO.Stream"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi.GetOperationStatus(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationStatusRequest)">
+            <summary>
+            Get async operation status 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationStatusRequest" /></param>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi.StartConvert(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest)">
+            <summary>
+            Starts async conversion specified input document, from request body, to format specified 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest" /></param>
+            <returns><see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi.StartConvertAndSave(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertAndSaveRequest)">
+            <summary>
+            Starts async conversion specified input document to format specified in the convertSettings with specified options 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertAndSaveRequest" /></param>
+            <returns><see cref="T:System.String"/></returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Api.ConvertApi">
             <summary>
             GroupDocs.Conversion Cloud API.
@@ -241,6 +287,108 @@
             </summary>
             <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StorageExistsRequest" /></param>
             <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.StorageExist"/></returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationResultRequest">
+            <summary>
+            Request model for <see cref="M:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi.GetOperationResult(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationResultRequest)" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationResultRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationResultRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationResultRequest.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationResultRequest"/> class.
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationResultRequest.id">
+            <summary>
+            Gets or sets id
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationStatusRequest">
+            <summary>
+            Request model for <see cref="M:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi.GetOperationStatus(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationStatusRequest)" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationStatusRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationStatusRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationStatusRequest.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationStatusRequest"/> class.
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetOperationStatusRequest.id">
+            <summary>
+            Gets or sets id
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest">
+            <summary>
+            Request model for <see cref="M:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi.StartConvert(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest)" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest.#ctor(System.String,System.IO.Stream,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest"/> class.
+            </summary>
+            <param name="format">Requested conversion format</param>
+            <param name="file">Input file to convert</param>
+            <param name="fromPage">Page start conversion from</param>
+            <param name="pagesCount">Number of pages to convert</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest.format">
+            <summary>
+            Requested conversion format
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest.File">
+            <summary>
+            Input file to convert
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest.fromPage">
+            <summary>
+            Page start conversion from
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertRequest.pagesCount">
+            <summary>
+            Number of pages to convert
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertAndSaveRequest">
+            <summary>
+            Request model for <see cref="M:GroupDocs.Conversion.Cloud.Sdk.Api.AsyncApi.StartConvertAndSave(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertAndSaveRequest)" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertAndSaveRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertAndSaveRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertAndSaveRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.ConvertSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertAndSaveRequest"/> class.
+            </summary>
+            <param name="convertSettings">Conversion settings</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.StartConvertAndSaveRequest.convertSettings">
+            <summary>
+            Conversion settings
+            </summary>  
         </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertDocumentRequest">
             <summary>
@@ -1658,11 +1806,6 @@
             Option to display or hide \"from\" email address. Default: true
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayEmailAddress">
-            <summary>
-            Option to display or hide email address. Default: true
-            </summary>  
-        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayToEmailAddress">
             <summary>
             Option to display or hide \"to\" email address. Default: true
@@ -2610,6 +2753,112 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OneLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult">
+            <summary>
+            Operation status result
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.MethodEnum">
+            <summary>
+            Gets or sets Method
+            </summary>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.MethodEnum.Convert">
+            <summary>
+            Enum Convert for "Convert"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.MethodEnum.ConvertAndSave">
+            <summary>
+            Enum ConvertAndSave for "ConvertAndSave"
+            </summary>            
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.StatusEnum">
+            <summary>
+            Gets or sets Status
+            </summary>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.StatusEnum.Created">
+            <summary>
+            Enum Created for "Created"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.StatusEnum.Started">
+            <summary>
+            Enum Started for "Started"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.StatusEnum.Failed">
+            <summary>
+            Enum Failed for "Failed"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.StatusEnum.Canceled">
+            <summary>
+            Enum Canceled for "Canceled"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.StatusEnum.Finished">
+            <summary>
+            Enum Finished for "Finished"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.Method">
+            <summary>
+            Gets or sets Method
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.Status">
+            <summary>
+            Gets or sets Status
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.Id">
+            <summary>
+            Gets or sets Id
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.Created">
+            <summary>
+            Gets or sets Created
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.Started">
+            <summary>
+            Gets or sets Started
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.Failed">
+            <summary>
+            Gets or sets Failed
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.Canceled">
+            <summary>
+            Gets or sets Canceled
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.Finished">
+            <summary>
+            Gets or sets Finished
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.Result">
+            <summary>
+            Gets or sets Result
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.Error">
+            <summary>
+            Gets or sets Error
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.ToString">
             <summary>
             Get the string presentation of the object
             </summary>

@@ -49,11 +49,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public bool? DisplayFromEmailAddress { get; set; }
 
         /// <summary>
-        /// Option to display or hide email address. Default: true
-        /// </summary>  
-        public bool? DisplayEmailAddress { get; set; }
-
-        /// <summary>
         /// Option to display or hide \"to\" email address. Default: true
         /// </summary>  
         public bool? DisplayToEmailAddress { get; set; }
@@ -98,7 +93,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("class EmailLoadOptions {\n");
           sb.Append("  DisplayHeader: ").Append(this.DisplayHeader).Append("\n");
           sb.Append("  DisplayFromEmailAddress: ").Append(this.DisplayFromEmailAddress).Append("\n");
-          sb.Append("  DisplayEmailAddress: ").Append(this.DisplayEmailAddress).Append("\n");
           sb.Append("  DisplayToEmailAddress: ").Append(this.DisplayToEmailAddress).Append("\n");
           sb.Append("  DisplayCcEmailAddress: ").Append(this.DisplayCcEmailAddress).Append("\n");
           sb.Append("  DisplayBccEmailAddress: ").Append(this.DisplayBccEmailAddress).Append("\n");

@@ -52,6 +52,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Client
         {
             try
             {
+                if (type == typeof(string)) return json;
+
                 if (json.StartsWith("{") || json.StartsWith("["))
                 {
                     try
