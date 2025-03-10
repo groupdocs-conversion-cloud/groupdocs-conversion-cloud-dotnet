@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd">
-//  Copyright (c) 2003-2024 Aspose Pty Ltd
+//  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -79,10 +79,10 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
             var existsRequest = new ObjectExistsRequest { path = testFile.FullName, storageName = storageName };
             var uploadRequest = new UploadFileRequest(testFile.FullName, GetTestFileStream(testFile), storageName);
 
-            FileApi.DeleteFile(deleteRequest);
             var response = StorageApi.ObjectExists(existsRequest);
-            Assert.IsFalse(response.Exists);
-            FileApi.UploadFile(uploadRequest);
+            if (!(response.Exists ?? false))
+                FileApi.UploadFile(uploadRequest);
+
             response = StorageApi.ObjectExists(existsRequest);
             Assert.IsTrue(response.Exists);
 

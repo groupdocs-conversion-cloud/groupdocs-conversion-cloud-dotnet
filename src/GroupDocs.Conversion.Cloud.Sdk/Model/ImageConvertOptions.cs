@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="ImageConvertOptions.cs">
-//  Copyright (c) 2003-2024 Aspose Pty Ltd
+//  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -122,6 +122,11 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public double? Gamma { get; set; }
 
         /// <summary>
+        /// Gets or sets a background color.
+        /// </summary>  
+        public string BackgroundColor { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -140,6 +145,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  Contrast: ").Append(this.Contrast).Append("\n");
           sb.Append("  Gamma: ").Append(this.Gamma).Append("\n");
           sb.Append("  FlipMode: ").Append(this.FlipMode).Append("\n");
+          sb.Append("  BackgroundColor: ").Append(this.BackgroundColor).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }
