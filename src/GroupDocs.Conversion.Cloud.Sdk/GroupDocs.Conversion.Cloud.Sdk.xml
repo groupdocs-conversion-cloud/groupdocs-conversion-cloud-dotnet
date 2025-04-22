@@ -1158,6 +1158,11 @@
             Amount of MBs processed
             </summary>  
         </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ConsumptionResult.BilledApiCalls">
+            <summary>
+            Billed API calls number
+            </summary>  
+        </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ConsumptionResult.ToString">
             <summary>
             Get the string presentation of the object
@@ -2342,6 +2347,11 @@
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConvertOptions.Gamma">
             <summary>
             Adjust image gamma
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConvertOptions.BackgroundColor">
+            <summary>
+            Gets or sets a background color.
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConvertOptions.ToString">
