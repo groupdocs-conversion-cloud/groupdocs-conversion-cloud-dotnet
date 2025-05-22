@@ -39,6 +39,39 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class SpreadsheetLoadOptions : LoadOptions 
     {                       
         /// <summary>
+        /// Represents the way comments are printed with the sheet. Default is PrintNoComments.
+        /// </summary>
+        /// <value>Represents the way comments are printed with the sheet. Default is PrintNoComments.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PrintCommentsEnum
+        { 
+            /// <summary>
+            /// Enum PrintInPlace for "PrintInPlace"
+            /// </summary>            
+            PrintInPlace,
+            
+            /// <summary>
+            /// Enum PrintNoComments for "PrintNoComments"
+            /// </summary>            
+            PrintNoComments,
+            
+            /// <summary>
+            /// Enum PrintSheetEnd for "PrintSheetEnd"
+            /// </summary>            
+            PrintSheetEnd,
+            
+            /// <summary>
+            /// Enum PrintWithThreadedComments for "PrintWithThreadedComments"
+            /// </summary>            
+            PrintWithThreadedComments            
+        }
+
+        /// <summary>
+        /// Represents the way comments are printed with the sheet. Default is PrintNoComments.
+        /// </summary>
+        public PrintCommentsEnum? PrintComments { get; set; }
+
+        /// <summary>
         /// Default font for Cells document. The following font will be used if a font is missing.
         /// </summary>  
         public string DefaultFont { get; set; }
@@ -79,11 +112,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public string Password { get; set; }
 
         /// <summary>
-        /// Hide comments
-        /// </summary>  
-        public bool? HideComments { get; set; }
-
-        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -99,7 +127,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  ConvertRange: ").Append(this.ConvertRange).Append("\n");
           sb.Append("  SkipEmptyRowsAndColumns: ").Append(this.SkipEmptyRowsAndColumns).Append("\n");
           sb.Append("  Password: ").Append(this.Password).Append("\n");
-          sb.Append("  HideComments: ").Append(this.HideComments).Append("\n");
+          sb.Append("  PrintComments: ").Append(this.PrintComments).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

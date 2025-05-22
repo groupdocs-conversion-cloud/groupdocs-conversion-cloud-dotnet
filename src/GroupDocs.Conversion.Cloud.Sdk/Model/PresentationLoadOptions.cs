@@ -39,6 +39,97 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class PresentationLoadOptions : LoadOptions 
     {                       
         /// <summary>
+        /// Represents the way comments are printed with the slide. Default is None.
+        /// </summary>
+        /// <value>Represents the way comments are printed with the slide. Default is None.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CommentsPositionEnum
+        { 
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>            
+            None,
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>            
+            Bottom,
+            
+            /// <summary>
+            /// Enum Right for "Right"
+            /// </summary>            
+            Right            
+        }
+
+        /// <summary>
+        /// Represents the way notes are printed with the slide. Default is None.
+        /// </summary>
+        /// <value>Represents the way notes are printed with the slide. Default is None.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum NotesPositionEnum
+        { 
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>            
+            None,
+            
+            /// <summary>
+            /// Enum BottomTruncated for "BottomTruncated"
+            /// </summary>            
+            BottomTruncated,
+            
+            /// <summary>
+            /// Enum BottomFull for "BottomFull"
+            /// </summary>            
+            BottomFull            
+        }
+
+        /// <summary>
+        /// Represents the way comments are printed with the slide. Default is None.
+        /// </summary>
+        public CommentsPositionEnum? CommentsPosition { get; set; }
+
+        /// <summary>
+        /// Represents the way notes are printed with the slide. Default is None.
+        /// </summary>
+        public NotesPositionEnum? NotesPosition { get; set; }
+
+        /// <summary>
+        /// Determines whether the document structure should be preserved when converting     to PDF (default is false).
+        /// </summary>  
+        public bool? PreserveDocumentStructure { get; set; }
+
+        /// <summary>
+        /// Value indicating whether custom document properties should be cleared.
+        /// </summary>  
+        public bool? ClearCustomDocumentProperties { get; set; }
+
+        /// <summary>
+        /// Value indicating whether built in document properties should be cleared.
+        /// </summary>  
+        public bool? ClearBuiltInDocumentProperties { get; set; }
+
+        /// <summary>
+        /// Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.Depth     Default: 1
+        /// </summary>  
+        public int? Depth { get; set; }
+
+        /// <summary>
+        /// Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.ConvertOwned     Default is false
+        /// </summary>  
+        public bool? ConvertOwned { get; set; }
+
+        /// <summary>
+        /// Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.ConvertOwner     Default is true
+        /// </summary>  
+        public bool? ConvertOwner { get; set; }
+
+        /// <summary>
+        /// Show hidden slides.
+        /// </summary>  
+        public bool? ShowHiddenSlides { get; set; }
+
+        /// <summary>
         /// Default font for rendering the presentation. The following font will be used if a presentation font is missing.
         /// </summary>  
         public string DefaultFont { get; set; }
@@ -54,16 +145,6 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public string Password { get; set; }
 
         /// <summary>
-        /// Hide comments
-        /// </summary>  
-        public bool? HideComments { get; set; }
-
-        /// <summary>
-        /// Show hidden slides
-        /// </summary>  
-        public bool? ShowHiddenSlides { get; set; }
-
-        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -71,11 +152,18 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class PresentationLoadOptions {\n");
+          sb.Append("  PreserveDocumentStructure: ").Append(this.PreserveDocumentStructure).Append("\n");
+          sb.Append("  ClearCustomDocumentProperties: ").Append(this.ClearCustomDocumentProperties).Append("\n");
+          sb.Append("  ClearBuiltInDocumentProperties: ").Append(this.ClearBuiltInDocumentProperties).Append("\n");
+          sb.Append("  Depth: ").Append(this.Depth).Append("\n");
+          sb.Append("  ConvertOwned: ").Append(this.ConvertOwned).Append("\n");
+          sb.Append("  ConvertOwner: ").Append(this.ConvertOwner).Append("\n");
+          sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
           sb.Append("  DefaultFont: ").Append(this.DefaultFont).Append("\n");
           sb.Append("  FontSubstitutes: ").Append(this.FontSubstitutes).Append("\n");
           sb.Append("  Password: ").Append(this.Password).Append("\n");
-          sb.Append("  HideComments: ").Append(this.HideComments).Append("\n");
-          sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
+          sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
+          sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

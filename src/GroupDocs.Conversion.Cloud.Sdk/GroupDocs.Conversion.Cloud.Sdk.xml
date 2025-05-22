@@ -3822,6 +3822,93 @@
             Presentation document load options
             </summary>  
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.CommentsPositionEnum">
+            <summary>
+            Represents the way comments are printed with the slide. Default is None.
+            </summary>
+            <value>Represents the way comments are printed with the slide. Default is None.</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.CommentsPositionEnum.None">
+            <summary>
+            Enum None for "None"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.CommentsPositionEnum.Bottom">
+            <summary>
+            Enum Bottom for "Bottom"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.CommentsPositionEnum.Right">
+            <summary>
+            Enum Right for "Right"
+            </summary>            
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.NotesPositionEnum">
+            <summary>
+            Represents the way notes are printed with the slide. Default is None.
+            </summary>
+            <value>Represents the way notes are printed with the slide. Default is None.</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.NotesPositionEnum.None">
+            <summary>
+            Enum None for "None"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.NotesPositionEnum.BottomTruncated">
+            <summary>
+            Enum BottomTruncated for "BottomTruncated"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.NotesPositionEnum.BottomFull">
+            <summary>
+            Enum BottomFull for "BottomFull"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.CommentsPosition">
+            <summary>
+            Represents the way comments are printed with the slide. Default is None.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.NotesPosition">
+            <summary>
+            Represents the way notes are printed with the slide. Default is None.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.PreserveDocumentStructure">
+            <summary>
+            Determines whether the document structure should be preserved when converting     to PDF (default is false).
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.ClearCustomDocumentProperties">
+            <summary>
+            Value indicating whether custom document properties should be cleared.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.ClearBuiltInDocumentProperties">
+            <summary>
+            Value indicating whether built in document properties should be cleared.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.Depth">
+            <summary>
+            Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.Depth     Default: 1
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.ConvertOwned">
+            <summary>
+            Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.ConvertOwned     Default is false
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.ConvertOwner">
+            <summary>
+            Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.ConvertOwner     Default is true
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.ShowHiddenSlides">
+            <summary>
+            Show hidden slides.
+            </summary>  
+        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.DefaultFont">
             <summary>
             Default font for rendering the presentation. The following font will be used if a presentation font is missing.
@@ -3835,16 +3922,6 @@
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.Password">
             <summary>
             Set password to unprotect protected document
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.HideComments">
-            <summary>
-            Hide comments
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.ShowHiddenSlides">
-            <summary>
-            Show hidden slides
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.ToString">
@@ -4041,6 +4118,37 @@
             Spreadsheet document load options
             </summary>  
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.PrintCommentsEnum">
+            <summary>
+            Represents the way comments are printed with the sheet. Default is PrintNoComments.
+            </summary>
+            <value>Represents the way comments are printed with the sheet. Default is PrintNoComments.</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.PrintCommentsEnum.PrintInPlace">
+            <summary>
+            Enum PrintInPlace for "PrintInPlace"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.PrintCommentsEnum.PrintNoComments">
+            <summary>
+            Enum PrintNoComments for "PrintNoComments"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.PrintCommentsEnum.PrintSheetEnd">
+            <summary>
+            Enum PrintSheetEnd for "PrintSheetEnd"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.PrintCommentsEnum.PrintWithThreadedComments">
+            <summary>
+            Enum PrintWithThreadedComments for "PrintWithThreadedComments"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.PrintComments">
+            <summary>
+            Represents the way comments are printed with the sheet. Default is PrintNoComments.
+            </summary>
+        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.DefaultFont">
             <summary>
             Default font for Cells document. The following font will be used if a font is missing.
@@ -4079,11 +4187,6 @@
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.Password">
             <summary>
             Set password to unprotect protected document
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.HideComments">
-            <summary>
-            Hide comments
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ToString">
