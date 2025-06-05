@@ -3891,17 +3891,17 @@
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.Depth">
             <summary>
-            Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.Depth     Default: 1
+            Option to control how many levels in depth to perform conversion     Default: 1
             </summary>  
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.ConvertOwned">
             <summary>
-            Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.ConvertOwned     Default is false
+            Option to control whether the owned documents in the documents container must     be converted
             </summary>  
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.ConvertOwner">
             <summary>
-            Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.ConvertOwner     Default is true
+            Option to control whether the documents container itself must be converted If     this property is true the documents container will be the first converted document     Default is true
             </summary>  
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.ShowHiddenSlides">
@@ -5136,14 +5136,35 @@
             WordProcessing document load options
             </summary>  
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.CommentDisplayModeEnum">
+            <summary>
+            Specifies how comments should be displayed in the output document. Default is Balloon.
+            </summary>
+            <value>Specifies how comments should be displayed in the output document. Default is Balloon.</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.CommentDisplayModeEnum.Hidden">
+            <summary>
+            Enum Hidden for "Hidden"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.CommentDisplayModeEnum.Balloon">
+            <summary>
+            Enum Balloon for "Balloon"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.CommentDisplayModeEnum.Annotation">
+            <summary>
+            Enum Annotation for "Annotation"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.CommentDisplayMode">
+            <summary>
+            Specifies how comments should be displayed in the output document. Default is Balloon.
+            </summary>
+        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.DefaultFont">
             <summary>
             Default font for Words document. The following font will be used if a font is missing.
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.AutoFontSubstitution">
-            <summary>
-            If AutoFontSubstitution is disabled, GroupDocs.Conversion uses the DefaultFont for the substitution of missing fonts. If AutoFontSubstitution is enabled, GroupDocs.Conversion evaluates all the related fields in FontInfo (Panose, Sig etc) for the missing font and finds the closest match among the available font sources. Note that font substitution mechanism will override the DefaultFont in cases when FontInfo for the missing font is available in the document. The default value is True.
             </summary>  
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.FontSubstitutes">
@@ -5161,11 +5182,6 @@
             Hide markup and track changes for Word documents
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.HideComments">
-            <summary>
-            Hide comments
-            </summary>  
-        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.BookmarksOutlineLevel">
             <summary>
             Specifies the default level in the document outline at which to display Word bookmarks. Default is 0. Valid range is 0 to 9.
@@ -5179,6 +5195,106 @@
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.ExpandedOutlineLevels">
             <summary>
             Specifies how many levels in the document outline to show expanded when the file is viewed. Default is 0. Valid range is 0 to 9. Note that this options will not work when saving to XPS.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.ClearCustomDocumentProperties">
+            <summary>
+            Clear custom document properties. Default is false.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.ClearBuiltInDocumentProperties">
+            <summary>
+            Clear built-in document properties. Default is false.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.Depth">
+            <summary>
+            Option to control how many levels in depth to perform conversion. Default: 1.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.ConvertOwned">
+            <summary>
+            Option to control whether the owned documents in the documents container must be converted
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.ConvertOwner">
+            <summary>
+            Option to control whether the documents container itself must be converted If this property is true the documents container will be the first converted document. Default is true.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.AutoHyphenation">
+            <summary>
+            Gets or sets value determining whether automatic hyphenation is turned on for the document. Default value for this property is false.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.HyphenateCaps">
+            <summary>
+            Gets or sets value determining whether words written in all capital letters are hyphenated. Default value for this property is true.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.PageNumbering">
+            <summary>
+            Enable or disable generation of page numbering in converted document. Default: false
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.PreserveDocumentStructure">
+            <summary>
+            Determines whether the document structure should be preserved when converting to PDF (default is false).
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.SkipExternalResources">
+            <summary>
+            If true all external resource will not be loading. Default is true.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.UseTextShaper">
+            <summary>
+            Specifies whether to use a text shaper for better kerning display. Default is false.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.PreserveFormFields">
+            <summary>
+            Specifies whether to preserve Microsoft Word form fields as form fields in PDF or convert them to text. Default is false.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.KeepDateFieldOriginalValue">
+            <summary>
+            Keep original value of date field. Default: false
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.UpdateFields">
+            <summary>
+            Update fields after loading. Default: false
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.UpdatePageLayout">
+            <summary>
+            Update page layout after loading. Default: false
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.EmbedTrueTypeFonts">
+            <summary>
+            If EmbedTrueTypeFonts is true, GroupDocs.Conversion Cloud embed true type fonts in the output document. Default: true
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.FontInfoSubstitutionEnabled">
+            <summary>
+            Automatically substitutes missing fonts based on FontInfo in the document. Default: false.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.FontConfigSubstitutionEnabled">
+            <summary>
+            Automatically substitutes missing fonts based on FontConfig in the system. Default: false.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.FontNameSubstitutionEnabled">
+            <summary>
+            Automatically substitutes missing fonts based on the font name. Default: false.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.ShowFullCommenterName">
+            <summary>
+            Show full commenter name in comments. Default is false.
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.ToString">

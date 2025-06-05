@@ -110,17 +110,17 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public bool? ClearBuiltInDocumentProperties { get; set; }
 
         /// <summary>
-        /// Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.Depth     Default: 1
+        /// Option to control how many levels in depth to perform conversion     Default: 1
         /// </summary>  
         public int? Depth { get; set; }
 
         /// <summary>
-        /// Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.ConvertOwned     Default is false
+        /// Option to control whether the owned documents in the documents container must     be converted
         /// </summary>  
         public bool? ConvertOwned { get; set; }
 
         /// <summary>
-        /// Implements GroupDocs.Conversion.Contracts.IDocumentsContainerLoadOptions.ConvertOwner     Default is true
+        /// Option to control whether the documents container itself must be converted If     this property is true the documents container will be the first converted document     Default is true
         /// </summary>  
         public bool? ConvertOwner { get; set; }
 
