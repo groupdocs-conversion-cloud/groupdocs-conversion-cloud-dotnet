@@ -16,22 +16,22 @@ Before you can make any requests to GroupDocs Cloud API you need to get a Client
 ## Convert document
 
 ```csharp
-using System;
-using System.Diagnostics;
 using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
 
-namespace Example
+namespace ConversionCloudExample
 {
-    public class Example
+    internal class Program
     {
-        public void Main()
+        static void Main(string[] args)
         {
             // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
             string MyClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
             string MyClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
-            
+
             var configuration = new Configuration(MyClientId, MyClientSecret);
-            
+
             // Create necessary API instances
             var apiInstance = new ConvertApi(configuration);
 
@@ -45,35 +45,37 @@ namespace Example
         }
     }
 }
+
 ```
 
 ## Convert document using cloud storage
 
 ```csharp
-using System;
-using System.Diagnostics;
 using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
 
-namespace Example
+namespace ConversionCloudExample
 {
-    public class Example
+    internal class Program
     {
-        public void Main()
+        static void Main(string[] args)
         {
             // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
             string MyClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
             string MyClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
-            
+
             var configuration = new Configuration(MyClientId, MyClientSecret);
 
             // Create necessary API instances
             var fileApi = new FileApi(configuration);
             var convertApi = new ConvertApi(configuration);
-            
+
             // Upload file to cloud storage
             var fileStream = File.Open("myFile.docx", FileMode.Open);
             fileApi.UploadFile(new UploadFileRequest("myFile.docx", fileStream));
-            
+
             // Prepare convert settings
             var settings = new ConvertSettings
             {
@@ -83,12 +85,12 @@ namespace Example
             };
 
             // Convert to specified format
-            apiInstance.ConvertDocument(new ConvertDocumentRequest(settings));
+            convertApi.ConvertDocument(new ConvertDocumentRequest(settings));
 
             // Download the result
 
-            var response = apiInstance.DownloadFile(new DownloadFileRequest("converted/myFile.pdf");
-            Console.WriteLine("Expected response type is Stream: " + response.Length.ToString());   
+            var response = fileApi.DownloadFile(new DownloadFileRequest("converted/myFile.pdf"));
+            Console.WriteLine("Expected response type is Stream: " + response.Length.ToString());
         }
     }
 }
