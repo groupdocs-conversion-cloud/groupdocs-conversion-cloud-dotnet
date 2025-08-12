@@ -1064,9 +1064,9 @@
         </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.DrawTypeEnum">
             <summary>
-            Gets or sets type of drawing.
+            A type of drawing.
             </summary>
-            <value>Gets or sets type of drawing.</value>
+            <value>A type of drawing.</value>
         </member>
         <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.DrawTypeEnum.UseDrawColor">
             <summary>
@@ -1080,7 +1080,7 @@
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.DrawType">
             <summary>
-            Gets or sets type of drawing.
+            A type of drawing.
             </summary>
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.LayoutNames">
@@ -1088,9 +1088,14 @@
             Render specific CAD layouts
             </summary>  
         </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.DrawColor">
+            <summary>
+            A foreground color.             
+            </summary>  
+        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.BackgroundColor">
             <summary>
-            Gets or sets a background color.
+            A background color.
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.ToString">
@@ -1801,39 +1806,9 @@
             Options for loading Email documents
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayHeader">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.PreserveOriginalDate">
             <summary>
-            Option to display or hide the email header. Default: true
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayFromEmailAddress">
-            <summary>
-            Option to display or hide \"from\" email address. Default: true
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayToEmailAddress">
-            <summary>
-            Option to display or hide \"to\" email address. Default: true
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayCcEmailAddress">
-            <summary>
-            Option to display or hide \"Cc\" email address. Default: false
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayBccEmailAddress">
-            <summary>
-            Option to display or hide \"Bcc\" email address. Default: false
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.TimeZoneOffset">
-            <summary>
-            Gets or sets the Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the localtime and UTC.
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.ConvertAttachments">
-            <summary>
-            Option to convert attachments in source email or not. Default: false.
+            Defines whether need to keep original date header string in mail message when saving or not (Default value is true)
             </summary>  
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.FieldLabels">
@@ -1841,9 +1816,64 @@
             The mapping between email message field and field text representation
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.PreserveOriginalDate">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.TimeZoneOffset">
             <summary>
-            Defines whether need to keep original date header string in mail message when saving or not (Default value is true)
+            Gets or sets the Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the localtime and UTC.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplaySent">
+            <summary>
+            Option to display or hide sent date/time in the header. Default: true.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplaySubject">
+            <summary>
+            Option to display or hide subject in the header. Default: true.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayAttachments">
+            <summary>
+            Option to display or hide attachments in the header. Default: true.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayEmailAddresses">
+            <summary>
+            Gets or sets DisplayEmailAddresses
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayBccEmailAddress">
+            <summary>
+            Option to display or hide \"Bcc\" email address. Default: false
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayCcEmailAddress">
+            <summary>
+            Option to display or hide \"Cc\" email address. Default: false
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayToEmailAddress">
+            <summary>
+            Option to display or hide \"to\" email address. Default: true
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayFromEmailAddress">
+            <summary>
+            Option to display or hide \"from\" email address. Default: true
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayHeader">
+            <summary>
+            Option to display or hide the email header. Default: true
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DefaultFont">
+            <summary>
+            Default font for Email document. The following font will be used if a font is missing.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.FontSubstitutes">
+            <summary>
+            List of font substitutes.
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.ToString">
@@ -3507,14 +3537,24 @@
             Pdf document load options
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.RemoveEmbeddedFiles">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.ClearBuiltInDocumentProperties">
             <summary>
-            Remove embedded files
+            Clear built-in document properties
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.Password">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.ClearCustomDocumentProperties">
             <summary>
-            Set password to unprotect protected document
+            Clear custom document properties
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.PageNumbering">
+            <summary>
+            Enable or disable generation of page numbering in converted document. Default:     false
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.FlattenAllFields">
+            <summary>
+            Flatten all the fields of the PDF form
             </summary>  
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.HidePdfAnnotations">
@@ -3522,9 +3562,29 @@
             Hide annotations in Pdf documents
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.FlattenAllFields">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.DefaultFont">
             <summary>
-            Flatten all the fields of the PDF form
+            Default font for Pdf document. The following font will be used if a font is missing.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.Password">
+            <summary>
+            Set password to unprotect protected document
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.RemoveJavascript">
+            <summary>
+            Remove javascript
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.RemoveEmbeddedFiles">
+            <summary>
+            Remove embedded files
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.FontSubstitutes">
+            <summary>
+            Substitute specific fonts when converting Words document.
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PdfLoadOptions.ToString">
@@ -4149,34 +4209,49 @@
             Represents the way comments are printed with the sheet. Default is PrintNoComments.
             </summary>
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.DefaultFont">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ClearCustomDocumentProperties">
             <summary>
-            Default font for Cells document. The following font will be used if a font is missing.
+            Clear custom document properties. Default is false.
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.FontSubstitutes">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ClearBuiltInDocumentProperties">
             <summary>
-            Substitute specific fonts when converting Cells document.
+            Clear built-in document properties. Default is false.
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ShowGridLines">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.RowsPerPage">
             <summary>
-            Show grid lines when converting Excel files
+            Split a worksheet into pages by rows. Default is 0, no pagination.
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ShowHiddenSheets">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ColumnsPerPage">
             <summary>
-            Show hidden sheets when converting Excel files
+            Split a worksheet into pages by columns. Default is 0, no pagination.
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.OnePagePerSheet">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.AutoFitRows">
             <summary>
-            If OnePagePerSheet is true the content of the sheet will be converted to one page in the PDF document. Default value is true.
+            Autofits all rows when converting
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ConvertRange">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.AllColumnsInOnePagePerSheet">
             <summary>
-            Convert specific range when converting to other than cells format. Example: \"D1:F8\"
+            If AllColumnsInOnePagePerSheet is true, all column content of one sheet will output to only one page in result. The width of paper size of pagesetup will be invalid, and the other settings of pagesetup will still take effect.             
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.CultureInfo">
+            <summary>
+            System culture info at the time file is loaded
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.CheckExcelRestriction">
+            <summary>
+            Whether check restriction of excel file when user modify cells related objects. For example, excel does not allow inputting string value longer than 32K. When you input a value longer than 32K, if this property is true, you will get an Exception. If this property is false, we will accept your input string value as the cell's value so that later you can output the complete string value for other file formats such as CSV. However, if you have set such kind of value that is invalid for excel file format, you should not save the workbook as excel file format later. Otherwise there may be unexpected error for the generated excel file.             
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.Password">
+            <summary>
+            Set password to unprotect protected document
             </summary>  
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.SkipEmptyRowsAndColumns">
@@ -4184,9 +4259,54 @@
             Skips empty rows and columns when converting. Default is True.
             </summary>  
         </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.Password">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ConvertRange">
             <summary>
-            Set password to unprotect protected document
+            Convert specific range when converting to other than cells format. Example: \"D1:F8\"
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.OptimizePdfSize">
+            <summary>
+            If True and converting to Pdf the conversion is optimized for better file size than print quality.             
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.OnePagePerSheet">
+            <summary>
+            If OnePagePerSheet is true the content of the sheet will be converted to one page in the PDF document. Default value is true.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ShowHiddenSheets">
+            <summary>
+            Show hidden sheets when converting Excel files
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ShowGridLines">
+            <summary>
+            Show grid lines when converting Excel files
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.FontSubstitutes">
+            <summary>
+            Substitute specific fonts when converting Cells document.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.DefaultFont">
+            <summary>
+            Default font for Cells document. The following font will be used if a font is missing.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.SheetIndexes">
+            <summary>
+            List of sheet indexes to convert. The indexes must be zero-based
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.Sheets">
+            <summary>
+            List of sheet names to convert
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ResetFontFolders">
+            <summary>
+            Reset font folders before loading document
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetLoadOptions.ToString">
@@ -4872,9 +4992,35 @@
             Enum AbsolutePositioning for "AbsolutePositioning"
             </summary>            
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.PageLayoutEnum">
+            <summary>
+            Specifies the page layout options when loading web documents
+            </summary>
+            <value>Specifies the page layout options when loading web documents</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.PageLayoutEnum.None">
+            <summary>
+            Enum None for "None"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.PageLayoutEnum.ScaleToPageWidth">
+            <summary>
+            Enum ScaleToPageWidth for "ScaleToPageWidth"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.PageLayoutEnum.ScaleToPageHeight">
+            <summary>
+            Enum ScaleToPageHeight for "ScaleToPageHeight"
+            </summary>            
+        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.RenderingMode">
             <summary>
             Controls how HTML content is rendered. Default: AbsolutePositioning
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.PageLayout">
+            <summary>
+            Specifies the page layout options when loading web documents
             </summary>
         </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.PageNumbering">
@@ -4882,14 +5028,34 @@
             Enable or disable generation of page numbering in converted document. Default: false
             </summary>  
         </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.BasePath">
+            <summary>
+            The base path/url for the html
+            </summary>  
+        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.Encoding">
             <summary>
             Get or sets the encoding to be used when loading the web document. If the property is null the encoding will be determined from document character set attribute
             </summary>  
         </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.SkipExternalResources">
+            <summary>
+            If true all external resource will not be loading
+            </summary>  
+        </member>
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.UsePdf">
             <summary>
             Use pdf for the conversion. Default: false
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.Zoom">
+            <summary>
+            Gets or sets Zoom
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.CustomCssStyle">
+            <summary>
+            Gets or sets CustomCssStyle
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WebLoadOptions.ToString">

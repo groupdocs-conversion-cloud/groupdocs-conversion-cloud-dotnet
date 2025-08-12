@@ -57,9 +57,37 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// Specifies the page layout options when loading web documents
+        /// </summary>
+        /// <value>Specifies the page layout options when loading web documents</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PageLayoutEnum
+        { 
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>            
+            None,
+            
+            /// <summary>
+            /// Enum ScaleToPageWidth for "ScaleToPageWidth"
+            /// </summary>            
+            ScaleToPageWidth,
+            
+            /// <summary>
+            /// Enum ScaleToPageHeight for "ScaleToPageHeight"
+            /// </summary>            
+            ScaleToPageHeight            
+        }
+
+        /// <summary>
         /// Controls how HTML content is rendered. Default: AbsolutePositioning
         /// </summary>
         public RenderingModeEnum? RenderingMode { get; set; }
+
+        /// <summary>
+        /// Specifies the page layout options when loading web documents
+        /// </summary>
+        public PageLayoutEnum? PageLayout { get; set; }
 
         /// <summary>
         /// Enable or disable generation of page numbering in converted document. Default: false
@@ -67,14 +95,34 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public bool? PageNumbering { get; set; }
 
         /// <summary>
+        /// The base path/url for the html
+        /// </summary>  
+        public string BasePath { get; set; }
+
+        /// <summary>
         /// Get or sets the encoding to be used when loading the web document. If the property is null the encoding will be determined from document character set attribute
         /// </summary>  
         public string Encoding { get; set; }
 
         /// <summary>
+        /// If true all external resource will not be loading
+        /// </summary>  
+        public bool? SkipExternalResources { get; set; }
+
+        /// <summary>
         /// Use pdf for the conversion. Default: false
         /// </summary>  
         public bool? UsePdf { get; set; }
+
+        /// <summary>
+        /// Gets or sets Zoom
+        /// </summary>  
+        public int? Zoom { get; set; }
+
+        /// <summary>
+        /// Gets or sets CustomCssStyle
+        /// </summary>  
+        public string CustomCssStyle { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -85,9 +133,14 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           var sb = new StringBuilder();
           sb.Append("class WebLoadOptions {\n");
           sb.Append("  PageNumbering: ").Append(this.PageNumbering).Append("\n");
+          sb.Append("  BasePath: ").Append(this.BasePath).Append("\n");
           sb.Append("  Encoding: ").Append(this.Encoding).Append("\n");
+          sb.Append("  SkipExternalResources: ").Append(this.SkipExternalResources).Append("\n");
           sb.Append("  UsePdf: ").Append(this.UsePdf).Append("\n");
           sb.Append("  RenderingMode: ").Append(this.RenderingMode).Append("\n");
+          sb.Append("  Zoom: ").Append(this.Zoom).Append("\n");
+          sb.Append("  PageLayout: ").Append(this.PageLayout).Append("\n");
+          sb.Append("  CustomCssStyle: ").Append(this.CustomCssStyle).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

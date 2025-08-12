@@ -39,9 +39,9 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class CadLoadOptions : LoadOptions 
     {                       
         /// <summary>
-        /// Gets or sets type of drawing.
+        /// A type of drawing.
         /// </summary>
-        /// <value>Gets or sets type of drawing.</value>
+        /// <value>A type of drawing.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DrawTypeEnum
         { 
@@ -57,7 +57,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets type of drawing.
+        /// A type of drawing.
         /// </summary>
         public DrawTypeEnum? DrawType { get; set; }
 
@@ -67,7 +67,12 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public List<string> LayoutNames { get; set; }
 
         /// <summary>
-        /// Gets or sets a background color.
+        /// A foreground color.             
+        /// </summary>  
+        public string DrawColor { get; set; }
+
+        /// <summary>
+        /// A background color.
         /// </summary>  
         public string BackgroundColor { get; set; }
 
@@ -80,8 +85,9 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           var sb = new StringBuilder();
           sb.Append("class CadLoadOptions {\n");
           sb.Append("  LayoutNames: ").Append(this.LayoutNames).Append("\n");
-          sb.Append("  BackgroundColor: ").Append(this.BackgroundColor).Append("\n");
           sb.Append("  DrawType: ").Append(this.DrawType).Append("\n");
+          sb.Append("  DrawColor: ").Append(this.DrawColor).Append("\n");
+          sb.Append("  BackgroundColor: ").Append(this.BackgroundColor).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

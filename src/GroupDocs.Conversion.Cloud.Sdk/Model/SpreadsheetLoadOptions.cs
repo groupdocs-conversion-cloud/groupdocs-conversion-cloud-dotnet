@@ -72,34 +72,49 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public PrintCommentsEnum? PrintComments { get; set; }
 
         /// <summary>
-        /// Default font for Cells document. The following font will be used if a font is missing.
+        /// Clear custom document properties. Default is false.
         /// </summary>  
-        public string DefaultFont { get; set; }
+        public bool? ClearCustomDocumentProperties { get; set; }
 
         /// <summary>
-        /// Substitute specific fonts when converting Cells document.
+        /// Clear built-in document properties. Default is false.
         /// </summary>  
-        public Dictionary<string, string> FontSubstitutes { get; set; }
+        public bool? ClearBuiltInDocumentProperties { get; set; }
 
         /// <summary>
-        /// Show grid lines when converting Excel files
+        /// Split a worksheet into pages by rows. Default is 0, no pagination.
         /// </summary>  
-        public bool? ShowGridLines { get; set; }
+        public int? RowsPerPage { get; set; }
 
         /// <summary>
-        /// Show hidden sheets when converting Excel files
+        /// Split a worksheet into pages by columns. Default is 0, no pagination.
         /// </summary>  
-        public bool? ShowHiddenSheets { get; set; }
+        public int? ColumnsPerPage { get; set; }
 
         /// <summary>
-        /// If OnePagePerSheet is true the content of the sheet will be converted to one page in the PDF document. Default value is true.
+        /// Autofits all rows when converting
         /// </summary>  
-        public bool? OnePagePerSheet { get; set; }
+        public bool? AutoFitRows { get; set; }
 
         /// <summary>
-        /// Convert specific range when converting to other than cells format. Example: \"D1:F8\"
+        /// If AllColumnsInOnePagePerSheet is true, all column content of one sheet will output to only one page in result. The width of paper size of pagesetup will be invalid, and the other settings of pagesetup will still take effect.             
         /// </summary>  
-        public string ConvertRange { get; set; }
+        public bool? AllColumnsInOnePagePerSheet { get; set; }
+
+        /// <summary>
+        /// System culture info at the time file is loaded
+        /// </summary>  
+        public string CultureInfo { get; set; }
+
+        /// <summary>
+        /// Whether check restriction of excel file when user modify cells related objects. For example, excel does not allow inputting string value longer than 32K. When you input a value longer than 32K, if this property is true, you will get an Exception. If this property is false, we will accept your input string value as the cell's value so that later you can output the complete string value for other file formats such as CSV. However, if you have set such kind of value that is invalid for excel file format, you should not save the workbook as excel file format later. Otherwise there may be unexpected error for the generated excel file.             
+        /// </summary>  
+        public bool? CheckExcelRestriction { get; set; }
+
+        /// <summary>
+        /// Set password to unprotect protected document
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Skips empty rows and columns when converting. Default is True.
@@ -107,9 +122,54 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public bool? SkipEmptyRowsAndColumns { get; set; }
 
         /// <summary>
-        /// Set password to unprotect protected document
+        /// Convert specific range when converting to other than cells format. Example: \"D1:F8\"
         /// </summary>  
-        public string Password { get; set; }
+        public string ConvertRange { get; set; }
+
+        /// <summary>
+        /// If True and converting to Pdf the conversion is optimized for better file size than print quality.             
+        /// </summary>  
+        public bool? OptimizePdfSize { get; set; }
+
+        /// <summary>
+        /// If OnePagePerSheet is true the content of the sheet will be converted to one page in the PDF document. Default value is true.
+        /// </summary>  
+        public bool? OnePagePerSheet { get; set; }
+
+        /// <summary>
+        /// Show hidden sheets when converting Excel files
+        /// </summary>  
+        public bool? ShowHiddenSheets { get; set; }
+
+        /// <summary>
+        /// Show grid lines when converting Excel files
+        /// </summary>  
+        public bool? ShowGridLines { get; set; }
+
+        /// <summary>
+        /// Substitute specific fonts when converting Cells document.
+        /// </summary>  
+        public Dictionary<string, string> FontSubstitutes { get; set; }
+
+        /// <summary>
+        /// Default font for Cells document. The following font will be used if a font is missing.
+        /// </summary>  
+        public string DefaultFont { get; set; }
+
+        /// <summary>
+        /// List of sheet indexes to convert. The indexes must be zero-based
+        /// </summary>  
+        public List<int?> SheetIndexes { get; set; }
+
+        /// <summary>
+        /// List of sheet names to convert
+        /// </summary>  
+        public List<string> Sheets { get; set; }
+
+        /// <summary>
+        /// Reset font folders before loading document
+        /// </summary>  
+        public bool? ResetFontFolders { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -119,15 +179,27 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class SpreadsheetLoadOptions {\n");
-          sb.Append("  DefaultFont: ").Append(this.DefaultFont).Append("\n");
-          sb.Append("  FontSubstitutes: ").Append(this.FontSubstitutes).Append("\n");
-          sb.Append("  ShowGridLines: ").Append(this.ShowGridLines).Append("\n");
-          sb.Append("  ShowHiddenSheets: ").Append(this.ShowHiddenSheets).Append("\n");
-          sb.Append("  OnePagePerSheet: ").Append(this.OnePagePerSheet).Append("\n");
-          sb.Append("  ConvertRange: ").Append(this.ConvertRange).Append("\n");
-          sb.Append("  SkipEmptyRowsAndColumns: ").Append(this.SkipEmptyRowsAndColumns).Append("\n");
+          sb.Append("  ClearCustomDocumentProperties: ").Append(this.ClearCustomDocumentProperties).Append("\n");
+          sb.Append("  ClearBuiltInDocumentProperties: ").Append(this.ClearBuiltInDocumentProperties).Append("\n");
+          sb.Append("  RowsPerPage: ").Append(this.RowsPerPage).Append("\n");
+          sb.Append("  ColumnsPerPage: ").Append(this.ColumnsPerPage).Append("\n");
+          sb.Append("  AutoFitRows: ").Append(this.AutoFitRows).Append("\n");
+          sb.Append("  AllColumnsInOnePagePerSheet: ").Append(this.AllColumnsInOnePagePerSheet).Append("\n");
+          sb.Append("  CultureInfo: ").Append(this.CultureInfo).Append("\n");
+          sb.Append("  CheckExcelRestriction: ").Append(this.CheckExcelRestriction).Append("\n");
           sb.Append("  Password: ").Append(this.Password).Append("\n");
+          sb.Append("  SkipEmptyRowsAndColumns: ").Append(this.SkipEmptyRowsAndColumns).Append("\n");
+          sb.Append("  ConvertRange: ").Append(this.ConvertRange).Append("\n");
+          sb.Append("  OptimizePdfSize: ").Append(this.OptimizePdfSize).Append("\n");
+          sb.Append("  OnePagePerSheet: ").Append(this.OnePagePerSheet).Append("\n");
+          sb.Append("  ShowHiddenSheets: ").Append(this.ShowHiddenSheets).Append("\n");
+          sb.Append("  ShowGridLines: ").Append(this.ShowGridLines).Append("\n");
+          sb.Append("  FontSubstitutes: ").Append(this.FontSubstitutes).Append("\n");
+          sb.Append("  DefaultFont: ").Append(this.DefaultFont).Append("\n");
+          sb.Append("  SheetIndexes: ").Append(this.SheetIndexes).Append("\n");
+          sb.Append("  Sheets: ").Append(this.Sheets).Append("\n");
           sb.Append("  PrintComments: ").Append(this.PrintComments).Append("\n");
+          sb.Append("  ResetFontFolders: ").Append(this.ResetFontFolders).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

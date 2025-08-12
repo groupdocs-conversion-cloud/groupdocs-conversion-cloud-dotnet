@@ -39,14 +39,24 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class PdfLoadOptions : LoadOptions 
     {                       
         /// <summary>
-        /// Remove embedded files
+        /// Clear built-in document properties
         /// </summary>  
-        public bool? RemoveEmbeddedFiles { get; set; }
+        public bool? ClearBuiltInDocumentProperties { get; set; }
 
         /// <summary>
-        /// Set password to unprotect protected document
+        /// Clear custom document properties
         /// </summary>  
-        public string Password { get; set; }
+        public bool? ClearCustomDocumentProperties { get; set; }
+
+        /// <summary>
+        /// Enable or disable generation of page numbering in converted document. Default:     false
+        /// </summary>  
+        public bool? PageNumbering { get; set; }
+
+        /// <summary>
+        /// Flatten all the fields of the PDF form
+        /// </summary>  
+        public bool? FlattenAllFields { get; set; }
 
         /// <summary>
         /// Hide annotations in Pdf documents
@@ -54,9 +64,29 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public bool? HidePdfAnnotations { get; set; }
 
         /// <summary>
-        /// Flatten all the fields of the PDF form
+        /// Default font for Pdf document. The following font will be used if a font is missing.
         /// </summary>  
-        public bool? FlattenAllFields { get; set; }
+        public string DefaultFont { get; set; }
+
+        /// <summary>
+        /// Set password to unprotect protected document
+        /// </summary>  
+        public string Password { get; set; }
+
+        /// <summary>
+        /// Remove javascript
+        /// </summary>  
+        public bool? RemoveJavascript { get; set; }
+
+        /// <summary>
+        /// Remove embedded files
+        /// </summary>  
+        public bool? RemoveEmbeddedFiles { get; set; }
+
+        /// <summary>
+        /// Substitute specific fonts when converting Words document.
+        /// </summary>  
+        public Dictionary<string, string> FontSubstitutes { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -66,10 +96,16 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class PdfLoadOptions {\n");
-          sb.Append("  RemoveEmbeddedFiles: ").Append(this.RemoveEmbeddedFiles).Append("\n");
-          sb.Append("  Password: ").Append(this.Password).Append("\n");
-          sb.Append("  HidePdfAnnotations: ").Append(this.HidePdfAnnotations).Append("\n");
+          sb.Append("  ClearBuiltInDocumentProperties: ").Append(this.ClearBuiltInDocumentProperties).Append("\n");
+          sb.Append("  ClearCustomDocumentProperties: ").Append(this.ClearCustomDocumentProperties).Append("\n");
+          sb.Append("  PageNumbering: ").Append(this.PageNumbering).Append("\n");
           sb.Append("  FlattenAllFields: ").Append(this.FlattenAllFields).Append("\n");
+          sb.Append("  HidePdfAnnotations: ").Append(this.HidePdfAnnotations).Append("\n");
+          sb.Append("  DefaultFont: ").Append(this.DefaultFont).Append("\n");
+          sb.Append("  Password: ").Append(this.Password).Append("\n");
+          sb.Append("  RemoveJavascript: ").Append(this.RemoveJavascript).Append("\n");
+          sb.Append("  RemoveEmbeddedFiles: ").Append(this.RemoveEmbeddedFiles).Append("\n");
+          sb.Append("  FontSubstitutes: ").Append(this.FontSubstitutes).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

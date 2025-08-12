@@ -39,39 +39,9 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     public class EmailLoadOptions : LoadOptions 
     {                       
         /// <summary>
-        /// Option to display or hide the email header. Default: true
+        /// Defines whether need to keep original date header string in mail message when saving or not (Default value is true)
         /// </summary>  
-        public bool? DisplayHeader { get; set; }
-
-        /// <summary>
-        /// Option to display or hide \"from\" email address. Default: true
-        /// </summary>  
-        public bool? DisplayFromEmailAddress { get; set; }
-
-        /// <summary>
-        /// Option to display or hide \"to\" email address. Default: true
-        /// </summary>  
-        public bool? DisplayToEmailAddress { get; set; }
-
-        /// <summary>
-        /// Option to display or hide \"Cc\" email address. Default: false
-        /// </summary>  
-        public bool? DisplayCcEmailAddress { get; set; }
-
-        /// <summary>
-        /// Option to display or hide \"Bcc\" email address. Default: false
-        /// </summary>  
-        public bool? DisplayBccEmailAddress { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the localtime and UTC.
-        /// </summary>  
-        public string TimeZoneOffset { get; set; }
-
-        /// <summary>
-        /// Option to convert attachments in source email or not. Default: false.
-        /// </summary>  
-        public bool? ConvertAttachments { get; set; }
+        public bool? PreserveOriginalDate { get; set; }
 
         /// <summary>
         /// The mapping between email message field and field text representation
@@ -79,9 +49,64 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public List<FieldLabel> FieldLabels { get; set; }
 
         /// <summary>
-        /// Defines whether need to keep original date header string in mail message when saving or not (Default value is true)
+        /// Gets or sets the Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the localtime and UTC.
         /// </summary>  
-        public bool? PreserveOriginalDate { get; set; }
+        public string TimeZoneOffset { get; set; }
+
+        /// <summary>
+        /// Option to display or hide sent date/time in the header. Default: true.
+        /// </summary>  
+        public bool? DisplaySent { get; set; }
+
+        /// <summary>
+        /// Option to display or hide subject in the header. Default: true.
+        /// </summary>  
+        public bool? DisplaySubject { get; set; }
+
+        /// <summary>
+        /// Option to display or hide attachments in the header. Default: true.
+        /// </summary>  
+        public bool? DisplayAttachments { get; set; }
+
+        /// <summary>
+        /// Gets or sets DisplayEmailAddresses
+        /// </summary>  
+        public bool? DisplayEmailAddresses { get; set; }
+
+        /// <summary>
+        /// Option to display or hide \"Bcc\" email address. Default: false
+        /// </summary>  
+        public bool? DisplayBccEmailAddress { get; set; }
+
+        /// <summary>
+        /// Option to display or hide \"Cc\" email address. Default: false
+        /// </summary>  
+        public bool? DisplayCcEmailAddress { get; set; }
+
+        /// <summary>
+        /// Option to display or hide \"to\" email address. Default: true
+        /// </summary>  
+        public bool? DisplayToEmailAddress { get; set; }
+
+        /// <summary>
+        /// Option to display or hide \"from\" email address. Default: true
+        /// </summary>  
+        public bool? DisplayFromEmailAddress { get; set; }
+
+        /// <summary>
+        /// Option to display or hide the email header. Default: true
+        /// </summary>  
+        public bool? DisplayHeader { get; set; }
+
+        /// <summary>
+        /// Default font for Email document. The following font will be used if a font is missing.
+        /// </summary>  
+        public string DefaultFont { get; set; }
+
+        /// <summary>
+        /// List of font substitutes.
+        /// </summary>  
+        public Dictionary<string, string> FontSubstitutes { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -91,15 +116,20 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class EmailLoadOptions {\n");
-          sb.Append("  DisplayHeader: ").Append(this.DisplayHeader).Append("\n");
-          sb.Append("  DisplayFromEmailAddress: ").Append(this.DisplayFromEmailAddress).Append("\n");
-          sb.Append("  DisplayToEmailAddress: ").Append(this.DisplayToEmailAddress).Append("\n");
-          sb.Append("  DisplayCcEmailAddress: ").Append(this.DisplayCcEmailAddress).Append("\n");
-          sb.Append("  DisplayBccEmailAddress: ").Append(this.DisplayBccEmailAddress).Append("\n");
-          sb.Append("  TimeZoneOffset: ").Append(this.TimeZoneOffset).Append("\n");
-          sb.Append("  ConvertAttachments: ").Append(this.ConvertAttachments).Append("\n");
-          sb.Append("  FieldLabels: ").Append(this.FieldLabels).Append("\n");
           sb.Append("  PreserveOriginalDate: ").Append(this.PreserveOriginalDate).Append("\n");
+          sb.Append("  FieldLabels: ").Append(this.FieldLabels).Append("\n");
+          sb.Append("  TimeZoneOffset: ").Append(this.TimeZoneOffset).Append("\n");
+          sb.Append("  DisplaySent: ").Append(this.DisplaySent).Append("\n");
+          sb.Append("  DisplaySubject: ").Append(this.DisplaySubject).Append("\n");
+          sb.Append("  DisplayAttachments: ").Append(this.DisplayAttachments).Append("\n");
+          sb.Append("  DisplayEmailAddresses: ").Append(this.DisplayEmailAddresses).Append("\n");
+          sb.Append("  DisplayBccEmailAddress: ").Append(this.DisplayBccEmailAddress).Append("\n");
+          sb.Append("  DisplayCcEmailAddress: ").Append(this.DisplayCcEmailAddress).Append("\n");
+          sb.Append("  DisplayToEmailAddress: ").Append(this.DisplayToEmailAddress).Append("\n");
+          sb.Append("  DisplayFromEmailAddress: ").Append(this.DisplayFromEmailAddress).Append("\n");
+          sb.Append("  DisplayHeader: ").Append(this.DisplayHeader).Append("\n");
+          sb.Append("  DefaultFont: ").Append(this.DefaultFont).Append("\n");
+          sb.Append("  FontSubstitutes: ").Append(this.FontSubstitutes).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }
