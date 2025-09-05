@@ -166,7 +166,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
             var format = "pdf";
             var testFile = TestFiles.PasswordProtectedDocx;
 
-            var loadOptions = new DocxLoadOptions
+            var loadOptions = new WordProcessingLoadOptions
             {
                 Format = "docx",
                 Password = TestFiles.PasswordProtectedDocx.Password

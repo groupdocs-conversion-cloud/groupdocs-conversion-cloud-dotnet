@@ -18,15 +18,15 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
                 new TestCaseData(TestFiles.OnePageDocx, "jpeg", new JpegConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "jpg", new JpgConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "png", new PngConvertOptions()),
-                //new TestCaseData(TestFiles.OnePageDocx, "psd", new PsdConvertOptions()),
-                new TestCaseData(TestFiles.OnePageDocx, "svg", new SvgConvertOptions()),
+                new TestCaseData(TestFiles.OnePageDocx, "psd", new PsdConvertOptions()),
+                new TestCaseData(TestFiles.OnePageDocx, "svg", new PDLConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "tif", new TifConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "tiff", new TiffConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "webp", new WebpConvertOptions()),
                 
-                new TestCaseData(TestFiles.OnePageDocx, "epub", new EpubConvertOptions()),
+                new TestCaseData(TestFiles.OnePageDocx, "epub", new EBookConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "pdf", new PdfConvertOptions()),
-                new TestCaseData(TestFiles.OnePageDocx, "xps", new XpsConvertOptions()),
+                new TestCaseData(TestFiles.OnePageDocx, "xps", new PDLConvertOptions()),
 
                 new TestCaseData(TestFiles.OnePageDocx, "odp", new OdpConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "otp", new OtpConvertOptions()),
@@ -59,7 +59,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
                 new TestCaseData(TestFiles.OnePageDocx, "rtf", new RtfConvertOptions()),
                 new TestCaseData(TestFiles.OnePageDocx, "txt", new TxtConvertOptions()),
 
-                new TestCaseData(TestFiles.OnePageDocx, "html", new HtmlConvertOptions()),
+                new TestCaseData(TestFiles.OnePageDocx, "html", new WebConvertOptions()),
             };
             return result;
         }
