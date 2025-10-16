@@ -1093,6 +1093,22 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.CompressionLoadOptions">
+            <summary>
+            Options for loading compression documents
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CompressionLoadOptions.Password">
+            <summary>
+            Set password to load protected document.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CompressionLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ConsumptionResult">
             <summary>
             Metered license consumption information
@@ -1232,6 +1248,17 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CsvLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DatabaseLoadOptions">
+            <summary>
+            Options for loading Database documents
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DatabaseLoadOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1592,6 +1619,98 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.EBookLoadOptions">
+            <summary>
+            Options for loading e-book documents
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.EBookLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions">
+            <summary>
+            Options for loading Email documents
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.PreserveOriginalDate">
+            <summary>
+            Defines whether need to keep original date header string in mail message when saving or not (Default value is true)
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.FieldLabels">
+            <summary>
+            The mapping between email message field and field text representation
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.TimeZoneOffset">
+            <summary>
+            Gets or sets the Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the localtime and UTC.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplaySent">
+            <summary>
+            Option to display or hide sent date/time in the header. Default: true.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplaySubject">
+            <summary>
+            Option to display or hide subject in the header. Default: true.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayAttachments">
+            <summary>
+            Option to display or hide attachments in the header. Default: true.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayEmailAddresses">
+            <summary>
+            Gets or sets DisplayEmailAddresses
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayBccEmailAddress">
+            <summary>
+            Option to display or hide \"Bcc\" email address. Default: false
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayCcEmailAddress">
+            <summary>
+            Option to display or hide \"Cc\" email address. Default: false
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayToEmailAddress">
+            <summary>
+            Option to display or hide \"to\" email address. Default: true
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayFromEmailAddress">
+            <summary>
+            Option to display or hide \"from\" email address. Default: true
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DisplayHeader">
+            <summary>
+            Option to display or hide the email header. Default: true
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.DefaultFont">
+            <summary>
+            Default font for Email document. The following font will be used if a font is missing.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.FontSubstitutes">
+            <summary>
+            List of font substitutes.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.EmfConvertOptions">
             <summary>
             Emf convert options
@@ -1650,6 +1769,118 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ErrorDetails.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel">
+            <summary>
+            Represents field label 
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum">
+            <summary>
+            The field name
+            </summary>
+            <value>The field name</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.Start">
+            <summary>
+            Enum Start for "Start"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.TabField">
+            <summary>
+            Enum TabField for "TabField"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.Subject">
+            <summary>
+            Enum Subject for "Subject"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.ShowTimeAs">
+            <summary>
+            Enum ShowTimeAs for "ShowTimeAs"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.Sent">
+            <summary>
+            Enum Sent for "Sent"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.RequiredAttendees">
+            <summary>
+            Enum RequiredAttendees for "RequiredAttendees"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.RecurrencePattern">
+            <summary>
+            Enum RecurrencePattern for "RecurrencePattern"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.Recurrence">
+            <summary>
+            Enum Recurrence for "Recurrence"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.PageHeader">
+            <summary>
+            Enum PageHeader for "PageHeader"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.Organizer">
+            <summary>
+            Enum Organizer for "Organizer"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.Location">
+            <summary>
+            Enum Location for "Location"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.Importance">
+            <summary>
+            Enum Importance for "Importance"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.From">
+            <summary>
+            Enum From for "From"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.End">
+            <summary>
+            Enum End for "End"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.Bcc">
+            <summary>
+            Enum Bcc for "Bcc"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.Attachments">
+            <summary>
+            Enum Attachments for "Attachments"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.FieldEnum.To">
+            <summary>
+            Enum To for "To"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.Field">
+            <summary>
+            The field name
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.Label">
+            <summary>
+            The label e.g. \"Sender\"
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.FieldLabel.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1729,12 +1960,55 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.FinanceLoadOptions">
+            <summary>
+            Options for loading Finance documents
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.FinanceLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.FontLoadOptions">
+            <summary>
+            Options for loading Font documents
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.FontLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.GifConvertOptions">
             <summary>
             Gif convert options
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.GifConvertOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.GisLoadOptions">
+            <summary>
+            Options for loading Gis documents
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.GisLoadOptions.Width">
+            <summary>
+            Page width for converting GIS document. Default is 1000.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.GisLoadOptions.Height">
+            <summary>
+            Page height for converting GIS document. Default is 1000.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.GisLoadOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1989,6 +2263,43 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.MboxLoadOptions">
+            <summary>
+            Options for loading Mbox documents
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.MboxLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.NoteLoadOptions">
+            <summary>
+            One document load options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.NoteLoadOptions.DefaultFont">
+            <summary>
+            Default font for Note document. The following font will be used if a font is missing.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.NoteLoadOptions.FontSubstitutes">
+            <summary>
+            Substitute specific fonts when converting Note document.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.NoteLoadOptions.Password">
+            <summary>
+            Set password to unprotect protected document
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.NoteLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ObjectExist">
             <summary>
             Object exists
@@ -2049,6 +2360,22 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OdtConvertOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OlmLoadOptions">
+            <summary>
+            Options for loading Olm documents
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OlmLoadOptions.Folder">
+            <summary>
+            Folder which to be processed Default is Inbox
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OlmLoadOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -2820,6 +3147,17 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PdlLoadOptions">
+            <summary>
+            Options for loading Pdl documents
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PdlLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PersonalStorageLoadOptions">
             <summary>
             Options for loading personal storage documents.
@@ -3182,6 +3520,17 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PubLoadOptions">
+            <summary>
+            Options for loading Pub documents
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PubLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.RtfConvertOptions">
             <summary>
             Rtf convert options
@@ -3470,6 +3819,17 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ThreeDLoadOptions">
+            <summary>
+            Options for loading 3d documents
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ThreeDLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.TifConvertOptions">
             <summary>
             Tif convert options
@@ -3624,6 +3984,22 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.TxtLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.VcfLoadOptions">
+            <summary>
+            Options for loading Vcf documents
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.VcfLoadOptions.Encoding">
+            <summary>
+            The encoding that will be used when loading Vcf document. Can be null. Default is null.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.VcfLoadOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
