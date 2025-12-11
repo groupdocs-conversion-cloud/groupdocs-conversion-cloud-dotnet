@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="TxtConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="FinanceConvertOptions.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,9 +34,9 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Txt convert options
+    /// Options for to Finance conversion
     /// </summary>  
-    public class TxtConvertOptions : ConvertOptions 
+    public class FinanceConvertOptions : ConvertOptions 
     {                       
         /// <summary>
         /// Get the string presentation of the object
@@ -45,7 +45,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class TxtConvertOptions {\n");
+          sb.Append("class FinanceConvertOptions {\n");
           sb.Append("}\n");
           return sb.ToString();
         }

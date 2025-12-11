@@ -36,7 +36,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     /// <summary>
     /// Webp convert options
     /// </summary>  
-    public class WebpConvertOptions : ImageConvertOptions 
+    public class WebpConvertOptions 
     {                       
         /// <summary>
         /// Indicates if the compression of the converted file will be lossless

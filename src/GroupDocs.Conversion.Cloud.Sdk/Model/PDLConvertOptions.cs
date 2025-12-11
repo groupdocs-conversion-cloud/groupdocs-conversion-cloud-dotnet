@@ -34,10 +34,20 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Page description langusge convert options
+    /// Page description language convert options
     /// </summary>  
     public class PDLConvertOptions : ConvertOptions 
     {                       
+        /// <summary>
+        /// Desired page width after conversion.
+        /// </summary>  
+        public int? Width { get; set; }
+
+        /// <summary>
+        /// Desired page height after conversion.
+        /// </summary>  
+        public int? Height { get; set; }
+
         /// <summary>
         /// Get the string presentation of the object
         /// </summary>
@@ -46,6 +56,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class PDLConvertOptions {\n");
+          sb.Append("  Width: ").Append(this.Width).Append("\n");
+          sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

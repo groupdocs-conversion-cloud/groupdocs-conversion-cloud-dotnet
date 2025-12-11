@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="OttConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="EmailConvertOptions.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,9 +34,9 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Ott convert options
+    /// Options for to Email conversion
     /// </summary>  
-    public class OttConvertOptions : WordProcessingConvertOptions 
+    public class EmailConvertOptions : ConvertOptions 
     {                       
         /// <summary>
         /// Get the string presentation of the object
@@ -45,7 +45,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class OttConvertOptions {\n");
+          sb.Append("class EmailConvertOptions {\n");
           sb.Append("}\n");
           return sb.ToString();
         }

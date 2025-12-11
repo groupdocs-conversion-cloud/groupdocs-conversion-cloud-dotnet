@@ -1035,12 +1035,123 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.BmpConvertOptions">
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions">
             <summary>
-            Bmp convert options
+            Options for to Cad conversion
             </summary>  
         </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.BmpConvertOptions.ToString">
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum">
+            <summary>
+            Page size
+            </summary>
+            <value>Page size</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Default">
+            <summary>
+            Enum Default for "Default"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.A3">
+            <summary>
+            Enum A3 for "A3"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Statement">
+            <summary>
+            Enum Statement for "Statement"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Quarto">
+            <summary>
+            Enum Quarto for "Quarto"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Paper11x17">
+            <summary>
+            Enum Paper11x17 for "Paper11x17"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Paper10x14">
+            <summary>
+            Enum Paper10x14 for "Paper10x14"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Letter">
+            <summary>
+            Enum Letter for "Letter"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Legal">
+            <summary>
+            Enum Legal for "Legal"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Ledger">
+            <summary>
+            Enum Ledger for "Ledger"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Folio">
+            <summary>
+            Enum Folio for "Folio"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Executive">
+            <summary>
+            Enum Executive for "Executive"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.EnvelopeDL">
+            <summary>
+            Enum EnvelopeDL for "EnvelopeDL"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Custom">
+            <summary>
+            Enum Custom for "Custom"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.B5">
+            <summary>
+            Enum B5 for "B5"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.B4">
+            <summary>
+            Enum B4 for "B4"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.A5">
+            <summary>
+            Enum A5 for "A5"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.A4">
+            <summary>
+            Enum A4 for "A4"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSizeEnum.Tabloid">
+            <summary>
+            Enum Tabloid for "Tabloid"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.PageSize">
+            <summary>
+            Page size
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.Width">
+            <summary>
+            Desired page width after conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.Height">
+            <summary>
+            Desired page height after conversion
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CadConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1088,6 +1199,22 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CadLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.CompressionConvertOptions">
+            <summary>
+            Options for to zip conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CompressionConvertOptions.Password">
+            <summary>
+            Set this property if you want to protect the converted document with a password
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CompressionConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1264,12 +1391,17 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DcmConvertOptions">
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DiagramConvertOptions">
             <summary>
-            Dcm convert options
+            Options for to Diagram conversion
             </summary>  
         </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DcmConvertOptions.ToString">
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.DiagramConvertOptions.AutoFitPageToDrawingContent">
+            <summary>
+            Gets or sets a value indicating whether to enlarge the page to fit the drawing content.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DiagramConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1307,50 +1439,6 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DiscUsage.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DjvuConvertOptions">
-            <summary>
-            Djvu convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DjvuConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DngConvertOptions">
-            <summary>
-            Dng convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DngConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DocConvertOptions">
-            <summary>
-            Doc convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DocConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DocmConvertOptions">
-            <summary>
-            Docm convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DocmConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1432,50 +1520,6 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DocumentMetadata.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DocxConvertOptions">
-            <summary>
-            Docx convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DocxConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DotConvertOptions">
-            <summary>
-            Dot convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DotConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DotmConvertOptions">
-            <summary>
-            Dotm convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DotmConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.DotxConvertOptions">
-            <summary>
-            Dotx convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.DotxConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1630,6 +1674,17 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.EmailConvertOptions">
+            <summary>
+            Options for to Email conversion
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.EmailConvertOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions">
             <summary>
             Options for loading Email documents
@@ -1706,17 +1761,6 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.EmailLoadOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.EmfConvertOptions">
-            <summary>
-            Emf convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.EmfConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1960,12 +2004,34 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.FinanceConvertOptions">
+            <summary>
+            Options for to Finance conversion
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.FinanceConvertOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.FinanceLoadOptions">
             <summary>
             Options for loading Finance documents
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.FinanceLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.FontConvertOptions">
+            <summary>
+            Options for to Font conversion
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.FontConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -1982,12 +2048,12 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.GifConvertOptions">
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.GisConvertOptions">
             <summary>
-            Gif convert options
+            Options for to Gis conversion
             </summary>  
         </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.GifConvertOptions.ToString">
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.GisConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -2009,17 +2075,6 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.GisLoadOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.IcoConvertOptions">
-            <summary>
-            Ico convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.IcoConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -2116,6 +2171,26 @@
             Gets or sets a background color.
             </summary>  
         </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConvertOptions.JpegOptions">
+            <summary>
+            Options for converting to Jpeg-compatible image
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConvertOptions.PsdOptions">
+            <summary>
+            Options for converting to PSD-compatible image
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConvertOptions.TiffOptions">
+            <summary>
+            Options for converting to Tiff-compatible image
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConvertOptions.WebpOptions">
+            <summary>
+            Options for converting to WebP-compatible image
+            </summary>  
+        </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
@@ -2138,61 +2213,6 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.J2cConvertOptions">
-            <summary>
-            J2c convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.J2cConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.J2kConvertOptions">
-            <summary>
-            J2k convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.J2kConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Jp2ConvertOptions">
-            <summary>
-            Jp2 convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Jp2ConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.JpegConvertOptions">
-            <summary>
-            Jpeg convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.JpegConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.JpfConvertOptions">
-            <summary>
-            Jpf convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.JpfConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.JpgConvertOptions">
             <summary>
             Jpg convert options
@@ -2204,28 +2224,6 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.JpgConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.JpmConvertOptions">
-            <summary>
-            Jpm convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.JpmConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.JpxConvertOptions">
-            <summary>
-            Jpx convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.JpxConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -2321,50 +2319,6 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OdgConvertOptions">
-            <summary>
-            Odg convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OdgConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OdpConvertOptions">
-            <summary>
-            Odp convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OdpConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OdsConvertOptions">
-            <summary>
-            Ods convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OdsConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OdtConvertOptions">
-            <summary>
-            Odt convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OdtConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OlmLoadOptions">
             <summary>
             Options for loading Olm documents
@@ -2376,32 +2330,6 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OlmLoadOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OneLoadOptions">
-            <summary>
-            One document load options
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OneLoadOptions.DefaultFont">
-            <summary>
-            Default font for Note document. The following font will be used if a font is missing.
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OneLoadOptions.FontSubstitutes">
-            <summary>
-            Substitute specific fonts when converting Note document.
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.OneLoadOptions.Password">
-            <summary>
-            Set password to unprotect protected document
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OneLoadOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -2508,39 +2436,6 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OperationResult.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OtpConvertOptions">
-            <summary>
-            Otp convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OtpConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OtsConvertOptions">
-            <summary>
-            Ots convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OtsConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.OttConvertOptions">
-            <summary>
-            Ott convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.OttConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -3138,7 +3033,17 @@
         </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PDLConvertOptions">
             <summary>
-            Page description langusge convert options
+            Page description language convert options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PDLConvertOptions.Width">
+            <summary>
+            Desired page width after conversion.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PDLConvertOptions.Height">
+            <summary>
+            Desired page height after conversion.
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PDLConvertOptions.ToString">
@@ -3174,105 +3079,6 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PersonalStorageLoadOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PngConvertOptions">
-            <summary>
-            Png convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PngConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PotmConvertOptions">
-            <summary>
-            Potm convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PotmConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PotxConvertOptions">
-            <summary>
-            Potx convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PotxConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PpsConvertOptions">
-            <summary>
-            Pps convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PpsConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PpsmConvertOptions">
-            <summary>
-            Ppsm convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PpsmConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PpsxConvertOptions">
-            <summary>
-            Ppsx convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PpsxConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PptConvertOptions">
-            <summary>
-            Ppt convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PptConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PptmConvertOptions">
-            <summary>
-            Pptm convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PptmConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PptxConvertOptions">
-            <summary>
-            Pptx convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PptxConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -3407,6 +3213,17 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PresentationLoadOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ProjectManagementConvertOptions">
+            <summary>
+            Options for to ProjectManagement conversion
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ProjectManagementConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -3560,11 +3377,6 @@
         <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetConvertOptions.Zoom">
             <summary>
             Specifies the zoom level in percentage. Default is 100.
-            </summary>  
-        </member>
-        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetConvertOptions.UsePdf">
-            <summary>
-            If true, the input firstly is converted to PDF and after that to desired format
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.SpreadsheetConvertOptions.ToString">
@@ -3819,23 +3631,23 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ThreeDConvertOptions">
+            <summary>
+            Options for to 3d conversion
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ThreeDConvertOptions.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ThreeDLoadOptions">
             <summary>
             Options for loading 3d documents
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ThreeDLoadOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.TifConvertOptions">
-            <summary>
-            Tif convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.TifConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -3888,34 +3700,12 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.TsvConvertOptions">
-            <summary>
-            Tsv convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.TsvConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.TsvLoadOptions">
             <summary>
             Tsv load options
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.TsvLoadOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.TxtConvertOptions">
-            <summary>
-            Txt convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.TxtConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>
@@ -4231,17 +4021,6 @@
             </summary>
             <returns>String presentation of the object</returns>
         </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WmfConvertOptions">
-            <summary>
-            Wmf convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WmfConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
         <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingConvertOptions">
             <summary>
             Options for to word processing conversion
@@ -4420,6 +4199,11 @@
             Specifies the zoom level in percentage. Default is 100. Default zoom is supported till Microsoft Word 2010. Starting from Microsoft Word 2013 default zoom is no longer set to document, instead it appears to use the zoom factor of the last document that was opened.
             </summary>  
         </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingConvertOptions.RtfOptions">
+            <summary>
+            RTF specific convert options
+            </summary>  
+        </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
@@ -4593,83 +4377,6 @@
             </summary>  
         </member>
         <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WordProcessingLoadOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Xls2003ConvertOptions">
-            <summary>
-            Xls2003 convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Xls2003ConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.XlsbConvertOptions">
-            <summary>
-            Xlsb convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.XlsbConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.XlsConvertOptions">
-            <summary>
-            Xls convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.XlsConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.XlsmConvertOptions">
-            <summary>
-            Xlsm convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.XlsmConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.XlsxConvertOptions">
-            <summary>
-            Xlsx convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.XlsxConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.XltmConvertOptions">
-            <summary>
-            Xltm convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.XltmConvertOptions.ToString">
-            <summary>
-            Get the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.XltxConvertOptions">
-            <summary>
-            Xltx convert options
-            </summary>  
-        </member>
-        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.XltxConvertOptions.ToString">
             <summary>
             Get the string presentation of the object
             </summary>

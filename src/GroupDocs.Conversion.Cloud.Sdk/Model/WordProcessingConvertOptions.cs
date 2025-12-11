@@ -218,6 +218,11 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public int? Zoom { get; set; }
 
         /// <summary>
+        /// RTF specific convert options
+        /// </summary>  
+        public RtfConvertOptions RtfOptions { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -233,6 +238,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  PdfRecognitionMode: ").Append(this.PdfRecognitionMode).Append("\n");
           sb.Append("  PageSize: ").Append(this.PageSize).Append("\n");
           sb.Append("  PageOrientation: ").Append(this.PageOrientation).Append("\n");
+          sb.Append("  RtfOptions: ").Append(this.RtfOptions).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

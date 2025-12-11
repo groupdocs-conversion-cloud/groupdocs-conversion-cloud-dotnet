@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="PsdConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="CadConvertOptions.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,110 +34,122 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Psd convert options
+    /// Options for to Cad conversion
     /// </summary>  
-    public class PsdConvertOptions 
+    public class CadConvertOptions : ConvertOptions 
     {                       
         /// <summary>
-        /// Psd color mode
+        /// Page size
         /// </summary>
-        /// <value>Psd color mode</value>
+        /// <value>Page size</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ColorModeEnum
+        public enum PageSizeEnum
         { 
             /// <summary>
-            /// Enum Bitmap for "Bitmap"
+            /// Enum Default for "Default"
             /// </summary>            
-            Bitmap,
+            Default,
             
             /// <summary>
-            /// Enum Grayscale for "Grayscale"
+            /// Enum A3 for "A3"
             /// </summary>            
-            Grayscale,
+            A3,
             
             /// <summary>
-            /// Enum Indexed for "Indexed"
+            /// Enum Statement for "Statement"
             /// </summary>            
-            Indexed,
+            Statement,
             
             /// <summary>
-            /// Enum Rgb for "Rgb"
+            /// Enum Quarto for "Quarto"
             /// </summary>            
-            Rgb,
+            Quarto,
             
             /// <summary>
-            /// Enum Cmyk for "Cmyk"
+            /// Enum Paper11x17 for "Paper11x17"
             /// </summary>            
-            Cmyk,
+            Paper11x17,
             
             /// <summary>
-            /// Enum Multichannel for "Multichannel"
+            /// Enum Paper10x14 for "Paper10x14"
             /// </summary>            
-            Multichannel,
+            Paper10x14,
             
             /// <summary>
-            /// Enum Duotone for "Duotone"
+            /// Enum Letter for "Letter"
             /// </summary>            
-            Duotone,
+            Letter,
             
             /// <summary>
-            /// Enum Lab for "Lab"
+            /// Enum Legal for "Legal"
             /// </summary>            
-            Lab            
+            Legal,
+            
+            /// <summary>
+            /// Enum Ledger for "Ledger"
+            /// </summary>            
+            Ledger,
+            
+            /// <summary>
+            /// Enum Folio for "Folio"
+            /// </summary>            
+            Folio,
+            
+            /// <summary>
+            /// Enum Executive for "Executive"
+            /// </summary>            
+            Executive,
+            
+            /// <summary>
+            /// Enum EnvelopeDL for "EnvelopeDL"
+            /// </summary>            
+            EnvelopeDL,
+            
+            /// <summary>
+            /// Enum Custom for "Custom"
+            /// </summary>            
+            Custom,
+            
+            /// <summary>
+            /// Enum B5 for "B5"
+            /// </summary>            
+            B5,
+            
+            /// <summary>
+            /// Enum B4 for "B4"
+            /// </summary>            
+            B4,
+            
+            /// <summary>
+            /// Enum A5 for "A5"
+            /// </summary>            
+            A5,
+            
+            /// <summary>
+            /// Enum A4 for "A4"
+            /// </summary>            
+            A4,
+            
+            /// <summary>
+            /// Enum Tabloid for "Tabloid"
+            /// </summary>            
+            Tabloid            
         }
 
         /// <summary>
-        /// Psd compression method
+        /// Page size
         /// </summary>
-        /// <value>Psd compression method</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum CompressionMethodEnum
-        { 
-            /// <summary>
-            /// Enum Raw for "Raw"
-            /// </summary>            
-            Raw,
-            
-            /// <summary>
-            /// Enum Rle for "Rle"
-            /// </summary>            
-            Rle,
-            
-            /// <summary>
-            /// Enum ZipWithoutPrediction for "ZipWithoutPrediction"
-            /// </summary>            
-            ZipWithoutPrediction,
-            
-            /// <summary>
-            /// Enum ZipWithPrediction for "ZipWithPrediction"
-            /// </summary>            
-            ZipWithPrediction            
-        }
+        public PageSizeEnum? PageSize { get; set; }
 
         /// <summary>
-        /// Psd color mode
-        /// </summary>
-        public ColorModeEnum? ColorMode { get; set; }
-
-        /// <summary>
-        /// Psd compression method
-        /// </summary>
-        public CompressionMethodEnum? CompressionMethod { get; set; }
-
-        /// <summary>
-        /// Bits count per color channel
+        /// Desired page width after conversion
         /// </summary>  
-        public int? ChannelBitsCount { get; set; }
+        public int? Width { get; set; }
 
         /// <summary>
-        /// Color channels count
+        /// Desired page height after conversion
         /// </summary>  
-        public int? ChannelsCount { get; set; }
-
-        /// <summary>
-        /// Psd file version
-        /// </summary>  
-        public int? Version { get; set; }
+        public int? Height { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -146,12 +158,10 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class PsdConvertOptions {\n");
-          sb.Append("  ChannelBitsCount: ").Append(this.ChannelBitsCount).Append("\n");
-          sb.Append("  ChannelsCount: ").Append(this.ChannelsCount).Append("\n");
-          sb.Append("  ColorMode: ").Append(this.ColorMode).Append("\n");
-          sb.Append("  CompressionMethod: ").Append(this.CompressionMethod).Append("\n");
-          sb.Append("  Version: ").Append(this.Version).Append("\n");
+          sb.Append("class CadConvertOptions {\n");
+          sb.Append("  Width: ").Append(this.Width).Append("\n");
+          sb.Append("  Height: ").Append(this.Height).Append("\n");
+          sb.Append("  PageSize: ").Append(this.PageSize).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

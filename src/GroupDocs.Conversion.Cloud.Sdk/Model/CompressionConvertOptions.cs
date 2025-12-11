@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="TsvConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="CompressionConvertOptions.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,10 +34,15 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Tsv convert options
+    /// Options for to zip conversion
     /// </summary>  
-    public class TsvConvertOptions : SpreadsheetConvertOptions 
+    public class CompressionConvertOptions : ConvertOptions 
     {                       
+        /// <summary>
+        /// Set this property if you want to protect the converted document with a password
+        /// </summary>  
+        public string Password { get; set; }
+
         /// <summary>
         /// Get the string presentation of the object
         /// </summary>
@@ -45,7 +50,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class TsvConvertOptions {\n");
+          sb.Append("class CompressionConvertOptions {\n");
+          sb.Append("  Password: ").Append(this.Password).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="DngConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="DiagramConvertOptions.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,10 +34,15 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Dng convert options
+    /// Options for to Diagram conversion
     /// </summary>  
-    public class DngConvertOptions : ImageConvertOptions 
+    public class DiagramConvertOptions : ConvertOptions 
     {                       
+        /// <summary>
+        /// Gets or sets a value indicating whether to enlarge the page to fit the drawing content.
+        /// </summary>  
+        public bool? AutoFitPageToDrawingContent { get; set; }
+
         /// <summary>
         /// Get the string presentation of the object
         /// </summary>
@@ -45,7 +50,8 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class DngConvertOptions {\n");
+          sb.Append("class DiagramConvertOptions {\n");
+          sb.Append("  AutoFitPageToDrawingContent: ").Append(this.AutoFitPageToDrawingContent).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

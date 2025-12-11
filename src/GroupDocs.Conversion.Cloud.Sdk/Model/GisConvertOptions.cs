@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="OtpConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="GisConvertOptions.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,9 +34,9 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Otp convert options
+    /// Options for to Gis conversion
     /// </summary>  
-    public class OtpConvertOptions : PresentationConvertOptions 
+    public class GisConvertOptions : ConvertOptions 
     {                       
         /// <summary>
         /// Get the string presentation of the object
@@ -45,7 +45,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class OtpConvertOptions {\n");
+          sb.Append("class GisConvertOptions {\n");
           sb.Append("}\n");
           return sb.ToString();
         }

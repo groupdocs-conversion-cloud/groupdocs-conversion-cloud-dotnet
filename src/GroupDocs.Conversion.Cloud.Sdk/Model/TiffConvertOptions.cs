@@ -36,7 +36,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     /// <summary>
     /// Tiff convert options
     /// </summary>  
-    public class TiffConvertOptions : ImageConvertOptions 
+    public class TiffConvertOptions 
     {                       
         /// <summary>
         /// Set Tiff compression

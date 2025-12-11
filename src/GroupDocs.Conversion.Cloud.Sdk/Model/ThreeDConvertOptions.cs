@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="XlsmConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="ThreeDConvertOptions.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,9 +34,9 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Xlsm convert options
+    /// Options for to 3d conversion
     /// </summary>  
-    public class XlsmConvertOptions : SpreadsheetConvertOptions 
+    public class ThreeDConvertOptions : ConvertOptions 
     {                       
         /// <summary>
         /// Get the string presentation of the object
@@ -45,7 +45,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class XlsmConvertOptions {\n");
+          sb.Append("class ThreeDConvertOptions {\n");
           sb.Append("}\n");
           return sb.ToString();
         }

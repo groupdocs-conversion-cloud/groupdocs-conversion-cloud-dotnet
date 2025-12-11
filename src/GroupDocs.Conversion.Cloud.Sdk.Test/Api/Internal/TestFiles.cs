@@ -29,14 +29,14 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api.Internal
 {
     public static class TestFiles
     {
-        public static readonly TestFile OnePageDocx = new TestFile("one-page.docx", "WordProcessing\\");
+        public static readonly TestFile OnePageDocx = new TestFile("one-page.docx", "WordProcessing/");
         public static readonly TestFile NotExist = new TestFile("NotExist.docx", "some-folder/");
-        public static readonly TestFile PasswordProtectedDocx = new TestFile("password-protected.docx", "WordProcessing\\")
+        public static readonly TestFile PasswordProtectedDocx = new TestFile("password-protected.docx", "WordProcessing/")
         {
             Password = "password"
         };
-        public static readonly TestFile FourPagesDocx = new TestFile("four-pages.docx", "WordProcessing\\");
-        public static readonly TestFile OneNote = new TestFile("sample.one", "Note\\");
+        public static readonly TestFile FourPagesDocx = new TestFile("four-pages.docx", "WordProcessing/");
+        public static readonly TestFile OneNote = new TestFile("sample.one", "Note/");
 
         public static IEnumerable<TestFile> TestFilesList
         {

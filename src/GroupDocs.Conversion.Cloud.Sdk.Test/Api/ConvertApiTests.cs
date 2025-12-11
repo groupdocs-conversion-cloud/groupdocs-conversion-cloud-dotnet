@@ -139,7 +139,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Test.Api
         public void TestConversionFontSubs()
         {
             // Prepare convert settings
-            var loadOptions = new OneLoadOptions
+            var loadOptions = new NoteLoadOptions
             {
                 FontSubstitutes = new Dictionary<string, string>
                 {

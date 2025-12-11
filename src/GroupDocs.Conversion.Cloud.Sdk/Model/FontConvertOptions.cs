@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="OdgConvertOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="FontConvertOptions.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,9 +34,9 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Odg convert options
+    /// Options for to Font conversion
     /// </summary>  
-    public class OdgConvertOptions : ImageConvertOptions 
+    public class FontConvertOptions : ConvertOptions 
     {                       
         /// <summary>
         /// Get the string presentation of the object
@@ -45,7 +45,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class OdgConvertOptions {\n");
+          sb.Append("class FontConvertOptions {\n");
           sb.Append("}\n");
           return sb.ToString();
         }

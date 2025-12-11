@@ -36,7 +36,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     /// <summary>
     /// Rtf convert options
     /// </summary>  
-    public class RtfConvertOptions : WordProcessingConvertOptions 
+    public class RtfConvertOptions 
     {                       
         /// <summary>
         /// Specifies whether the keywords for \"old readers\" are written to RTF or not. This can significantly affect the size of the RTF document. Default is False.

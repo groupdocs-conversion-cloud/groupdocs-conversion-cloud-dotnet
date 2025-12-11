@@ -127,6 +127,26 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
         public string BackgroundColor { get; set; }
 
         /// <summary>
+        /// Options for converting to Jpeg-compatible image
+        /// </summary>  
+        public JpgConvertOptions JpegOptions { get; set; }
+
+        /// <summary>
+        /// Options for converting to PSD-compatible image
+        /// </summary>  
+        public PsdConvertOptions PsdOptions { get; set; }
+
+        /// <summary>
+        /// Options for converting to Tiff-compatible image
+        /// </summary>  
+        public TiffConvertOptions TiffOptions { get; set; }
+
+        /// <summary>
+        /// Options for converting to WebP-compatible image
+        /// </summary>  
+        public WebpConvertOptions WebpOptions { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -146,6 +166,10 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
           sb.Append("  Gamma: ").Append(this.Gamma).Append("\n");
           sb.Append("  FlipMode: ").Append(this.FlipMode).Append("\n");
           sb.Append("  BackgroundColor: ").Append(this.BackgroundColor).Append("\n");
+          sb.Append("  JpegOptions: ").Append(this.JpegOptions).Append("\n");
+          sb.Append("  PsdOptions: ").Append(this.PsdOptions).Append("\n");
+          sb.Append("  TiffOptions: ").Append(this.TiffOptions).Append("\n");
+          sb.Append("  WebpOptions: ").Append(this.WebpOptions).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

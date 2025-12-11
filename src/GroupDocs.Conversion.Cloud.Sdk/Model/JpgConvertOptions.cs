@@ -36,7 +36,7 @@ namespace GroupDocs.Conversion.Cloud.Sdk.Model
     /// <summary>
     /// Jpg convert options
     /// </summary>  
-    public class JpgConvertOptions : ImageConvertOptions 
+    public class JpgConvertOptions 
     {                       
         /// <summary>
         /// Desired image quality when converting to Jpeg. The value must be between 0 and 100. The default value is 100.
